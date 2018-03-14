@@ -1,19 +1,59 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import ScrollableAnchor from 'react-scrollable-anchor'
+import { StickyContainer, Sticky } from 'react-sticky'
+
+import Header from './Header'
+import Home from './Home'
+import About from './About'
+import Portfolio from './Portfolio'
+import Contact from './Contact'
 
 class App extends Component {
+  constructor(props){
+    super(props)
+  }
+
   render() {
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <div>
+        <ScrollableAnchor id={'Home'}>
+          <Home />
+        </ScrollableAnchor>
+        <StickyContainer style={{ background: "#ddd", padding: "0 30px" }}>
+          <Sticky>
+            {({
+              isSticky,
+              wasSticky,
+              style,
+              distanceFromTop,
+              distanceFromBottom,
+              calculatedHeight
+            }) => {
+              console.log({
+                isSticky,
+                wasSticky,
+                style,
+                distanceFromTop,
+                distanceFromBottom,
+                calculatedHeight
+              });
+              return <Header style={style} />;
+            }}
+          </Sticky>
+
+          <ScrollableAnchor id={'About'}>
+            <About />
+          </ScrollableAnchor>
+          <ScrollableAnchor id={'Portfolio'}>
+            <Portfolio />
+          </ScrollableAnchor>
+          <ScrollableAnchor id={'Contact'}>
+            <Contact />
+          </ScrollableAnchor>
+        </StickyContainer>
+
+       </div>
     );
   }
 }
