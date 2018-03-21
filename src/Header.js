@@ -112,7 +112,7 @@ class Header extends Component {
               <p className={this.state.hr === 'contact' ? 'nav-link active' : 'nav-link'}>CONTACT</p>
             </Link>
           </li>
-          <hr className={this.state.hr}/>
+          {/* <hr className={this.state.hr}/> */}
         </ul>
       </header>
 
