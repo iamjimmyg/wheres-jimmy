@@ -1,20 +1,37 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { selectHeader } from './actions/index';
-import { bindActionCreators } from 'redux';
+import React, { Component } from 'react'
 
+import { connect } from 'react-redux'
+import { selectHeader } from './actions/index'
+import { bindActionCreators } from 'redux'
+//import video from '../public/typing.mov'
 import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+
+
 
 class Home extends Component {
   render() {
     return (
-      <section className="text-center flex" id='landing'>
+      <section className="container flex" id='landing'>
+        <div className="fullscreen-video-wrap">
+          <video src='typing.mov' autoplay='true' loop='true'>
+          </video>
+        </div>
+        <div className="video-overlay"></div>
 
-        <h1>Hello, I'm Jimmy Gonzalez.<br/> I'm a full-stack web developer</h1>
-        <Link className="homepage-button" to="about" spy={true} smooth={true} duration={500} onClick={()=>{this.props.selectHeader('about')}} >
-          <div>View my work</div>
-        </Link>
-        {/* <a className="homepage-button" href="#About" onClick={()=>{this.props.selectHeader('about')}}><div>View my work</div></a> */}
+
+        <div className="landing-content container">
+
+
+
+          <div className="text-center center-content">
+            <h5 className="font-italic">I'm here to help clients with their business by fixing and creating projects of value</h5>
+            <h1> {'Lets build something amazing together'.toUpperCase()}</h1>
+            <Link className="homepage-button" to="about" spy={true} smooth={true} duration={500} onClick={()=>{this.props.selectHeader('about')}} >
+              <div>About my work</div>
+            </Link>
+          </div>
+
+        </div>
       </section>
 
     );
