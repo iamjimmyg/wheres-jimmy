@@ -96,13 +96,13 @@ header {
   height: 100vh;
   //margin-top: 35vh;
   // h1 {
-  color: white;
+  //color: white;
   a:hover, a:visited, a:link, a:active{
     text-decoration: none;
   }
   .homepage-button{
-    color: white;
-    border: 2px solid white;
+    color: lightgrey;
+    border: 2px solid lightgrey;
     width: 200px;
     margin-left: auto;
     margin-right: auto;
@@ -110,6 +110,7 @@ header {
     padding: 10px 25px;
     transition: all .25s ease-out;
     &:hover {
+      color: white;
       background: rgb(178, 148, 17);
       border-color: rgb(178, 148, 17);
     }

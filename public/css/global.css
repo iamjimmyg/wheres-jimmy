@@ -48,13 +48,12 @@ header {
   justify-content: center; }
 
 #landing {
-  height: 100vh;
-  color: white; }
+  height: 100vh; }
   #landing a:hover, #landing a:visited, #landing a:link, #landing a:active {
     text-decoration: none; }
   #landing .homepage-button {
-    color: white;
-    border: 2px solid white;
+    color: lightgrey;
+    border: 2px solid lightgrey;
     width: 200px;
     margin-left: auto;
     margin-right: auto;
@@ -62,6 +61,7 @@ header {
     padding: 10px 25px;
     transition: all .25s ease-out; }
     #landing .homepage-button:hover {
+      color: white;
       background: #b29411;
       border-color: #b29411; }
 
