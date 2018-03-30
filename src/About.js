@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Stats from './Stats'
 
 class About extends Component {
   render() {
@@ -25,7 +26,7 @@ class About extends Component {
         </div>
 
         <div className="row about-me-content">
-          <div className="col-sm-6 text-center ">
+          <div className="col-sm-5 text-center ">
             <div className="hexa">
               <div className="hex1">
                 <div className="hex2">
@@ -33,11 +34,12 @@ class About extends Component {
                 </div>
               </div>
             </div>
-
+            <div className="bio">
+              <p>Hey I'm Jimmy Gonzalez, I'm a sick as full-stack developer, checkout my shit, I can make websites while high as shit</p>
+            </div>
           </div>
-          <div className="col-sm-6">
-
-            hello im awesome
+          <div className="col-sm-7">
+            <Stats />
           </div>
 
         </div>

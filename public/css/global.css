@@ -120,7 +120,7 @@ header {
 
 #about {
   padding-top: 55px;
-  height: 100vh; }
+  min-height: 100vh; }
   #about h1 {
     margin-top: 50px; }
   #about .about-me-content {
@@ -151,6 +151,40 @@ header {
     transform: rotate(-60deg); }
   #about .material-icons {
     font-size: 70px; }
+  #about .stats {
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    background: #323840;
+    opacity: .8; }
+    #about .stats .skill-border {
+      color: white; }
+      #about .stats .skill-border .progress {
+        height: 20px;
+        position: relative;
+        top: 2px; }
+        #about .stats .skill-border .progress .progress-bar {
+          width: 0;
+          animation: progress 1.5s ease-in-out forwards;
+          height: 20px;
+          background: #b29411 !important; }
+          #about .stats .skill-border .progress .progress-bar .title {
+            opacity: 0;
+            animation: show 0.35s forwards ease-in-out 0.5s; }
+
+@keyframes progress {
+  from {
+    width: 0; }
+  to {
+    width: 100%; } }
+
+@keyframes show {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+        #about .stats .skill-border .progress .title {
+          padding: 1px; }
 
 #portfolio {
   padding-top: 55px;
