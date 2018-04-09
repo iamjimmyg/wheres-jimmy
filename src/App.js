@@ -88,15 +88,15 @@ class App extends Component{
   scrollToBottom() {
     scroll.scrollToBottom();
   }
-  scrollTo() {
-    scroll.scrollTo(100);
-  }
-  scrollMore() {
-    scroll.scrollMore(100);
-  }
-  // handleSetActive(to) {
-  //   console.log(to);
+  // scrollTo() {
+  //   scroll.scrollTo(100);
   // }
+  // scrollMore() {
+  //   scroll.scrollMore(100);
+  // }
+  handleSetActive(to) {
+    console.log(to);
+  }
   render () {
   	return (
       <div>

@@ -118,12 +118,12 @@ class Header extends Component {
                 </Link>
               </li>
               <li className={this.state.hr === 'portfolio' ? 'nav-item portfolio' : 'nav-item'}>
-                <Link data-toggle={this.state.width < 767 ? "collapse" : ""} data-target="#navbarSupportedContent" to="portfolio" spy={true} smooth={true} duration={500} onSetActive={this.handleSetActive}>
+                <Link data-toggle={this.state.width < 767 ? "collapse" : ""} data-target="#navbarSupportedContent" to="portfolio" spy={true} smooth={true} duration={500} onSetActive={this.handleSetActive} offset={-50}>
                   <p onClick={this.handleHamburgerLink.bind(this)} className={this.state.hr === 'portfolio' ? 'nav-link active' : 'nav-link'}>PORTFOLIO</p>
                 </Link>
               </li>
               <li className={this.state.hr === 'contact' ? 'nav-item contact' : 'nav-item'}>
-                <Link data-toggle={this.state.width < 767 ? "collapse" : ""} data-target="#navbarSupportedContent" to="contact" spy={true} smooth={true} duration={500} onSetActive={this.handleSetActive}>
+                <Link data-toggle={this.state.width < 767 ? "collapse" : ""} data-target="#navbarSupportedContent" to="contact" spy={true} smooth={true} duration={500} onSetActive={this.handleSetActive} offset={-50}>
                   <p onClick={this.handleHamburgerLink.bind(this)} className={this.state.hr === 'contact' ? 'nav-link active' : 'nav-link'}>CONTACT</p>
                 </Link>
               </li>
