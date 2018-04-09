@@ -25,15 +25,138 @@ body{
 header {
   //position: absolute;
   z-index: 5;
-  height: 45px;
+  //height: 50px;
   width: 100%;
   // background: rgb(43, 69, 86);
   background: #323840;
+  // .navbar {
+  //   padding-top: 3px;
+  // }
+
+  .navbar-toggler {
+    //border: 2px solid white;
+
+    &:focus {
+      outline: none;
+    }
+
+  }
+  button {
+    //background: red;
+  }
+
+  .navbar-toggler-icon {
+
+    width: 35px;
+    position: relative;
+		margin: 2px auto;
+    left: 15px;
+
+    // -webkit-transform: rotate(0deg);
+		// -moz-transform: rotate(0deg);
+		// -o-transform: rotate(0deg);
+		// transform: rotate(0deg);
+		// -webkit-transition: .25s ease-in-out;
+		// -moz-transition: .25s ease-in-out;
+		// -o-transition: .25s ease-in-out;
+		// transition: .25s ease-in-out;
+    span {
+      background-color: white;
+      display: block;
+  		position: absolute;
+  		height: 5px;
+  		width: 100%;
+  		background: white;
+  		border-radius: 9px;
+      -webkit-transform: rotate(0deg);
+  		-moz-transform: rotate(0deg);
+  		-o-transform: rotate(0deg);
+  		transform: rotate(0deg);
+  		-webkit-transition: .25s ease-in-out;
+  		-moz-transition: .25s ease-in-out;
+  		-o-transition: .25s ease-in-out;
+  		transition: .25s ease-in-out;
+      &:nth-child(1) {
+      	top: 0px;
+      }
+
+      &:nth-child(2) {
+      	top: 12px;
+      }
+
+      &:nth-child(3) {
+      	top: 24px;
+      }
+    }
+
+    &:hover {
+      span {
+        background-color: rgb(178, 148, 17);
+
+      }
+    }
+
+  }
+
+  .open {
+    width: 35px;
+    position: relative;
+    left: 15px;
+    span {
+      background-color: white;
+      display: block;
+  		position: absolute;
+  		height: 5px;
+  		width: 100%;
+  		background: white;
+  		border-radius: 9px;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: .25s ease-in-out;
+      -moz-transition: .25s ease-in-out;
+      -o-transition: .25s ease-in-out;
+      transition: .25s ease-in-out;
+      &:nth-child(1) {
+        top: 12px;
+        -webkit-transform: rotate(135deg);
+        -moz-transform: rotate(135deg);
+        -o-transform: rotate(135deg);
+        transform: rotate(135deg);
+      }
+
+      &:nth-child(2) {
+        -webkit-transform: translateX(-20px);
+        -moz-transform: translateX(-20px);
+        -o-transform: translateX(-20px);
+        transform: translateX(-20px);
+        opacity: 0;
+        left: -20px;
+      }
+
+      &:nth-child(3) {
+        top: 12px;
+        -webkit-transform: rotate(-135deg);
+        -moz-transform: rotate(-135deg);
+        -o-transform: rotate(-135deg);
+        transform: rotate(-135deg);
+      }
+    }
+    &:hover {
+      span {
+        background-color: rgb(178, 148, 17);
+      }
+    }
+  }
+
   ul{
-    padding-top: 3px;
+    //padding-top: 3px;
     li{
-      // display: inline;
-      // a{
+      p {
+        margin-bottom: 0rem;
+      }
+      padding-right: 15px;
       color: white;
       transition: all .25s ease-out;
       &:hover{
@@ -45,22 +168,22 @@ header {
       // }
     }
 
-    .about ~ hr {
-      margin-left: 81px;
-      // color: rgb(178, 148, 17);
-    }
-
-    .portfolio ~ hr {
-      margin-left: 166px;
-      width: 115px;
-      // color: rgb(178, 148, 17);
-    }
-
-    .contact ~ hr {
-      margin-left: 287px;
-      width: 100px;
-      // color: rgb(178, 148, 17);
-    }
+    // .about ~ hr {
+    //   margin-left: 81px;
+    //   // color: rgb(178, 148, 17);
+    // }
+    //
+    // .portfolio ~ hr {
+    //   margin-left: 166px;
+    //   width: 115px;
+    //   // color: rgb(178, 148, 17);
+    // }
+    //
+    // .contact ~ hr {
+    //   margin-left: 287px;
+    //   width: 100px;
+    //   // color: rgb(178, 148, 17);
+    // }
   }
 
   hr {
@@ -109,7 +232,7 @@ header {
     top:0;
     left:0;
     width:100vw;
-    z-index:-1;
+    z-index:0;
     background:#3b424c;
     opacity:0.7;
   }
@@ -188,6 +311,7 @@ header {
 }
 
 #about {
+
   //display: inline-block;
   h1 {
     margin-top: 50px;
@@ -195,6 +319,15 @@ header {
   .about-me-content {
     margin-top: 40px;
     margin-bottom: 40px;
+    //margin-right: -50px;
+    .profile-pic {
+      //text-align: center;
+    }
+    .bio {
+      margin-top: 10px;
+      //margin-left: 10px;
+      //padding: 20px;
+    }
   }
   .icon-section{
     margin-bottom: 50px;
@@ -240,6 +373,9 @@ header {
     border-radius: 10px;
     padding-top: 20px;
     padding-bottom: 10px;
+    //margin-right: 10px;
+    //margin-left: 10px;
+    //padding-left: 50px;
     background: #323840;
     opacity: .8;
     // margin: 10px;
@@ -252,8 +388,9 @@ header {
         position: relative;
         top: 2px;
         .progress-bar {
-          width: 0;
+          //width: 75;
           animation: progress 1.5s ease-in-out forwards;
+          -webkit-animation: progress 1.5s ease-in-out forwards;
           height: 20px;
           background: rgb(178, 148, 17) !important;
           .title {
@@ -297,7 +434,11 @@ header {
 }
 
 
-
+// @media (max-width: 575px) {
+//   .nav-bar {
+//     max-height: none !important;
+//   }
+// }
 
 
 
