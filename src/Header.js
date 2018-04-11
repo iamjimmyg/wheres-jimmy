@@ -73,13 +73,17 @@ class Header extends Component {
   }
 
   handleHamburgerLink(event) {
+    console.log(window.innerWidth)
+    if(window.innerWidth < 767){
+      if(this.state.hamburgerMenu === false){
+        this.setState({ hamburgerMenu: true})
+      }else if(this.state.hamburgerMenu === true) {
+        this.setState({ hamburgerMenu: false})
+      }
+    }
     //console.log(event.target)
     //this.hamburgerClick()
-    if(this.state.hamburgerMenu === false){
-      this.setState({ hamburgerMenu: true})
-    }else if(this.state.hamburgerMenu === true) {
-      this.setState({ hamburgerMenu: false})
-    }
+
   }
 
   updateDimensions() {
