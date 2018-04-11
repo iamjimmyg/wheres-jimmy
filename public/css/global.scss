@@ -426,8 +426,90 @@ header {
 }
 #portfolio {
   padding-top: 55px;
-  height: 100vh;
+  min-height: 100vh;
   background: lightgrey;
+  .card-flip {
+    margin: 10px;
+    display: inline-block;
+    position: relative;
+    min-width: 220px;
+    height: 260px;
+    opacity: 0.85;
+    //background-color: none !important;
+  }
+  .front,
+  .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-transition: -webkit-transform 300ms;
+    transition: -webkit-transform 300ms;
+    transition: transform 300ms;
+    transition: transform 300ms, -webkit-transform 300ms;
+    -webkit-transition-timing-function: linear;
+            transition-timing-function: linear;
+    border-radius: 5px;
+  }
+  .front {
+    transform: rotateY(0deg);
+    background: -webkit-linear-gradient(top left, #84DD63, #009970);
+    background: linear-gradient(to bottom right, #84DD63, #009970);
+    text-align: center;
+    padding: 30px;
+  }
+  .back {
+    background: -webkit-linear-gradient(top left, #009970, #84DD63);
+    background: linear-gradient(to bottom right, #009970, #84DD63);
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+    padding: 40px 15px;
+    color: #fff;
+  }
+  .card-flip:hover .front {
+    -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);
+  }
+  .card-flip:hover .back {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  //styling
+  // .front .contact {
+  //   height: 120px;
+  //   width: 120px;
+  //   border: 5px solid #B2DBBF;
+  //   border-radius: 50%;
+  //   display: inline-block;
+  //   margin-bottom: 10px;
+  // }
+  .front .name {
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+  }
+  .front .job {
+    color: #fff;
+  }
+  // .front hr {
+  //   border: none;
+  //   color: #B2DBBF;
+  //   border: 1px solid;
+  // }
+  // .back .icon {
+  //   fill: currentColor;
+  //   color: inherit;
+  //   height: 33px;
+  //   width: 33px;
+  //   margin-top: 15px;
+  //   color: white;
+  // }
+  .back .icon:hover {
+    cursor: pointer;
+    color: #648767;
+  }
+
 }
 #contact {
   height: 100vh;

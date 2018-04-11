@@ -1,36 +1,69 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+
 
 class Portfolio extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      front: true,
+    }
+
+    this.handleCard = this.handleCard.bind(this)
+  }
+
+  handleCard(event){
+    this.setState({front: !this.state.front})
+  }
+
   render() {
     return (
       <section className="text-center" id='portfolio'>
         <h1>Portfolio</h1>
-        {/* <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          </ol>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img class="d-block w-100" src="..." alt="First slide"/>
+        <div className="container">
+          <div className="row">
+            <div className='card-flip col-md'>
+              <div className='front'>
+
+                <span className='name'>Grey Wolf</span>
+              
+                <span className='job'> - front-end web developer - </span>
+              </div>
+              <div className='back'>
+                <span>Skills:</span>
+                <p>HTML, CSS, Javascript. UX/UI designer</p>
+                <span>Social media </span>
+              </div>
             </div>
-            <div class="carousel-item">
-              <img class="d-block w-100" src="..." alt="Second slide"/>
+            <div className='card-flip col-md'>
+              <div className='front'>
+
+                <span className='name'>Grey Wolf</span>
+              
+                <span className='job'> - front-end web developer - </span>
+              </div>
+              <div className='back'>
+                <span>Skills:</span>
+                <p>HTML, CSS, Javascript. UX/UI designer</p>
+                <span>Social media </span>
+              </div>
             </div>
-            <div class="carousel-item">
-              <img class="d-block w-100" src="..." alt="Third slide"/>
+            <div className='card-flip col-md'>
+              <div className='front'>
+
+                <span className='name'>Grey Wolf</span>
+              
+                <span className='job'> - front-end web developer - </span>
+              </div>
+              <div className='back'>
+                <span>Skills:</span>
+                <p>HTML, CSS, Javascript. UX/UI designer</p>
+                <span>Social media </span>
+              </div>
             </div>
           </div>
-          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div> */}
+
+        </div>
+
       </section>
     );
   }
