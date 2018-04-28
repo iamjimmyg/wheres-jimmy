@@ -24,8 +24,8 @@ class Portfolio extends Component {
             <div className='card-flip col-lg nopadding'>
               <div className='front'>
 
-                <span className='name'>Grey Wolf</span>
-
+                <span className='name'>bellaWatt</span>
+                <br/>
                 <span className='job'> - front-end web developer - </span>
               </div>
               <div className='back'>

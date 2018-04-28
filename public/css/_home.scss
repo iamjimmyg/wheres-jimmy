@@ -1,0 +1,64 @@
+#landing {
+  height: 100vh;
+  background-color: grey;
+  width: 100%;
+  color: white;
+  a:hover, a:visited, a:link, a:active{
+    text-decoration: none;
+  }
+  .landing-content{
+    z-index: 1000;
+
+    h5 {
+      margin-bottom: 15px;
+    }
+    .center-content {
+      margin-top: 50px;
+    }
+    .homepage-button{
+      margin-top: 25px;
+      display: block;
+      color: white;
+      border: 2px solid white;
+      width: 200px;
+      margin-left: auto;
+      margin-right: auto;
+      cursor: pointer;
+      padding: 10px 25px;
+      transition: all .25s ease-out;
+      &:hover {
+
+        color: white;
+        background: rgb(178, 148, 17);
+        border-color: rgb(178, 148, 17);
+      }
+    }
+
+    .homepage-button{
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+
+    .homepage-button:after {
+      content: '»';
+      position: absolute;
+      opacity: 0;
+      top: 10px;
+      right: -5px;
+      transition: 0.5s;
+    }
+
+    .homepage-button:hover{
+      padding-right: 24px;
+      padding-left:8px;
+    }
+
+    .homepage-button:hover:after {
+      opacity: 1;
+      right: 10px;
+    }
+
+  }
+}
