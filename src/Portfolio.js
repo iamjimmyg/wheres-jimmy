@@ -19,13 +19,13 @@ class Portfolio extends Component {
     return (
       <section className="text-center" id='portfolio'>
         <h1>Portfolio</h1>
-        <div className="container">
+        <div className="container cards">
           <div className="row">
-            <div className='card-flip col-md'>
+            <div className='card-flip col-lg nopadding'>
               <div className='front'>
 
                 <span className='name'>Grey Wolf</span>
-              
+
                 <span className='job'> - front-end web developer - </span>
               </div>
               <div className='back'>
@@ -34,11 +34,11 @@ class Portfolio extends Component {
                 <span>Social media </span>
               </div>
             </div>
-            <div className='card-flip col-md'>
+            <div className='card-flip col-lg nopadding'>
               <div className='front'>
 
                 <span className='name'>Grey Wolf</span>
-              
+
                 <span className='job'> - front-end web developer - </span>
               </div>
               <div className='back'>
@@ -47,11 +47,11 @@ class Portfolio extends Component {
                 <span>Social media </span>
               </div>
             </div>
-            <div className='card-flip col-md'>
+            <div className='card-flip col-lg nopadding col-md justify-content-center'>
               <div className='front'>
 
                 <span className='name'>Grey Wolf</span>
-              
+
                 <span className='job'> - front-end web developer - </span>
               </div>
               <div className='back'>

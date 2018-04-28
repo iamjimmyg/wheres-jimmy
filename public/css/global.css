@@ -122,26 +122,11 @@ header {
 
 #landing {
   height: 100vh;
+  background-color: grey;
+  width: 100%;
   color: white; }
   #landing a:hover, #landing a:visited, #landing a:link, #landing a:active {
     text-decoration: none; }
-  #landing .fullscreen-video-wrap {
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden; }
-  #landing .video-overlay {
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    z-index: 0;
-    background: #3b424c;
-    opacity: 0.7; }
   #landing .landing-content {
     z-index: 1000; }
     #landing .landing-content h5 {
@@ -254,57 +239,56 @@ header {
 
 #portfolio {
   padding-top: 55px;
-  min-height: 100vh;
+  height: 100%;
   background: lightgrey; }
-  #portfolio .card-flip {
-    margin: 10px;
-    display: inline-block;
-    position: relative;
-    min-width: 220px;
-    height: 260px;
-    opacity: 0.85; }
-  #portfolio .front,
-  #portfolio .back {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-transition: -webkit-transform 300ms;
-    transition: -webkit-transform 300ms;
-    transition: transform 300ms;
-    transition: transform 300ms, -webkit-transform 300ms;
-    -webkit-transition-timing-function: linear;
-    transition-timing-function: linear;
-    border-radius: 5px; }
-  #portfolio .front {
-    transform: rotateY(0deg);
-    background: -webkit-linear-gradient(top left, #84DD63, #009970);
-    background: linear-gradient(to bottom right, #84DD63, #009970);
-    text-align: center;
-    padding: 30px; }
-  #portfolio .back {
-    background: -webkit-linear-gradient(top left, #009970, #84DD63);
-    background: linear-gradient(to bottom right, #009970, #84DD63);
-    -webkit-transform: rotateY(180deg);
-    transform: rotateY(180deg);
-    padding: 40px 15px;
-    color: #fff; }
-  #portfolio .card-flip:hover .front {
-    -webkit-transform: rotateY(-180deg);
-    transform: rotateY(-180deg); }
-  #portfolio .card-flip:hover .back {
-    -webkit-transform: rotateY(0deg);
-    transform: rotateY(0deg); }
-  #portfolio .front .name {
-    display: inline-block;
-    font-size: 18px;
-    color: #fff; }
-  #portfolio .front .job {
-    color: #fff; }
-  #portfolio .back .icon:hover {
-    cursor: pointer;
-    color: #648767; }
+  #portfolio .cards {
+    margin-bottom: 20px; }
+    #portfolio .cards .card-flip {
+      margin: 10px;
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      height: 260px;
+      opacity: 0.85; }
+    #portfolio .cards .nopadding {
+      padding: 0 !important; }
+    #portfolio .cards .front,
+    #portfolio .cards .back {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      -webkit-transition: -webkit-transform 300ms;
+      transition: -webkit-transform 300ms;
+      transition: transform 300ms;
+      transition: transform 300ms, -webkit-transform 300ms;
+      -webkit-transition-timing-function: linear;
+      transition-timing-function: linear;
+      border-radius: 5px; }
+    #portfolio .cards .front {
+      transform: rotateY(0deg);
+      background: grey;
+      text-align: center;
+      padding: 30px; }
+    #portfolio .cards .back {
+      background: grey;
+      -webkit-transform: rotateY(180deg);
+      transform: rotateY(180deg);
+      padding: 40px 15px;
+      color: #fff; }
+    #portfolio .cards .card-flip:hover .front {
+      -webkit-transform: rotateY(-180deg);
+      transform: rotateY(-180deg); }
+    #portfolio .cards .card-flip:hover .back {
+      -webkit-transform: rotateY(0deg);
+      transform: rotateY(0deg); }
+    #portfolio .cards .front .name {
+      display: inline-block;
+      font-size: 18px;
+      color: #fff; }
+    #portfolio .cards .front .job {
+      color: #fff; }
 
 #contact {
   height: 100vh; }
