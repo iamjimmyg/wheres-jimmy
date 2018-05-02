@@ -11,8 +11,8 @@ class Home extends Component {
   render() {
     return (
       <section className="container flex" id='landing'>
-        <Motion defaultStyle={{x: 0}} style={{x: spring(20)}}>
-          {value => <div className="landing-content container" style={{paddingLeft: value.x}}>
+        <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0, {stiffness: 120,damping: 30}), o: spring(1, {stiffness: 30})}}>
+          {value => <div className="landing-content container" style={{left: value.x, opacity: value.o}}>
 
             <div className="text-center center-content">
               <h5 className="font-italic">I'm here to help clients with their business by fixing and creating projects of value</h5>

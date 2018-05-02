@@ -6,7 +6,8 @@
   #landing a:hover, #landing a:visited, #landing a:link, #landing a:active {
     text-decoration: none; }
   #landing .landing-content {
-    z-index: 1000; }
+    z-index: 1000;
+    position: relative; }
     #landing .landing-content h5 {
       margin-bottom: 15px; }
     #landing .landing-content .center-content {
@@ -59,6 +60,7 @@
     #about .about-me-content .bio {
       margin-top: 10px; }
   #about .icon-section {
+    position: relative;
     margin-bottom: 50px;
     margin-top: 40px; }
   #about img {
