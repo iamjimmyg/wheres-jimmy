@@ -8,17 +8,44 @@ class About extends Component {
     super(props)
     this.state = {
       stats: '',
-      iconSection: '',
-      profileSection: ''
+      profileSection: <div className="col-lg-5 col-sm-12 text-center invisible">
+        <div className="profile-pic">
+          <div className="hexa">
+            <div className="hex1">
+              <div className="hex2">
+                <img src="profilepic.jpg" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="bio">
+          <h3>Jimmy Gonzalez</h3>
+          <p>Hey I'm Jimmy Gonzalez, I'm a sick as full-stack developer, checkout my shit, I can make websites while high as shit</p>
+        </div>
+      </div>,
+      iconSection1: '',
+      iconSection2: <div className="col-md-4 invisible">
+        <div><i className="material-icons">lightbulb_outline</i></div>
+        <h5>Intuitive</h5>
+        <p>You'll shit your brains when you see how intuitive I am with this shit</p>
+      </div>,
+      iconSection3: <div className="col-md-4 invisible">
+        <i className="material-icons">timeline</i>
+        <h5>Performance</h5>
+        <p>Perforance will be at an all time mother fuckin high</p>
+      </div>,
     }
     this.handleStats = this.handleStats.bind(this)
-    this.handleIconSection = this.handleIconSection.bind(this)
     this.handleProfileSection = this.handleProfileSection.bind(this)
+    this.handleIconSection1 = this.handleIconSection1.bind(this)
+    this.handleIconSection2 = this.handleIconSection2.bind(this)
+    this.handleIconSection3 = this.handleIconSection3.bind(this)
   }
 
   handleProfileSection(){
     this.setState({ profileSection: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0, {stiffness: 120 }), o: spring(1)}}>
-      {value => <div style={{left: value.x, opacity: value.o}} className="col-lg-5 col-sm-12 text-center ">
+      {value => <div style={{left: value.x, opacity: value.o,}} className="col-lg-5 col-sm-12 text-center ">
         <div className="profile-pic">
           <div className="hexa">
             <div className="hex1">
@@ -41,27 +68,41 @@ class About extends Component {
     this.setState({ stats: <Stats /> })
   }
 
-  handleIconSection(){
-    this.setState({ iconSection: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0, {stiffness: 120 }), o: spring(1)}}>
-      {value => <div style={{left: value.x, opacity: value.o}} className="row icon-section text-center">
-        <div className="col-md-4">
-          <div><i class="material-icons">important_devices</i></div>
+  handleIconSection1(){
+    setTimeout(()=>{
+      this.setState({ iconSection1: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0, {stiffness: 120 }), o: spring(1)}}>
+        {value => <div className="col-md-4" style={{left: value.x, opacity: value.o,}}>
+          <div><i className="material-icons">important_devices</i></div>
           <h5>Responsive</h5>
           <p>Shit is responsive as fuck yo in any browser</p>
-        </div>
-        <div className="col-md-4 ">
-          <div><i class="material-icons">lightbulb_outline</i></div>
+        </div>}
+      </Motion> })
+    }, 0)
+
+  }
+  handleIconSection2(){
+    setTimeout(() => {
+      this.setState({ iconSection2: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0, {stiffness: 120 }), o: spring(1)}}>
+        {value => <div className="col-md-4" style={{left: value.x, opacity: value.o}}>
+          <div><i className="material-icons">lightbulb_outline</i></div>
           <h5>Intuitive</h5>
           <p>You'll shit your brains when you see how intuitive I am with this shit</p>
-        </div>
-        <div className="col-md-4">
-          <i class="material-icons">timeline</i>
+        </div>}
+      </Motion> })
+    },300)
+
+  }
+  handleIconSection3(){
+    setTimeout(()=>{
+      this.setState({ iconSection3: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0, {stiffness: 120 }), o: spring(1)}}>
+        {value => <div className="col-md-4" style={{left: value.x, opacity: value.o}}>
+          <i className="material-icons">timeline</i>
           <h5>Performance</h5>
           <p>Perforance will be at an all time mother fuckin high</p>
-        </div>
+        </div>}
+      </Motion> })
+    },600)
 
-      </div>}
-    </Motion> })
   }
 
   render() {
@@ -84,10 +125,23 @@ class About extends Component {
           </div>
         </div>
 
-        <Waypoint onEnter={()=>{
-          this.handleIconSection()
-        }}/>
-        {this.state.iconSection}
+        <div className="row icon-section text-center">
+          <Waypoint onEnter={()=>{
+            this.handleIconSection1()
+          }}/>
+          {this.state.iconSection1}
+
+          <Waypoint onEnter={()=>{
+            this.handleIconSection2()
+          }}/>
+          {this.state.iconSection2}
+
+          <Waypoint onEnter={()=>{
+            this.handleIconSection3()
+          }}/>
+          {this.state.iconSection3}
+
+        </div>
 
       </section>
     );

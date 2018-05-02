@@ -284,6 +284,9 @@ body {
   color: #333;
   overflow-x: hidden; }
 
+.invisible {
+  color: white; }
+
 .bring-down {
   position: absolute;
   top: 100vh; }
