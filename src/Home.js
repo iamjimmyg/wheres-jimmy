@@ -12,16 +12,8 @@ class Home extends Component {
   render() {
     return (
       <section className="container flex" id='landing'>
-        {/* <div className="fullscreen-video-wrap">
-          <video src='typing.mov' autoplay='true' loop='true'>
-          </video>
-        </div>
-        <div className="video-overlay"></div> */}
-
 
         <div className="landing-content container">
-
-
 
           <div className="text-center center-content">
             <h5 className="font-italic">I'm here to help clients with their business by fixing and creating projects of value</h5>

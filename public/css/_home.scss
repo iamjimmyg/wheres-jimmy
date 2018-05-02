@@ -42,12 +42,16 @@
     }
 
     .homepage-button:after {
-      content: '»';
+      font-family: 'Material Icons';
+      font-size: 20px;
+      content: "chevron_right";
+      -webkit-font-feature-settings: 'liga';
       position: absolute;
       opacity: 0;
-      top: 10px;
+      top: 8px;
       right: -5px;
       transition: 0.5s;
+      transform: rotate(90deg);
     }
 
     .homepage-button:hover{

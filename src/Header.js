@@ -63,7 +63,6 @@ class Header extends Component {
   }
 
   hamburgerClick(event) {
-    console.log('penis')
     event.preventDefault()
     if(this.state.hamburgerMenu === false){
       this.setState({ hamburgerMenu: true})
