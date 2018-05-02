@@ -6,10 +6,10 @@ class Stats extends Component {
   render() {
     let skill = function(name, percent){
       return <div className='skill-border row'>
-        <div className='skill col-3'>
+        <div className='skill col-md-3'>
           <h5>{name}</h5>
         </div>
-        <div className='col-9'>
+        <div className='col-md-9'>
           <div className='progress'>
             <div className='progress-bar progress-bar-striped progress-bar-animated'
               role="progressbar"

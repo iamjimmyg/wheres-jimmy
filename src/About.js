@@ -1,7 +1,19 @@
 import React, { Component } from 'react';
 import Stats from './Stats'
+import Waypoint from 'react-waypoint'
 
 class About extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      stats: ''
+    }
+    this.handleStats = this.handleStats.bind(this)
+  }
+
+  handleStats(){
+    this.setState({ stats: <Stats /> })
+  }
 
   render() {
 
@@ -27,7 +39,11 @@ class About extends Component {
             </div>
           </div>
           <div className="col-lg-7">
-            <Stats />
+            <Waypoint onEnter={()=>{
+              this.handleStats()
+            }}/>
+            {this.state.stats}
+
           </div>
 
         </div>

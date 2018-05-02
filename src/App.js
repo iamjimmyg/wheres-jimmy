@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
-//import { StickyContainer, Sticky } from 'react-sticky'
+
 
 import Header from './Header'
 import Home from './Home'
@@ -40,7 +40,9 @@ class App extends Component{
           <Home />
         </Element>
         <main>
+
           <Element name="about" className="element">
+
             <About />
           </Element>
 
