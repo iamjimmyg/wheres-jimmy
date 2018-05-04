@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 
 class Stats extends Component {
-
+  constructor(props){
+    super(props)
+  }
 
   render() {
     let skill = function(name, percent){
@@ -23,7 +25,7 @@ class Stats extends Component {
       </div>
     }
     return (
-      <div className='container stats'>
+      <div className={'container stats ' + this.props.klass} style={this.props.style}>
         {skill('JavaScript', '85%')}
         {skill('React', '90%')}
         {skill('HTML', '95%')}

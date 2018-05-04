@@ -88,6 +88,7 @@
   #about .material-icons {
     font-size: 70px; }
   #about .stats {
+    position: relative;
     border-radius: 10px;
     padding-top: 20px;
     padding-bottom: 10px;
@@ -273,3 +274,17 @@ body {
 @media (max-width: 375px) {
   .profile-pic {
     transform: scale(0.8, 0.8); } }
+
+@media (max-width: 991px) {
+  #portfolio .projects .project .card {
+    max-height: 150px;
+    max-width: 150px; }
+    #portfolio .projects .project .card .aop {
+      height: 150px;
+      width: 150px; }
+    #portfolio .projects .project .card .bellawatt {
+      width: 150px;
+      height: 150px; }
+    #portfolio .projects .project .card .utility-radar {
+      width: 150px;
+      height: 150px; } }

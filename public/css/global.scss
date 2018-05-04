@@ -43,6 +43,33 @@ body{
     transform: scale(.8,.8);
   }
 }
+@media (max-width: 991px){
+  #portfolio {
+
+    .projects {
+      .project {
+        .card {
+          max-height: 150px;
+          max-width: 150px;
+          .aop {
+            height: 150px;
+            width: 150px;
+          }
+          .bellawatt {
+            width: 150px;
+            height: 150px;
+          }
+          .utility-radar {
+            width: 150px;
+            height: 150px;
+          }
+
+
+        }
+      }
+    }
+  }
+}
 
 
 

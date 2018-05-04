@@ -22,7 +22,7 @@ class Home extends Component {
 
   handleAboutButton(){
     setTimeout(() => {
-      this.setState({ aboutButton: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0, {stiffness: 120,damping: 30}), o: spring(1, {stiffness: 30})}}>
+      this.setState({ aboutButton: <Motion defaultStyle={{x: -35, o: 0}} style={{x: spring(0), o: spring(1, {stiffness: 30})}}>
         {value => <div className="intro" style={{left: value.x, opacity: value.o}}>
             <Link className="homepage-button" to="about" spy={true} smooth={true} duration={500} onClick={()=>{this.props.selectHeader('about')}} >
               <div>About my work</div>
@@ -41,7 +41,7 @@ class Home extends Component {
         <div className="landing-content container" >
 
           <div className="text-center center-content">
-            <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0, {stiffness: 120,damping: 30}), o: spring(1, {stiffness: 30})}}>
+            <Motion defaultStyle={{x: -35, o: 0}} style={{x: spring(0), o: spring(1, {stiffness: 30})}}>
               {value => <div className="intro" style={{left: value.x, opacity: value.o}}>
                   <h5 className="font-italic">I'm here to help clients with their business by fixing and creating projects of value</h5>
                   <h1> {'Blah blah blah blahb blah'.toUpperCase()}</h1>
