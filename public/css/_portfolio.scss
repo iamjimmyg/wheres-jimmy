@@ -6,11 +6,25 @@
     margin-top: 45px;
     margin-bottom: 40px;
     .project {
+      position: relative;
       margin-bottom: 35px;
+      .project-info {
+        margin-left: 55px;
+      }
       .card {
-        border-radius: 5%;
-        height: 250px;
-        width: 280px;
+        overflow: hidden;
+        border-radius: 15%;
+        max-height: 200px;
+        max-width: 200px;
+        .aop {
+          height: 200px;
+          width: 200px;
+        }
+        .utility-radar {
+          width: 200px;
+          height: 200px;
+        }
+
       }
     }
 
