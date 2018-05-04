@@ -7,6 +7,7 @@ class About extends Component {
   constructor(props){
     super(props)
     this.state = {
+      title: <h1 className="text-center invisible">About</h1>,
       stats: <Stats klass='d-none'/>,
       profileSection: <div className="col-lg-5 col-sm-12 text-center invisible">
         <div className="profile-pic">
@@ -41,6 +42,13 @@ class About extends Component {
     this.handleIconSection1 = this.handleIconSection1.bind(this)
     this.handleIconSection2 = this.handleIconSection2.bind(this)
     this.handleIconSection3 = this.handleIconSection3.bind(this)
+    this.handleTitle = this.handleTitle.bind(this)
+  }
+
+  handleTitle(){
+    this.setState({ title: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0), o: spring(1)}}>
+      {value => <h1 style={{left: value.x, opacity: value.o, position: 'relative'}} className="text-center">About</h1>}
+    </Motion> })
   }
 
   handleProfileSection(){
@@ -113,8 +121,10 @@ class About extends Component {
 
     return (
       <section className="container" id='about'>
-        <h1 className="text-center">About</h1>
-
+        <Waypoint onEnter={()=>{this.handleTitle()}}
+          bottomOffset='150px'
+        />
+        {this.state.title}
         <div className="row about-me-content">
 
           <Waypoint onEnter={()=>{this.handleProfileSection()}}

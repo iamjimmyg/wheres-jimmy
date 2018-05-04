@@ -6,6 +6,7 @@ class Portfolio extends Component {
   constructor(props){
     super(props)
     this.state = {
+      title: <h1 className='invisible'>Portfolio</h1>,
       bellawatt: <div className="row project invisible">
         <div className="card">
           <img src='bellawatt.png'/>
@@ -40,6 +41,12 @@ class Portfolio extends Component {
     this.handleBellawatt = this.handleBellawatt.bind(this)
     this.handleAOP = this.handleAOP.bind(this)
     this.handleUtilityRadar = this.handleUtilityRadar.bind(this)
+  }
+
+  handleTitle(){
+    this.setState({ title: <Motion defaultStyle={{x: 25, o: 0}} style={{x: spring(0, {stiffness: 120 }), o: spring(1)}}>
+      {value => <h1 style={{top: value.x, opacity: value.o, position: 'relative'}}>Portfolio</h1>}
+    </Motion>})
   }
 
   handleBellawatt(){
@@ -90,7 +97,11 @@ class Portfolio extends Component {
   render() {
     return (
       <section className="text-center" id='portfolio'>
-        <h1>Portfolio</h1>
+        <Waypoint onEnter={()=>{this.handleTitle()}}
+          bottomOffset='150px'
+        />
+        {this.state.title}
+        {/* <h1>Portfolio</h1> */}
         <div className="container projects">
           <Waypoint onEnter={()=>{this.handleAOP()}}
             bottomOffset='150px'

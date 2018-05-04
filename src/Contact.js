@@ -7,10 +7,10 @@ class Contact extends Component {
   render() {
     console.log(window.location.pathname)
     return (
-      <section className="text-center flex" id='contact'>
+      <section className="text-center" id='contact'>
         <h1>Contact</h1>
 
-        
+
         {/* <p><a className="nav-link" href="#Home" onClick={()=>{this.props.selectHeader('home')}}>Back to top</a></p> */}
       </section>
     );
