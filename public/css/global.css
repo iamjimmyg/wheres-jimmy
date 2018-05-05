@@ -133,19 +133,14 @@
     #portfolio .projects .project {
       position: relative;
       margin-bottom: 35px; }
-      #portfolio .projects .project .project-info {
-        margin-left: 55px; }
       #portfolio .projects .project .card {
-        overflow: hidden;
-        border-radius: 15%;
-        max-height: 200px;
-        max-width: 200px; }
-        #portfolio .projects .project .card .aop {
-          height: 200px;
-          width: 200px; }
-        #portfolio .projects .project .card .utility-radar {
-          width: 200px;
-          height: 200px; }
+        margin-bottom: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        max-height: 300px; }
+        #portfolio .projects .project .card .image {
+          width: 100%;
+          height: 100%; }
 
 header {
   z-index: 5;
@@ -268,20 +263,26 @@ body {
   flex-direction: column;
   justify-content: center; }
 
-@media (max-width: 375px) {
-  .profile-pic {
-    transform: scale(0.8, 0.8); } }
-
-@media (max-width: 991px) {
+@media (max-width: 1200px) {
   #portfolio .projects .project .card {
-    max-height: 150px;
-    max-width: 150px; }
-    #portfolio .projects .project .card .aop {
-      height: 150px;
-      width: 150px; }
-    #portfolio .projects .project .card .bellawatt {
-      width: 150px;
-      height: 150px; }
-    #portfolio .projects .project .card .utility-radar {
-      width: 150px;
-      height: 150px; } }
+    height: 280px; } }
+
+@media (max-width: 992px) {
+  #portfolio .projects .project .card {
+    height: 100%;
+    max-height: 480px; } }
+
+@media (max-width: 767px) {
+  #portfolio .projects .project .card {
+    height: 100%;
+    max-height: 320px; } }
+
+@media (max-width: 500px) {
+  .profile-pic {
+    transform: scale(0.8, 0.8); }
+  #portfolio .projects .project .card {
+    height: 280px; } }
+
+@media (max-width: 375px) {
+  #portfolio .projects .project .card {
+    height: 230px; } }
