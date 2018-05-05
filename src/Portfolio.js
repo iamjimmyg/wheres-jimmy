@@ -56,8 +56,9 @@ class Portfolio extends Component {
     this.setState({ aop: <Motion defaultStyle={{x: 25, o: 0}} style={{x: spring(0, {stiffness: 120 }), o: spring(1)}}>
       {value => <div className="row project" style={{top: value.x, opacity: value.o}}>
         <div className="col-lg-5">
-          <div className='banner'><i className="material-icons browser-dots">more_horiz</i></div>
+
           <div id="carouselAOP" className="carousel slide card" data-ride="carousel">
+            <div className='banner'><i className="material-icons browser-dots">more_horiz</i></div>
             <div className="carousel-inner">
               <div className="carousel-item active">
                 <img className='image' src='aop1.png' alt="First slide"/>
@@ -94,6 +95,7 @@ class Portfolio extends Component {
       {value => <div className="row project" style={{top: value.x, opacity: value.o}}>
         <div className="col-lg-5">
           <div id="carouselBellawatt" className="carousel slide card" data-ride="carousel">
+            <div className='banner'><i className="material-icons browser-dots">more_horiz</i></div>
             <div className="carousel-inner">
               <div className="carousel-item active">
                 <img className='image' src='bellawatt2.png' alt="First slide"/>
@@ -130,6 +132,7 @@ class Portfolio extends Component {
       {value => <div className="row project" style={{top: value.x, opacity: value.o}}>
         <div className="col-lg-5">
           <div id="carouselExampleControls" className="carousel slide card" data-ride="carousel">
+            <div className='banner'><i className="material-icons browser-dots">more_horiz</i></div>
             <div className="carousel-inner">
               <div className="carousel-item active">
                 <img className='image' src='utilityradar1.png' alt="First slide"/>
