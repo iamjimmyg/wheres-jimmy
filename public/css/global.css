@@ -1,6 +1,7 @@
 #landing {
   height: 100vh;
-  background-color: grey;
+  background: url(../background-image.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
   width: 100%;
   color: white; }
   #landing a:hover, #landing a:visited, #landing a:link, #landing a:active {

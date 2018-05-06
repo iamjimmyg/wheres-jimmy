@@ -37,6 +37,9 @@ class Home extends Component {
 
     return (
       <section className="container flex" id='landing'>
+        {/* <div className='background-div'>
+          <img src='background-image.jpg' className='background-image'/>
+        </div> */}
 
         <div className="landing-content container" >
 
