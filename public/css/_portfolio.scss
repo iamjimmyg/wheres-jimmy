@@ -26,7 +26,25 @@
         }
       }
       .project-info {
-        //margin-left: 55px;
+        .nnsa-icon {
+          height: 75px;
+          top: -10px;
+          position: relative;
+          margin-right: 10px;
+          margin-left: 10px;
+        }
+        .bellawatt-icon {
+          height: 60px;
+          position: relative;
+          margin-right: 10px;
+          margin-left: 10px;
+          //top: -9px;
+        }
+        .utility-icon {
+          height: 80px;
+          position: relative;
+          top: -9px;
+        }
       }
       .card {
         -webkit-box-shadow: 11px 10px 22px 2px rgba(0,0,0,0.19);

@@ -140,6 +140,21 @@
           float: left;
           color: grey;
           font-size: 30px; }
+      #portfolio .projects .project .project-info .nnsa-icon {
+        height: 75px;
+        top: -10px;
+        position: relative;
+        margin-right: 10px;
+        margin-left: 10px; }
+      #portfolio .projects .project .project-info .bellawatt-icon {
+        height: 60px;
+        position: relative;
+        margin-right: 10px;
+        margin-left: 10px; }
+      #portfolio .projects .project .project-info .utility-icon {
+        height: 80px;
+        position: relative;
+        top: -9px; }
       #portfolio .projects .project .card {
         -webkit-box-shadow: 11px 10px 22px 2px rgba(0, 0, 0, 0.19);
         -moz-box-shadow: 11px 10px 22px 2px rgba(0, 0, 0, 0.19);
