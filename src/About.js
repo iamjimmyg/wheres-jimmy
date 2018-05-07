@@ -141,17 +141,17 @@ class About extends Component {
 
         <div className="row icon-section text-center">
           <Waypoint onEnter={()=>{this.handleIconSection1()}}
-            bottomOffset='125px'
+            bottomOffset='100px'
           />
           {this.state.iconSection1}
 
           <Waypoint onEnter={()=>{this.handleIconSection2()}}
-            bottomOffset='125px'
+            bottomOffset='100px'
           />
           {this.state.iconSection2}
 
           <Waypoint onEnter={()=>{this.handleIconSection3()}}
-            bottomOffset='125px'
+            bottomOffset='100px'
           />
           {this.state.iconSection3}
 
