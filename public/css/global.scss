@@ -14,9 +14,9 @@ body{
   overflow-x:hidden;
 }
 
-.invisible {
-  color: white;
-}
+// .invisible {
+//   color: white;
+// }
 
 .bring-down {
 
@@ -44,14 +44,10 @@ body{
     .projects {
       .project {
         .card {
-          // margin-left: 10px;
-          // margin-right: 10px
-          height: 280px;
-          // max-width:580px;
-          // .image{
-          //   width: 100%;
-          //   height: 100%;
-          // }
+          .carousel-inner {
+            height: 280px;
+          }
+
         }
       }
     }
@@ -62,11 +58,11 @@ body{
     .projects {
       .project {
         .card {
-          height: 100%;
-          max-height: 480px;
-          .image{
-
+          .carousel-inner {
+            height: 100%;
+            max-height: 480px;
           }
+
         }
       }
     }
@@ -79,8 +75,10 @@ body{
     .projects {
       .project {
         .card {
-          height: 100%;
-          max-height: 320px;
+          .carousel-inner {
+            height: 100%;
+            max-height: 320px;
+          }
 
         }
       }
@@ -95,7 +93,9 @@ body{
     .projects {
       .project {
         .card {
-          height: 280px;
+          .carousel-inner {
+            height: 280px;
+          }
         }
       }
     }

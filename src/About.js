@@ -8,7 +8,7 @@ class About extends Component {
     super(props)
     this.state = {
       title: <h1 className="text-center invisible">About</h1>,
-      stats: <Stats klass='d-none'/>,
+      stats: <Stats klass='invisible'/>,
       profileSection: <div className="col-lg-5 col-sm-12 text-center invisible">
         <div className="profile-pic">
           <div className="hexa">
@@ -36,6 +36,7 @@ class About extends Component {
         <h5>Performance</h5>
         <p>Perforance will be at an all time mother fuckin high</p>
       </div>,
+
     }
     this.handleStats = this.handleStats.bind(this)
     this.handleProfileSection = this.handleProfileSection.bind(this)
@@ -114,7 +115,6 @@ class About extends Component {
         </div>}
       </Motion> })
     },1200)
-
   }
 
   render() {
@@ -125,6 +125,7 @@ class About extends Component {
           bottomOffset='150px'
         />
         {this.state.title}
+
         <div className="row about-me-content">
 
           <Waypoint onEnter={()=>{this.handleProfileSection()}}
@@ -141,22 +142,21 @@ class About extends Component {
 
         <div className="row icon-section text-center">
           <Waypoint onEnter={()=>{this.handleIconSection1()}}
-            bottomOffset='100px'
+            bottomOffset='50px'
           />
           {this.state.iconSection1}
 
           <Waypoint onEnter={()=>{this.handleIconSection2()}}
-            bottomOffset='100px'
+            bottomOffset='50px'
           />
           {this.state.iconSection2}
 
           <Waypoint onEnter={()=>{this.handleIconSection3()}}
-            bottomOffset='100px'
+            bottomOffset='50px'
           />
           {this.state.iconSection3}
 
         </div>
-
       </section>
     );
   }

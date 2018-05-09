@@ -2,46 +2,82 @@ import React, { Component } from 'react'
 import Waypoint from 'react-waypoint'
 import {Motion, spring} from 'react-motion'
 import AOP from './portfolio/AOP'
+import AOPInfo from './portfolio/AOPInfo'
 import Bellawatt from './portfolio/Bellawatt'
+import BellawattInfo from './portfolio/BellawattInfo'
 import UtilityRadar from './portfolio/UtilityRadar'
+import UtilityRadarInfo from './portfolio/UtilityRadarInfo'
 
 class Portfolio extends Component {
   constructor(props){
     super(props)
+    this.aop = <AOP />
+    this.aopInfo = <AOPInfo />
+    this.bellawatt = <Bellawatt />
+    this.bellawattInfo = <BellawattInfo />
+    this.utilityRadar = <UtilityRadar />
+    this.utilityRadarInfo = <UtilityRadarInfo />
 
     this.state = {
       title: <h1 className='invisible'>Portfolio</h1>,
-      aop: <AOP klass='invisible'/>,
-      bellawatt: <Bellawatt klass='invisible' />,
-      utilityRadar: <UtilityRadar klass='invisible' />
+      aop: <div className='invisible'>{this.aop}</div>,
+      aopInfo: <div className='invisible'>{this.aopInfo}</div>,
+      bellawatt: <div className='invisible'>{this.bellawatt}</div>,
+      bellawattInfo: <div className='invisible'>{this.bellawattInfo}</div>,
+      utilityRadar: <div className='invisible'>{this.utilityRadar}</div>,
+      utilityRadarInfo: <div className='invisible'>{this.utilityRadarInfo}</div>,
     }
-    this.handleBellawatt = this.handleBellawatt.bind(this)
     this.handleAOP = this.handleAOP.bind(this)
+    this.handleAOPInfo = this.handleAOPInfo.bind(this)
+    this.handleBellawatt = this.handleBellawatt.bind(this)
+    this.handleBellawattInfo = this.handleBellawattInfo.bind(this)
     this.handleUtilityRadar = this.handleUtilityRadar.bind(this)
+    this.handleUtilityRadarInfo = this.handleUtilityRadarInfo.bind(this)
   }
 
   handleTitle(){
-    this.setState({ title: <Motion defaultStyle={{x: 25, o: 0}} style={{x: spring(0, {stiffness: 120 }), o: spring(1)}}>
-      {value => <h1 style={{top: value.x, opacity: value.o, position: 'relative'}}>Portfolio</h1>}
+    this.setState({ title: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0), o: spring(1)}}>
+      {value => <h1 style={{left: value.x, opacity: value.o, position: 'relative'}}>Portfolio</h1>}
     </Motion>})
   }
 
   handleAOP(){
-    this.setState({ aop: <Motion defaultStyle={{x: 35, o: 0}} style={{x: spring(0, {stiffness: 50 }), o: spring(1)}}>
-      {value => <AOP style={{top: value.x, opacity: value.o}}/>}
+    this.setState({ aop: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0), o: spring(1)}}>
+      {value => <div style={{left: value.x, opacity: value.o, position: 'relative'}}>{this.aop}</div>}
     </Motion>})
+  }
+  handleAOPInfo(){
+    setTimeout(() => {
+      this.setState({ aopInfo: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0), o: spring(1)}}>
+        {value => <div style={{left: value.x, opacity: value.o, position: 'relative'}}>{this.aopInfo}</div>}
+      </Motion>})
+    },300)
   }
 
   handleBellawatt(){
-    this.setState({ bellawatt: <Motion defaultStyle={{x: 35, o: 0}} style={{x: spring(0, {stiffness: 50 }), o: spring(1)}}>
-      {value => <Bellawatt style={{top: value.x, opacity: value.o}}/>}
+    this.setState({ bellawatt: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0), o: spring(1)}}>
+      {value => <div style={{left: value.x, opacity: value.o, position: 'relative'}}>{this.bellawatt}</div>}
     </Motion>})
+  }
+  handleBellawattInfo(){
+    setTimeout(() => {
+      this.setState({ bellawattInfo: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0), o: spring(1)}}>
+        {value => <div style={{left: value.x, opacity: value.o, position: 'relative'}}>{this.bellawattInfo}</div>}
+      </Motion>})
+    },300)
   }
 
   handleUtilityRadar(){
-    this.setState({ utilityRadar: <Motion defaultStyle={{x: 35, o: 0}} style={{x: spring(0, {stiffness: 50 }), o: spring(1)}}>
-      {value => <UtilityRadar style={{top: value.x, opacity: value.o}}/>}
+    this.setState({ utilityRadar: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0), o: spring(1)}}>
+      {value => <div style={{left: value.x, opacity: value.o, position: 'relative'}}>{this.utilityRadar}</div>}
     </Motion>})
+  }
+  handleUtilityRadarInfo(){
+    setTimeout(() => {
+      this.setState({ utilityRadarInfo: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0), o: spring(1)}}>
+        {value => <div style={{left: value.x, opacity: value.o, position: 'relative'}}>{this.utilityRadarInfo}</div>}
+      </Motion>})
+    },300)
   }
 
   render() {
@@ -52,20 +88,51 @@ class Portfolio extends Component {
         />
         {this.state.title}
         <div className="container projects">
-          <Waypoint onEnter={()=>{this.handleAOP()}}
-            bottomOffset='150px'
-          />
-          {this.state.aop}
+          <div className='row project'>
+            <div className='col-lg-5'>
+              <Waypoint onEnter={()=>{this.handleAOP()}}
+                bottomOffset='100px'
+              />
+              {this.state.aop}
+            </div>
+            <div className='col-lg-7 '>
+              <Waypoint onEnter={()=>{this.handleAOPInfo()}}
+                bottomOffset='100px'
+              />
+              {this.state.aopInfo}
+            </div>
 
-          <Waypoint onEnter={()=>{this.handleBellawatt()}}
-            bottomOffset='150px'
-          />
-          {this.state.bellawatt}
+          </div>
+          <div className='row project'>
+            <div className='col-lg-5'>
+              <Waypoint onEnter={()=>{this.handleBellawatt()}}
+                bottomOffset='100px'
+              />
+              {this.state.bellawatt}
+            </div>
+            <div className='col-lg-7'>
+              <Waypoint onEnter={()=>{this.handleBellawattInfo()}}
+                bottomOffset='100px'
+              />
+              {this.state.bellawattInfo}
+            </div>
 
-          <Waypoint onEnter={()=>{this.handleUtilityRadar()}}
-            bottomOffset='150px'
-          />
-          {this.state.utilityRadar}
+          </div>
+
+          <div className='row project'>
+            <div className='col-lg-5'>
+              <Waypoint onEnter={()=>{this.handleUtilityRadar()}}
+                bottomOffset='100px'
+              />
+              {this.state.utilityRadar}
+            </div>
+            <div className='col-lg-7'>
+              <Waypoint onEnter={()=>{this.handleUtilityRadarInfo()}}
+                bottomOffset='100px'
+              />
+              {this.state.utilityRadarInfo}
+            </div>
+          </div>
         </div>
 
       </section>
