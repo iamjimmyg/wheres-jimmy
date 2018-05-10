@@ -64,8 +64,8 @@
       margin-top: 10px; }
   #about .icon-section {
     position: relative;
-    margin-bottom: 50px;
-    margin-top: 40px; }
+    margin-bottom: 70px;
+    margin-top: 70px; }
   #about img {
     max-height: 270px; }
   #about .hexa, #about .hexa div {
@@ -90,25 +90,20 @@
     font-size: 70px; }
   #about .stats {
     position: relative;
-    border-radius: 10px;
-    padding-top: 20px;
-    padding-bottom: 10px;
-    background: #323840;
-    opacity: .8; }
-    #about .stats .skill-border {
-      color: white; }
-      #about .stats .skill-border .progress {
+    margin-bottom: 50px; }
+    #about .stats .skill-border p {
+      margin-bottom: 0; }
+    #about .stats .skill-border .progress {
+      height: 18px;
+      position: relative; }
+      #about .stats .skill-border .progress .progress-bar {
+        animation: progress 1.5s ease-in-out forwards;
+        -webkit-animation: progress 1.5s ease-in-out forwards;
         height: 20px;
-        position: relative;
-        top: 2px; }
-        #about .stats .skill-border .progress .progress-bar {
-          animation: progress 1.5s ease-in-out forwards;
-          -webkit-animation: progress 1.5s ease-in-out forwards;
-          height: 20px;
-          background: #b29411 !important; }
-          #about .stats .skill-border .progress .progress-bar .title {
-            opacity: 0;
-            animation: show 0.35s forwards ease-in-out 0.5s; }
+        background: #b29411 !important; }
+        #about .stats .skill-border .progress .progress-bar .title {
+          opacity: 0;
+          animation: show 0.35s forwards ease-in-out 0.5s; }
 
 @keyframes progress {
   from {
@@ -121,8 +116,8 @@
     opacity: 0; }
   to {
     opacity: 1; } }
-        #about .stats .skill-border .progress .title {
-          padding: 1px; }
+      #about .stats .skill-border .progress .title {
+        padding: 1px; }
 
 #portfolio {
   padding-top: 55px;
@@ -181,6 +176,8 @@
   margin-bottom: 50px; }
   #contact .feedback {
     padding: 15px; }
+  #contact .social-media-icons svg {
+    height: 80px; }
 
 header {
   z-index: 5;

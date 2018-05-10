@@ -19,7 +19,7 @@ class Portfolio extends Component {
     this.utilityRadarInfo = <UtilityRadarInfo />
 
     this.state = {
-      title: <h1 className='invisible'>Portfolio</h1>,
+      title: <h1 className='invisible'>PORTFOLIO</h1>,
       aop: <div className='invisible'>{this.aop}</div>,
       aopInfo: <div className='invisible'>{this.aopInfo}</div>,
       bellawatt: <div className='invisible'>{this.bellawatt}</div>,
@@ -37,7 +37,7 @@ class Portfolio extends Component {
 
   handleTitle(){
     this.setState({ title: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0), o: spring(1)}}>
-      {value => <h1 style={{left: value.x, opacity: value.o, position: 'relative'}}>Portfolio</h1>}
+      {value => <h1 style={{left: value.x, opacity: value.o, position: 'relative'}}>PORTFOLIO</h1>}
     </Motion>})
   }
 
