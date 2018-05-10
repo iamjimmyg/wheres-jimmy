@@ -47,11 +47,11 @@ class Portfolio extends Component {
     </Motion>})
   }
   handleAOPInfo(){
-    setTimeout(() => {
+    // setTimeout(() => {
       this.setState({ aopInfo: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0), o: spring(1)}}>
         {value => <div style={{left: value.x, opacity: value.o, position: 'relative'}}>{this.aopInfo}</div>}
       </Motion>})
-    },300)
+    // },100)
   }
 
   handleBellawatt(){
@@ -60,11 +60,11 @@ class Portfolio extends Component {
     </Motion>})
   }
   handleBellawattInfo(){
-    setTimeout(() => {
+    // setTimeout(() => {
       this.setState({ bellawattInfo: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0), o: spring(1)}}>
         {value => <div style={{left: value.x, opacity: value.o, position: 'relative'}}>{this.bellawattInfo}</div>}
       </Motion>})
-    },300)
+    // },100)
   }
 
   handleUtilityRadar(){
@@ -73,11 +73,11 @@ class Portfolio extends Component {
     </Motion>})
   }
   handleUtilityRadarInfo(){
-    setTimeout(() => {
+    // setTimeout(() => {
       this.setState({ utilityRadarInfo: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0), o: spring(1)}}>
         {value => <div style={{left: value.x, opacity: value.o, position: 'relative'}}>{this.utilityRadarInfo}</div>}
       </Motion>})
-    },300)
+    // },100)
   }
 
   render() {

@@ -1,6 +1,19 @@
 import React, { Component } from 'react'
 
 class Bellawatt extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      bellawatt1: 'bellawatt1low.png'
+    }
+  }
+
+  componentWillMount(){
+    setTimeout(()=>{
+      this.setState({ bellawatt1: 'bellawatt1.png' })
+    },50)
+  }
+
   render (){
     return (
         <div>
@@ -8,10 +21,10 @@ class Bellawatt extends Component {
             <div className='banner'><i className="material-icons browser-dots">more_horiz</i></div>
             <div className="carousel-inner">
               <div className="carousel-item active">
-                <img className='image' src='bellawatt2.png' alt="First slide"/>
+                <img className='image' src={this.state.bellawatt1} alt="First slide"/>
               </div>
               <div className="carousel-item">
-                <img className='image' src="bellawatt1.png" alt="Second slide"/>
+                <img className='image' src="bellawatt2.png" alt="Second slide"/>
               </div>
               <div className="carousel-item">
                 <img className="image" src="bellawatt3.png" alt="Third slide"/>
