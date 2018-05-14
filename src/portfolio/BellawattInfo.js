@@ -6,7 +6,7 @@ class Bellawatt extends Component {
         <div className="text-left project-info">
           <div className='row'>
             <div>
-              <img src='bellawatt.png' className="bellawatt-icon"/>
+              <img src='bellawatt.jpg' className="bellawatt-icon"/>
             </div>
             <div className='text-left'>
               <h4><a href='http://www.bellawatt.com' target="_blank">bellaWatt</a></h4>

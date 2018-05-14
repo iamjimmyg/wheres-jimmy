@@ -24,7 +24,7 @@ class Stats extends Component {
     }
     return (
       <div className={'stats ' + this.props.klass} style={this.props.style}>
-        <h5>SKILLSET</h5>
+        <h5 className='text-center'>SKILLSET</h5>
         {skill('JAVASCRIPT', '85%')}
         {skill('REACT', '90%')}
         {skill('HTML', '95%')}

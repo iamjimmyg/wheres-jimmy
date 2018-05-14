@@ -4,15 +4,15 @@ class UtilityRadar extends Component {
   constructor(props){
     super(props)
     this.state = {
-      utilityRadar1: 'utilityradar1low.png'
+      utilityRadar1: 'utilityradar1.jpg'
     }
   }
 
-  componentWillMount(){
-    setTimeout(()=>{
-      this.setState({ utilityRadar1: 'utilityradar1.png' })
-    },50)
-  }
+  // componentWillMount(){
+  //   setTimeout(()=>{
+  //     this.setState({ utilityRadar1: 'utilityradar1.png' })
+  //   },500)
+  // }
 
   render (){
     return (
@@ -24,7 +24,7 @@ class UtilityRadar extends Component {
                 <img className='image' src={this.state.utilityRadar1} alt="First slide"/>
               </div>
               <div className="carousel-item">
-                <img className='image' src="utilityradar2.png" alt="Second slide"/>
+                <img className='image' src="utilityradar2.jpg" alt="Second slide"/>
               </div>
             </div>
             <a className="carousel-control-prev" href="#carouselUtilityRadar" role="button" data-slide="prev">

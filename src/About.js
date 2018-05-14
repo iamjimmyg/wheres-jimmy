@@ -15,7 +15,11 @@ class About extends Component {
         <p>As a designer and a developer, I write code that conforms to industry standards and semantic best practices. I am able to transform static artwork into pixel prefect, interactive and fully functional interfaces.</p>
 
       </div>,
-      iconSection1: '',
+      iconSection1: <div className="col-md-4 invisible">
+        <div><i className="material-icons">important_devices</i></div>
+        <h5>RESPONSIVE</h5>
+        <p>Shit is responsive as fuck yo in any browser</p>
+      </div>,
       iconSection2: <div className="col-md-4 invisible">
         <div><i className="material-icons">lightbulb_outline</i></div>
         <h5>Intuitive</h5>
@@ -45,7 +49,7 @@ class About extends Component {
   handleProfileSection(){
     this.setState({ profileSection: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0), o: spring(1)}}>
       {value => <div style={{left: value.x, opacity: value.o, position: 'relative'}} className="">
-        <h5>MY WORK</h5>
+        <h5 className="text-center">MY WORK</h5>
         <div className="bio">
           <p>Offering creative design solutions to solve business problems is what I do best. I write in JavaScript, CSS, Java, and PHP. I also speak to databases and make servers do stuff. I like working on scalability, performance, reusability, and great user experiences.</p>
           <p>As a designer and a developer, I write code that conforms to industry standards and semantic best practices. I am able to transform static artwork into pixel prefect, interactive and fully functional interfaces.</p>
@@ -56,15 +60,15 @@ class About extends Component {
   }
 
   handleStats(){
-    setTimeout(()=>{
+    // setTimeout(()=>{
     this.setState({ stats: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0), o: spring(1)}}>
       {value => <Stats style={{left: value.x, opacity: value.o,}}/>}
     </Motion> })
-  }, 300)
+    // }, 100)
   }
 
   handleIconSection1(){
-    setTimeout(()=>{
+    // setTimeout(()=>{
       this.setState({ iconSection1: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0), o: spring(1)}}>
         {value => <div className="col-md-4" style={{left: value.x, opacity: value.o,}}>
           <div><i className="material-icons">important_devices</i></div>
@@ -72,11 +76,11 @@ class About extends Component {
           <p>Shit is responsive as fuck yo in any browser</p>
         </div>}
       </Motion> })
-    }, 600)
+    // }, 100)
 
   }
   handleIconSection2(){
-    setTimeout(() => {
+    // setTimeout(() => {
       this.setState({ iconSection2: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0), o: spring(1)}}>
         {value => <div className="col-md-4" style={{left: value.x, opacity: value.o}}>
           <div><i className="material-icons">lightbulb_outline</i></div>
@@ -84,11 +88,11 @@ class About extends Component {
           <p>You'll shit your brains when you see how intuitive I am with this shit</p>
         </div>}
       </Motion> })
-    },900)
+    // },200)
 
   }
   handleIconSection3(){
-    setTimeout(()=>{
+    // setTimeout(()=>{
       this.setState({ iconSection3: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0), o: spring(1)}}>
         {value => <div className="col-md-4" style={{left: value.x, opacity: value.o}}>
           <i className="material-icons">timeline</i>
@@ -96,7 +100,7 @@ class About extends Component {
           <p>Perforance will be at an all time mother fuckin high</p>
         </div>}
       </Motion> })
-    },1200)
+    // },300)
   }
 
   render() {
@@ -110,17 +114,17 @@ class About extends Component {
 
         <div className="row icon-section text-center">
           <Waypoint onEnter={()=>{this.handleIconSection1()}}
-            bottomOffset='50px'
+            bottomOffset='150px'
           />
           {this.state.iconSection1}
 
           <Waypoint onEnter={()=>{this.handleIconSection2()}}
-            bottomOffset='50px'
+            bottomOffset='175px'
           />
           {this.state.iconSection2}
 
           <Waypoint onEnter={()=>{this.handleIconSection3()}}
-            bottomOffset='50px'
+            bottomOffset='200px'
           />
           {this.state.iconSection3}
 
@@ -135,7 +139,7 @@ class About extends Component {
 
           <div className="col-lg-7">
             <Waypoint onEnter={()=>{this.handleStats()}}
-              bottomOffset='150px'
+              bottomOffset='200px'
             />
             {this.state.stats}
           </div>

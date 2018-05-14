@@ -1,18 +1,18 @@
 import React, { Component } from 'react'
 
 class AOP extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
-      aop1: 'aop1low.png'
-    }
-  }
+  // constructor(props){
+  //   super(props)
+  //   this.state = {
+  //     aop1: 'aop1.png'
+  //   }
+  // }
 
-  componentWillMount(){
-    setTimeout(()=>{
-      this.setState({ aop1: 'aop1.png' })
-    },50)
-  }
+  // componentWillMount(){
+  //   setTimeout(()=>{
+  //     this.setState({ aop1: 'aop1.png' })
+  //   },0)
+  // }
 
   render (){
     return (
@@ -21,13 +21,13 @@ class AOP extends Component {
           <div className='banner'><i className="material-icons browser-dots">more_horiz</i></div>
           <div className="carousel-inner">
             <div className="carousel-item active">
-              <img className='image' src={this.state.aop1} alt="First slide"/>
+              <img className='image' src='aop1.png' alt="First slide"/>
             </div>
             <div className="carousel-item">
-              <img className='image' src='aop2.png' alt="Second slide"/>
+              <img className='image' src='aop2.jpg' alt="Second slide"/>
             </div>
             <div className="carousel-item">
-              <img className='image' src='aop3.png' alt="Third slide"/>
+              <img className='image' src='aop3.jpg' alt="Third slide"/>
             </div>
           </div>
           <a className="carousel-control-prev" href="#carouselAOP" role="button" data-slide="prev">
