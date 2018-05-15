@@ -41,7 +41,7 @@ class About extends Component {
   }
 
   handleTitle(){
-    this.setState({ title: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0), o: spring(1)}}>
+    this.setState({ title: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0, {stiffness: 120, damping: 17}), o: spring(1)}}>
       {value => <h1 style={{left: value.x, opacity: value.o, position: 'relative'}} className="text-center">ABOUT</h1>}
     </Motion> })
   }

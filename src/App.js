@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
-
 import Header from './Header'
 import Home from './Home'
 import About from './About'
@@ -13,6 +12,10 @@ class App extends Component{
 
   constructor (props){
       super(props);
+      this.state = {
+        opacity: 0,
+        imageTransformY: 0,
+      }
       this.scrollToTop = this.scrollToTop.bind(this);
   }
 
@@ -23,21 +26,30 @@ class App extends Component{
   scrollToBottom() {
     scroll.scrollToBottom();
   }
-  // scrollTo() {
-  //   scroll.scrollTo(100);
-  // }
-  // scrollMore() {
-  //   scroll.scrollMore(100);
-  // }
-  handleSetActive(to) {
-    console.log('yoo', to);
+
+  componentDidMount () {
+
+
+      window.onscroll =()=>{
+        if(window.scrollY < window.innerHeight){
+          //console.log(window.scrollY)
+      //   console.log('scroll posish', window.scrollY)
+      //   console.log('window height', window.innerHeight)
+          let transformY = Math.floor((window.scrollY / window.innerHeight) * 300)
+          //console.log(transformX)
+          let opacity = (window.scrollY / window.innerHeight) + .1
+          this.setState({ opacity: opacity, imageTransformY: transformY })
+        }
+      }
+
   }
+
   render () {
   	return (
       <div>
         <Header />
         <Element name="home" className="element">
-          <Home />
+          <Home opacity={this.state.opacity} transformY={this.state.imageTransformY}/>
         </Element>
         <main>
 
