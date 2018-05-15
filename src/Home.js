@@ -50,7 +50,7 @@ class Home extends Component {
             <Motion defaultStyle={{x: -35, o: 0}} style={{x: spring(0), o: spring(1, {stiffness: 30})}}>
               {value => <div className="intro" style={{left: value.x, opacity: value.o}}>
                   <h5 className="font-italic">Building everything from small business sites to rich interactive web apps.</h5>
-                  <h1> {'Full-stack developer'.toUpperCase()}</h1>
+                  <h1> {'blah blah blah'.toUpperCase()}</h1>
                 </div>}
             </Motion>
             {/* {this.handleAboutButton()}

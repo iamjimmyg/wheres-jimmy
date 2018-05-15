@@ -13,10 +13,18 @@
   }
 
   .social-media-icons {
+    .icon {
 
       svg {
         height: 80px;
+        transition: .2s ease-out;
+        &:hover {
+          // cursor: pointer;
+          transform: scale(1.1, 1.1);
+        }
       }
+    }
+
 
 
   }

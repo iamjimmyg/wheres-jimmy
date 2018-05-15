@@ -17,6 +17,7 @@ class App extends Component{
         textOpacity: 1,
         imageTransformY: 0,
         scale: 1,
+        imageScale: 1,
       }
       //this.scrollToTop = this.scrollToTop.bind(this);
   }
@@ -28,11 +29,19 @@ class App extends Component{
           //console.log(window.scrollY)
           // console.log('scroll posish', window.scrollY)
           // console.log('window height', window.innerHeight)
-          let transformY = Math.floor((window.scrollY / window.innerHeight) * 300)
+          let transformY = Math.floor((window.scrollY / window.innerHeight) * 400)
           let imageOpacity = (window.scrollY / window.innerHeight) + .1
+          let imageScale = (((window.scrollY / window.innerHeight) + 1) * .5) + .5
+          console.log(imageScale)
           let textOpacity = (window.innerHeight - window.scrollY) / 1043
           let scale = .7 + (((window.innerHeight - window.scrollY) / 104.3) * .03)
-          this.setState({ imageOpacity: imageOpacity, imageTransformY: transformY, scale: scale, textOpacity: textOpacity})
+          this.setState({
+            imageOpacity: imageOpacity,
+            imageTransformY: transformY,
+            scale: scale,
+            textOpacity: textOpacity,
+            imageScale: imageScale,
+          })
         }
       }
 
@@ -47,7 +56,9 @@ class App extends Component{
             textOpacity={this.state.textOpacity}
             imageOpacity={this.state.imageOpacity}
             transformY={this.state.imageTransformY}
-            scale={this.state.scale}/>
+            scale={this.state.scale}
+            imageScale={this.state.imageScale}
+          />
         </Element>
         <main>
 
