@@ -13,32 +13,26 @@ class App extends Component{
   constructor (props){
       super(props);
       this.state = {
-        opacity: 0,
+        imageOpacity: 0,
+        textOpacity: 1,
         imageTransformY: 0,
+        scale: 1,
       }
-      this.scrollToTop = this.scrollToTop.bind(this);
-  }
-
-
-  scrollToTop() {
-    scroll.scrollToTop();
-  }
-  scrollToBottom() {
-    scroll.scrollToBottom();
+      //this.scrollToTop = this.scrollToTop.bind(this);
   }
 
   componentDidMount () {
 
-
       window.onscroll =()=>{
         if(window.scrollY < window.innerHeight){
           //console.log(window.scrollY)
-      //   console.log('scroll posish', window.scrollY)
-      //   console.log('window height', window.innerHeight)
+          // console.log('scroll posish', window.scrollY)
+          // console.log('window height', window.innerHeight)
           let transformY = Math.floor((window.scrollY / window.innerHeight) * 300)
-          //console.log(transformX)
-          let opacity = (window.scrollY / window.innerHeight) + .1
-          this.setState({ opacity: opacity, imageTransformY: transformY })
+          let imageOpacity = (window.scrollY / window.innerHeight) + .1
+          let textOpacity = (window.innerHeight - window.scrollY) / 1043
+          let scale = .7 + (((window.innerHeight - window.scrollY) / 104.3) * .03)
+          this.setState({ imageOpacity: imageOpacity, imageTransformY: transformY, scale: scale, textOpacity: textOpacity})
         }
       }
 
@@ -49,7 +43,11 @@ class App extends Component{
       <div>
         <Header />
         <Element name="home" className="element">
-          <Home opacity={this.state.opacity} transformY={this.state.imageTransformY}/>
+          <Home
+            textOpacity={this.state.textOpacity}
+            imageOpacity={this.state.imageOpacity}
+            transformY={this.state.imageTransformY}
+            scale={this.state.scale}/>
         </Element>
         <main>
 

@@ -35,16 +35,18 @@ class Home extends Component {
 
   render() {
     let backgroundImageStyle = `translateY(${-this.props.transformY}px)`
+    //let textHeight = `translateY(${this.props.transformY})`
+    let scaleText = `scale(${this.props.scale}, ${this.props.scale})`
     return (
       <section className="container flex" id='landing'>
-        <div className='background-div' style={{opacity: this.props.opacity}}>
+        <div className='background-div' style={{opacity: this.props.imageOpacity}}>
         </div>
         <div className='background-image-div' style={{ top: this.props.transformY, transform: backgroundImageStyle }}>
         </div>
 
-        <div className="landing-content container" >
+        <div className="landing-content container" style={{ transform: scaleText, opacity: this.props.textOpacity, top: this.props.transformY }}>
 
-          <div className="text-center center-content">
+          <div className="text-center center-content" >
             <Motion defaultStyle={{x: -35, o: 0}} style={{x: spring(0), o: spring(1, {stiffness: 30})}}>
               {value => <div className="intro" style={{left: value.x, opacity: value.o}}>
                   <h5 className="font-italic">Building everything from small business sites to rich interactive web apps.</h5>
