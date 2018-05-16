@@ -48,10 +48,10 @@ class About extends Component {
 
   handleProfileSection(){
     this.setState({ profileSection: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0), o: spring(1)}}>
-      {value => <div style={{left: value.x, opacity: value.o, position: 'relative'}} className="">
+      {value => <div style={{left: value.x, opacity: value.o, position: 'relative'}} className="bio">
         <h5 className="text-center">MY WORK</h5>
-        <div className="bio">
-          <p>Offering creative design solutions to solve business problems is what I do best. I write in JavaScript, CSS, Java, and PHP. I also speak to databases and make servers do stuff. I like working on scalability, performance, reusability, and great user experiences.</p>
+        <div className="">
+          <p>Offering creative design solutions to solve business problems is what I do best. I write in JavaScript, CSS, Ruby. I also speak to databases and make servers do stuff. I like working on scalability, performance, reusability, and great user experiences.</p>
           <p>As a front-end developer, I write code that conforms to industry standards and semantic best practices. I am able to transform static artwork into pixel perfect, interactive and fully functional interfaces.</p>
 
         </div>

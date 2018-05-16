@@ -5,7 +5,9 @@
   z-index: -2; }
   #landing .down-arrow {
     color: #b29411;
-    font-size: 120px; }
+    font-size: 120px;
+    position: relative;
+    z-index: 2; }
   #landing .background-div {
     z-index: 1;
     position: absolute;
@@ -47,35 +49,32 @@
   padding-bottom: 55px; }
   #about h1 {
     margin-top: 50px; }
-  #about .about-me-content {
-    margin-top: 40px;
-    margin-bottom: 40px; }
-    #about .about-me-content .bio {
-      margin-top: 10px; }
+  #about h1 {
+    overflow: hidden;
+    text-align: center; }
+  #about h1:before,
+  #about h1:after {
+    background-color: black;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    vertical-align: middle;
+    width: 10%; }
+  #about h1:before {
+    right: 0.5em;
+    margin-left: -50%; }
+  #about h1:after {
+    left: 0.5em;
+    margin-right: -50%; }
   #about .icon-section {
     position: relative;
     margin-bottom: 70px;
     margin-top: 70px; }
+    #about .icon-section .material-icons {
+      color: #323840; }
   #about img {
     max-height: 270px; }
-  #about .hexa, #about .hexa div {
-    margin: 0 auto;
-    transform-origin: 50% 50%;
-    overflow: hidden;
-    width: 300px;
-    height: 300px; }
-  #about .hexa {
-    width: 325px;
-    height: 230px; }
-  #about .hexa div {
-    width: 100%;
-    height: 100%; }
-  #about .hexa {
-    transform: rotate(120deg); }
-  #about .hex1 {
-    transform: rotate(-60deg); }
-  #about .hex2 {
-    transform: rotate(-60deg); }
   #about .material-icons {
     font-size: 70px; }
   #about .stats {
@@ -113,6 +112,24 @@
   padding-top: 55px;
   height: 100%;
   background: #f5f5f5; }
+  #portfolio h1 {
+    overflow: hidden;
+    text-align: center; }
+  #portfolio h1:before,
+  #portfolio h1:after {
+    background-color: black;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    vertical-align: middle;
+    width: 10%; }
+  #portfolio h1:before {
+    right: 0.5em;
+    margin-left: -50%; }
+  #portfolio h1:after {
+    left: 0.5em;
+    margin-right: -50%; }
   #portfolio .projects {
     margin-top: 45px;
     margin-bottom: 40px; }
@@ -175,16 +192,36 @@
 #contact {
   margin-top: 55px;
   margin-bottom: 50px; }
+  #contact h1 {
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 40px; }
+  #contact h1:before,
+  #contact h1:after {
+    background-color: black;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    vertical-align: middle;
+    width: 10%; }
+  #contact h1:before {
+    right: 0.5em;
+    margin-left: -50%; }
+  #contact h1:after {
+    left: 0.5em;
+    margin-right: -50%; }
   #contact .feedback {
     padding: 15px; }
   #contact .social-media-icons .icon svg {
+    color: #323840;
     height: 80px;
     transition: .2s ease-out; }
     #contact .social-media-icons .icon svg:hover {
       transform: scale(1.1, 1.1); }
 
 header {
-  z-index: 5;
+  z-index: 1001;
   width: 100%;
   background: #323840; }
   header .navbar-toggler:focus {

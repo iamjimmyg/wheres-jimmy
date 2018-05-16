@@ -11,7 +11,7 @@ class Home extends Component {
   constructor(props){
     super(props)
     this.state = {
-      downArrow: <i className="material-icons down-arrow">arrow_drop_down</i>
+      downArrow: <i className="material-icons down-arrow">keyboard_arrow_down</i>
     }
     // this.handleAboutButton = this.handleAboutButton.bind(this)
   }
@@ -56,11 +56,15 @@ class Home extends Component {
                 </div>}
             </Motion>
             {/* {this.handleAboutButton()} */}
-            {this.state.downArrow}
+
 
 
           </div>
         </div>
+        {/* <div className='text-center'>
+          {this.state.downArrow}
+        </div> */}
+
 
       </section>
 

@@ -9,6 +9,9 @@ $color-yellow: rgb(178, 148, 17);
   .down-arrow {
     color: $color-yellow;
     font-size: 120px;
+    position: relative;
+    //top: 90vh;
+    z-index: 2;
   }
   .background-div {
     z-index: 1;
@@ -59,32 +62,7 @@ $color-yellow: rgb(178, 148, 17);
           top: 80px;
         }
       }
-      //   h1 {
-      //     overflow: hidden;
-      //     text-align: center;
-      //   }
-      //
-      //   h1:before,
-      //   h1:after {
-      //     background-color: white;
-      //     content: "";
-      //     display: inline-block;
-      //     height: 2px;
-      //     position: relative;
-      //     vertical-align: middle;
-      //     width: 10%;
-      //   }
-      //
-      //   h1:before {
-      //     right: 0.5em;
-      //     margin-left: -50%;
-      //   }
-      //
-      //   h1:after {
-      //     left: 0.5em;
-      //     margin-right: -50%;
-      //   }
-      // }
+      
 
     }
     .intro {
