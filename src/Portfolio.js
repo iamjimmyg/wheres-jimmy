@@ -94,22 +94,10 @@ class Portfolio extends Component {
                 bottomOffset='150px'
               />
               {this.state.aop}
-              {/* <div className="modal fade aop-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                <div className="modal-dialog modal-lg">
-                  <div className="modal-content">
-                    <div className="modal-header">
-                      <h5 className="modal-title" id="exampleModalLabel">New message</h5>
-                      <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div> */}
             </div>
             <div className='col-lg-7 '>
               <Waypoint onEnter={()=>{this.handleAOPInfo()}}
-                bottomOffset='150px'
+                bottomOffset='200px'
               />
               {this.state.aopInfo}
             </div>
@@ -124,7 +112,7 @@ class Portfolio extends Component {
             </div>
             <div className='col-lg-7'>
               <Waypoint onEnter={()=>{this.handleBellawattInfo()}}
-                bottomOffset='150px'
+                bottomOffset='200px'
               />
               {this.state.bellawattInfo}
             </div>
@@ -140,7 +128,7 @@ class Portfolio extends Component {
             </div>
             <div className='col-lg-7'>
               <Waypoint onEnter={()=>{this.handleUtilityRadarInfo()}}
-                bottomOffset='150px'
+                bottomOffset='200px'
               />
               {this.state.utilityRadarInfo}
             </div>

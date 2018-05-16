@@ -14,30 +14,20 @@ body{
   overflow-x:hidden;
 }
 
-// .invisible {
-//   color: white;
-// }
-
 .bring-down {
-
   position: absolute;
   top: 100vh;
 }
+
 .everything-else-header {
-  //animation: popDown .5s;
   position: fixed;
 }
-
 
 .flex {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
-
-
-
 
 @media (max-width: 1200px){
   #portfolio {
@@ -47,13 +37,17 @@ body{
           .carousel-inner {
             height: 280px;
           }
-
         }
       }
     }
   }
 }
 @media (max-width: 992px){
+  #landing {
+    .landing-content {
+      width: 80%;
+    }
+  }
   #portfolio {
     .projects {
       .project {
@@ -78,7 +72,6 @@ body{
             //height: 100%;
             height: 320px;
           }
-
         }
       }
     }

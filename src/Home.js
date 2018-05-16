@@ -11,13 +11,9 @@ class Home extends Component {
   constructor(props){
     super(props)
     this.state = {
-      // aboutButton: <div className="intro invisible">
-      //     <Link className="homepage-button" to="about" spy={true} smooth={true} duration={500} onClick={()=>{this.props.selectHeader('about')}} >
-      //       <div>About my work</div>
-      //     </Link>
-      //   </div>,
+      downArrow: <i className="material-icons down-arrow">arrow_drop_down</i>
     }
-    //this.handleAboutButton = this.handleAboutButton.bind(this)
+    // this.handleAboutButton = this.handleAboutButton.bind(this)
   }
 
   // handleAboutButton(){
@@ -46,15 +42,21 @@ class Home extends Component {
 
         <div className="landing-content container" style={{ transform: scaleText, opacity: this.props.textOpacity, top: this.props.transformY }}>
 
-          <div className="text-center center-content" >
+          <div className="center-content" >
             <Motion defaultStyle={{x: -35, o: 0}} style={{x: spring(0), o: spring(1, {stiffness: 30})}}>
               {value => <div className="intro" style={{left: value.x, opacity: value.o}}>
-                  <h5 className="font-italic">Building everything from small business sites to rich interactive web apps.</h5>
-                  <h1> {'blah blah blah'.toUpperCase()}</h1>
+                  <h5 className="font-italic">Hello, I'm</h5>
+                  <h1>JIMMY GONZALEZ</h1>
+                  <h4>FULLSTACK DEVELOPER</h4>
+                  <hr/>
+                  <br/>
+                  <br/>
+                  <h5 className="font-italic">I love building everything from small business sites to rich interactive web apps.</h5>
+
                 </div>}
             </Motion>
-            {/* {this.handleAboutButton()}
-            {this.state.aboutButton} */}
+            {/* {this.handleAboutButton()} */}
+            {this.state.downArrow}
 
 
           </div>

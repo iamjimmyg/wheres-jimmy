@@ -31,6 +31,7 @@ class Stats extends Component {
         {skill('SCSS', '86%')}
         {skill('NODE', '70%')}
         {skill('RUBY ON RAILS', '65%')}
+        {skill('GUITAR', '80%')}
 
       </div>
     )

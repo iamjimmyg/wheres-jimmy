@@ -12,7 +12,7 @@ class About extends Component {
       profileSection: <div className="bio invisible">
         <p>Offering creative design solutions to solve business problems is what I do best.</p>
         <p>I write in JavaScript, CSS, Java, and PHP. I also speak to databases and make servers do stuff. I like working on scalability, performance, reusability, and great user experiences.</p>
-        <p>As a designer and a developer, I write code that conforms to industry standards and semantic best practices. I am able to transform static artwork into pixel prefect, interactive and fully functional interfaces.</p>
+        <p>As a front-end developer, I write code that conforms to industry standards and semantic best practices. I am able to transform static artwork into pixel prefect, interactive and fully functional interfaces.</p>
 
       </div>,
       iconSection1: <div className="col-md-4 invisible">
@@ -52,7 +52,7 @@ class About extends Component {
         <h5 className="text-center">MY WORK</h5>
         <div className="bio">
           <p>Offering creative design solutions to solve business problems is what I do best. I write in JavaScript, CSS, Java, and PHP. I also speak to databases and make servers do stuff. I like working on scalability, performance, reusability, and great user experiences.</p>
-          <p>As a designer and a developer, I write code that conforms to industry standards and semantic best practices. I am able to transform static artwork into pixel prefect, interactive and fully functional interfaces.</p>
+          <p>As a front-end developer, I write code that conforms to industry standards and semantic best practices. I am able to transform static artwork into pixel perfect, interactive and fully functional interfaces.</p>
 
         </div>
       </div>}

@@ -8,11 +8,11 @@
     .project {
       position: relative;
       margin-bottom: 35px;
-      // .arrows {
-      //   font-size: 50px;
-      //   opacity: 1.0;
-      //   color: rgb(178, 148, 17);
-      // }
+      .arrows {
+        font-size: 50px;
+        //opacity: 1.0;
+        color: rgb(178, 148, 17);
+      }
       .card {
         -webkit-box-shadow: 11px 10px 22px 2px rgba(0,0,0,0.19);
         -moz-box-shadow: 11px 10px 22px 2px rgba(0,0,0,0.19);
@@ -22,6 +22,22 @@
         margin-bottom: 40px;
         margin-left: auto;
         margin-right: auto;
+        .carousel-control-prev{
+          opacity: 1;
+          transition: .1s ease-in-out;
+          &:hover {
+            cursor: pointer;
+            transform: scale(1.2, 1.2);
+          }
+        }
+        .carousel-control-next{
+          opacity: 1;
+          transition: .1s ease-in-out;
+          &:hover {
+            cursor: pointer;
+            transform: scale(1.2, 1.2);
+          }
+        }
         .carousel-inner{
           height: 300px;
           // width: 420px;
@@ -30,11 +46,11 @@
             height: 100%;
           }
         }
-        transition: .2s ease-out;
-        &:hover {
-          cursor: pointer;
-          transform: scale(1.02, 1.02);
-        }
+        // transition: .2s ease-out;
+        // &:hover {
+        //   cursor: pointer;
+        //   transform: scale(1.02, 1.02);
+        // }
       }
       .banner {
         background: lightgrey;
