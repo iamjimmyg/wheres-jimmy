@@ -1,18 +1,19 @@
 import React, { Component } from 'react'
-
+//import preloadImage from '../public/background_image_preload.jpg'
 // import { connect } from 'react-redux'
 // import { selectHeader } from './actions/index'
 // import { bindActionCreators } from 'redux'
 //import video from '../public/typing.mov'
 //import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 import {Motion, spring} from 'react-motion'
+import IronImage from './IronImage'
 
 class Home extends Component {
   constructor(props){
     super(props)
-    this.state = {
-      downArrow: <i className="material-icons down-arrow">keyboard_arrow_down</i>
-    }
+    // this.state = {
+    //   downArrow: <i className="material-icons down-arrow">keyboard_arrow_down</i>
+    // }
     // this.handleAboutButton = this.handleAboutButton.bind(this)
   }
 
@@ -33,12 +34,21 @@ class Home extends Component {
     let backgroundImageStyle = `translateY(${-this.props.transformY}px)`
     //let textHeight = `translateY(${this.props.transformY})`
     let scaleText = `scale(${this.props.scale}, ${this.props.scale})`
+
     return (
       <section className="container flex" id='landing'>
         <div className='background-div' style={{opacity: this.props.imageOpacity}}>
         </div>
-        <div className='background-image-div' style={{ top: this.props.transformY, transform: backgroundImageStyle }}>
-        </div>
+        {/* <div>
+          <img src='background-image.jpg' className='background-image-div' style={{ top: this.props.transformY, transform: backgroundImageStyle }}/>
+        </div> */}
+        <IronImage
+          //srcPreload='background-image.jpg'
+          transformY={this.props.transformY}
+          backgroundImageStyle={backgroundImageStyle}
+          srcLoaded='../background-image.jpg'
+        />
+
 
         <div className="landing-content container" style={{ transform: scaleText, opacity: this.props.textOpacity, top: this.props.transformY }}>
 

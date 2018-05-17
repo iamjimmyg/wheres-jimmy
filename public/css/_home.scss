@@ -6,15 +6,15 @@ $color-yellow: rgb(178, 148, 17);
 
   color: white;
   z-index: -2;
-  .down-arrow {
-    color: $color-yellow;
-    font-size: 120px;
-    position: relative;
-    //top: 90vh;
-    z-index: 2;
-  }
+  // .down-arrow {
+  //   color: $color-yellow;
+  //   font-size: 120px;
+  //   position: relative;
+  //   //top: 90vh;
+  //   z-index: 2;
+  // }
   .background-div {
-    z-index: 1;
+    z-index: 3;
     position: absolute;
     background-color: rgb(50,56,64);
     opacity: 0;
@@ -22,15 +22,64 @@ $color-yellow: rgb(178, 148, 17);
     width: 100%;
     margin-left: -15px;
   }
-  .background-image-div {
-    z-index: 0;
+
+  .iron-image-container {
     position: absolute;
-    margin-left: -15px;
-    height: 100vh;
-    background: url(https://www.sessions.edu/wp-content/uploads/bigstock-Wooden-working-table-with-lapt-93597728.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
+
     width: 100%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    //
+    // overflow: hidden;
+    .iron-image-preload {
+      z-index: 0;
+      position: absolute;
+      background: url(../background_image_preload.jpg) no-repeat center center fixed;
+      height: 100vh;
+      // width: 100%;
+      //z-index: 1;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      background-size: cover;
+    }
+    .iron-image-loaded {
+      background: url(../background-image.jpg) no-repeat center center fixed;
+      position: absolute;
+      height: 100%;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      background-size: cover;
+
+      opacity: 0;
+
+      transition: opacity 1s ease;
+    }
+
+    .iron-image-fade-in {
+      opacity: 1;
+    }
   }
+
+
+  // .background-image-div {
+  //   z-index: 0;
+  //   position: absolute;
+  //   margin-left: -15px;
+  //   height: 100vh;
+  //
+  //   //background: url(../background-image.jpg) no-repeat center center fixed;
+  //   -webkit-background-size: cover;
+  //   width: 100%;
+  // }
 
   a:hover, a:visited, a:link, a:active{
     text-decoration: none;
@@ -62,7 +111,7 @@ $color-yellow: rgb(178, 148, 17);
           top: 80px;
         }
       }
-      
+
 
     }
     .intro {
