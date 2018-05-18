@@ -7,7 +7,7 @@ class Form extends Component {
   render(){
     return (
 
-      <form className={`col-lg-5 ${this.props.klass}`} style={this.props.style} id="gform" method="POST" action="https://formspree.io/jimmygonzalez87@gmail.com">
+      <form className={`${this.props.klass}`} style={this.props.style} id="gform" method="POST" action="https://formspree.io/jimmygonzalez87@gmail.com">
         <input type="hidden" name="_next" value="contactredirect" />
         <div className="form-group">
           <label >Full Name</label>

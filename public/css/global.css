@@ -208,9 +208,9 @@
         top: -9px; }
 
 #contact {
-  margin-top: 55px;
-  margin-bottom: 50px; }
+  position: relative; }
   #contact h1 {
+    padding-top: 55px;
     overflow: hidden;
     text-align: center;
     margin-bottom: 40px; }
@@ -229,14 +229,19 @@
   #contact h1:after {
     left: 0.5em;
     margin-right: -50%; }
-  #contact .feedback {
-    padding: 15px; }
-  #contact .social-media-icons .icon svg {
-    color: #323840;
-    height: 80px;
-    transition: .2s ease-out; }
-    #contact .social-media-icons .icon svg:hover {
-      transform: scale(1.1, 1.1); }
+  #contact .form-reviews {
+    margin-top: 13vh;
+    margin-bottom: 13vh; }
+    #contact .form-reviews .feedback {
+      padding: 15px; }
+  #contact .social-media-icons {
+    position: relative; }
+    #contact .social-media-icons .icon svg {
+      color: #323840;
+      height: 80px;
+      transition: .2s ease-out; }
+      #contact .social-media-icons .icon svg:hover {
+        transform: scale(1.1, 1.1); }
 
 header {
   z-index: 1001;
@@ -364,7 +369,10 @@ body {
   #landing .landing-content {
     width: 80%; }
   #portfolio .projects .project .card .carousel-inner {
-    height: 480px; } }
+    height: 480px; }
+  #contact .form-reviews {
+    margin-top: 0px;
+    margin-bottom: 0px; } }
 
 @media (max-width: 767px) {
   #portfolio .projects .project .card .carousel-inner {
