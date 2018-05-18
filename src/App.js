@@ -34,7 +34,7 @@ class App extends Component{
           let imageScale = (((window.scrollY / window.innerHeight) + 1) * .5) + .5
 
           let textOpacity = (window.innerHeight - window.scrollY) / window.innerHeight
-          console.log(textOpacity)
+          //console.log(textOpacity)
           let scale = .7 + (((window.innerHeight - window.scrollY) / window.innderHeight) * .3)
           this.setState({
             imageOpacity: imageOpacity,

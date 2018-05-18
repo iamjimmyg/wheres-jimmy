@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
 import Waypoint from 'react-waypoint'
 import {Motion, spring} from 'react-motion'
+import Form from './Form'
 
 class Contact extends Component {
   constructor(props){
     super(props)
     this.state = {
       title: <h1 className='invisible'>CONTACT</h1>,
+      form: <Form klass='invisible'/>,
       feedback1: <p className='invisible'>“Jimmy was the primary developer on several client facing functional demos. With minimal guidance, he delivered and deployed 3 HTML/CSS/JS/React projects. We have been thrilled with the results!”</p>,
       feedback2: <p className='invisible'>"Jimmy contributed to an existing large, complex project. It was built primarily using Ruby on Rails, with a Dockerized setup for development. Despite the fact that these were completely new technologies for him, Jimmy was able to jump in and get productive really quickly. Our customer for this product has been extremely happy with what we’ve delivered."</p>,
       feedback3: <p className='invisible'>“Jimmy developed a track record of consistently shipping results that mattered to us and to our customers.”</p>,
     }
+    this.handleForm = this.handleForm.bind(this)
     this.handleFeedback1 = this.handleFeedback1.bind(this)
     this.handleFeedback2 = this.handleFeedback2.bind(this)
     this.handleFeedback3 = this.handleFeedback3.bind(this)
@@ -20,6 +23,12 @@ class Contact extends Component {
   handleTitle(){
     this.setState({ title: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0), o: spring(1)}}>
       {value => <h1 className='text-center' style={{left: value.x, opacity: value.o, position: 'relative'}}>CONTACT</h1>}
+    </Motion> })
+  }
+
+  handleForm(){
+    this.setState({ form: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0), o: spring(1)}}>
+      {value => <Form style={{left: value.x, opacity: value.o, position: 'relative'}} />}
     </Motion> })
   }
 
@@ -48,30 +57,11 @@ class Contact extends Component {
         />
         {this.state.title}
 
-
         <div className='row'>
-          <form className='col-lg-5' id="gform" method="POST" action="https://formspree.io/jimmygonzalez87@gmail.com">
-            <input type="hidden" name="_next" value="contactredirect" />
-            <div className="form-group">
-              <label >Full Name</label>
-              <input name="name" type="text" className="form-control" placeholder="John Doe"></input>
-
-            </div>
-            <div className="form-group">
-              <label>Email Address</label>
-              <input name="email" type="email" className="form-control" aria-describedby="emailHelp" placeholder="john@doe.com"></input>
-              <small id="emailHelp" className="form-text text-muted">We will never share your email with anyone else.</small>
-            </div>
-            <div className="form-group">
-              <label>Subject</label>
-              <input name="subject" type="text" className="form-control" placeholder="..."></input>
-            </div>
-            <div className="form-group">
-              <label>Message</label>
-              <textarea name="message" className="form-control" rows="8" placeholder="..."></textarea>
-            </div>
-            <button type="submit" className="btn btn-primary">Send</button>
-          </form>
+          <Waypoint onEnter={()=>{this.handleForm()}}
+            bottomOffset='150px'
+          />
+          {this.state.form}
           <div className='feedback col-lg-7'>
             <div className='row'>
               <div className='col-lg-9'>

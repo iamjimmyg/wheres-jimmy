@@ -14,7 +14,11 @@ class Bellawatt extends Component {
             </div>
 
           </div>
-          <p>Donec hendrerit aliquet augue. In vitae sodales sem. In hac habitasse platea dictumst. Sed eu libero nisi. Mauris vitae condimentum metus. Mauris sit amet velit bibendum, consequat enim eu, porttitor neque. Aliquam quis maximus sapien. Curabitur tristique at nisi et ultricies. Mauris pretium sit amet justo non placerat. Maecenas sit amet nunc molestie, tincidunt nisi in, aliquet neque. Ut dignissim leo sit amet orci varius, non laoreet felis lobortis. Etiam efficitur felis et augue vehicula elementum. Ut sed tellus sem.</p>
+          <p>Cost of service budgeting app for the US Power Utility Industry</p>
+          <ul>
+            <li>Designed UX and developed fron-end code using React/Redux, SCSS, Handsontable, and Chart.js</li>
+            <li>Developed efficient Handsontable spreadsheet functionality similar to utility industry standard excel spreadsheets</li>
+          </ul>
         </div>
     )
   }

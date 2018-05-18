@@ -10,11 +10,15 @@ class AOPInfo extends Component {
           </div>
           <div className='text-left'>
             <h4>AOP [Redacted]</h4>
-            <h5>Front-end Developer</h5>
+            <h5>Full Stack Developer</h5>
           </div>
 
         </div>
-        <p>Donec hendrerit aliquet augue. In vitae sodales sem. In hac habitasse platea dictumst. Sed eu libero nisi. Mauris vitae condimentum metus. Mauris sit amet velit bibendum, consequat enim eu, porttitor neque. Aliquam quis maximus sapien. Curabitur tristique at nisi et ultricies. Mauris pretium sit amet justo non placerat. Maecenas sit amet nunc molestie, tincidunt nisi in, aliquet neque. Ut dignissim leo sit amet orci varius, non laoreet felis lobortis. Etiam efficitur felis et augue vehicula elementum. Ut sed tellus sem.</p>
+        <p>Budgeting app for the US National Nuclear Security Administration. The original process was driven by Excel spreadsheets, which we redesigned the workflow into a streamlined data collection and reporting web application. This is an internal enterprise web app so it naturally can't be shared with the public.</p>
+        <ul>
+          <li>Translated and enhanced UX designs to clean reusable code using a combination of React, Ruby, Bootstrap, SCSS.</li>
+          <li>Maintained and contributed to existing Ruby on Rails code to improve performace and expand features using test-driven development.</li>
+        </ul>
       </div>
     )
   }
