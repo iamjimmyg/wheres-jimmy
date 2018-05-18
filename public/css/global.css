@@ -246,7 +246,8 @@
 header {
   z-index: 1001;
   width: 100%;
-  background: #323840; }
+  background: #323840;
+  min-height: 55px; }
   header .header-logo {
     display: inline-flex;
     position: absolute;
@@ -260,7 +261,6 @@ header {
   header .navbar-toggler-icon {
     width: 35px;
     position: relative;
-    margin: 2px auto;
     left: 15px; }
     header .navbar-toggler-icon span {
       background-color: white;
