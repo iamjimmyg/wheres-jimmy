@@ -247,6 +247,14 @@ header {
   z-index: 1001;
   width: 100%;
   background: #323840; }
+  header .header-logo {
+    display: inline-flex;
+    position: absolute;
+    color: white;
+    right: 5px;
+    top: 10px; }
+    header .header-logo .yellow {
+      color: #b29411; }
   header .navbar-toggler:focus {
     outline: none; }
   header .navbar-toggler-icon {
@@ -375,6 +383,8 @@ body {
     margin-bottom: 0px; } }
 
 @media (max-width: 767px) {
+  header .header-logo {
+    left: 10px; }
   #portfolio .projects .project .card .carousel-inner {
     height: 320px; } }
 

@@ -86,17 +86,21 @@ class Header extends Component {
   }
 
   updateDimensions() {
-    console.log(window.innerWidth)
+    //console.log(window.innerWidth)
     this.setState({ width: window.innerWidth });
   }
 
   render() {
-
+    //console.log(this.state.width)
     // if(window.innerWidth < 768) console.log('smalll');
     return (
 
       <header className={`${this.state.position} nav-bar`}>
-        <nav className="navbar navbar-expand-md">
+        <nav className={`navbar navbar-expand-md ${this.state.width < 767 ? '' : 'container'}`}>
+          <div className='header-logo font-italic'>
+            <h3 className='yellow'>@</h3>
+            <h3>iamjimmyg</h3>
+          </div>
           <button onClick={this.hamburgerClick} className="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded='false' aria-label="Toggle navigation">
 
             <div className={`${this.state.hamburgerMenu === true ? 'open navbar-toggler-icon' : 'navbar-toggler-icon'}`}>
@@ -131,6 +135,9 @@ class Header extends Component {
                 </Link>
               </li>
             </ul>
+
+
+
           </div>
         </nav>
 

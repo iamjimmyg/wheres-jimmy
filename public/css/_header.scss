@@ -1,7 +1,19 @@
+$color-yellow: rgb(178, 148, 17);
+
 header {
   z-index: 1001;
   width: 100%;
   background: #323840;
+  .header-logo {
+    display: inline-flex;
+    position: absolute;
+    color: white;
+    right: 5px;
+    top: 10px;
+    .yellow {
+      color: $color-yellow;
+    }
+  }
   .navbar-toggler {
     &:focus {
       outline: none;
