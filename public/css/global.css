@@ -208,7 +208,8 @@
         top: -9px; }
 
 #contact {
-  position: relative; }
+  position: relative;
+  min-height: 95vh; }
   #contact h1 {
     padding-top: 55px;
     overflow: hidden;
