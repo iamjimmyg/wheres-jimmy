@@ -1,4 +1,5 @@
 $color-blue: #323840;
+$color-yellow: rgb(178, 148, 17);
 
 #contact {
   //
@@ -34,12 +35,16 @@ $color-blue: #323840;
   }
   //height: 100vh;
   .form-reviews {
-    margin-top: 13vh;
-    margin-bottom: 13vh;
+    margin-top: 11vh;
+    margin-bottom: 11vh;
     .feedback {
       padding: 15px;
     }
+    p {
+      color: $color-yellow;
+    }
   }
+
 
 
   .social-media-icons {

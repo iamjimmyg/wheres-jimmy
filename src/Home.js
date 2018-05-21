@@ -11,24 +11,30 @@ import IronImage from './IronImage'
 class Home extends Component {
   constructor(props){
     super(props)
-    // this.state = {
-    //   downArrow: <i className="material-icons down-arrow">keyboard_arrow_down</i>
-    // }
-    // this.handleAboutButton = this.handleAboutButton.bind(this)
+    this.state = {
+      about: <div className="intro invisible">
+          <hr/>
+          <br/>
+          <br/>
+          <h5 className="font-italic">I love building everything from small business sites to rich interactive web apps.</h5>
+        </div>
+    }
+    this.handleAbout = this.handleAbout.bind(this)
   }
 
-  // handleAboutButton(){
-  //   setTimeout(() => {
-  //     this.setState({ aboutButton: <Motion defaultStyle={{x: -35, o: 0}} style={{x: spring(0), o: spring(1, {stiffness: 30})}}>
-  //       {value => <div className="intro" style={{left: value.x, opacity: value.o}}>
-  //           <Link className="homepage-button" to="about" spy={true} smooth={true} duration={500} onClick={()=>{this.props.selectHeader('about')}} >
-  //             <div>About my work</div>
-  //           </Link>
-  //         </div>}
-  //     </Motion> })
-  //   },650)
-  //
-  // }
+  handleAbout(){
+    setTimeout(() => {
+      this.setState({ about: <Motion defaultStyle={{x: -35, o: 0}} style={{x: spring(0), o: spring(1, {stiffness: 30})}}>
+        {value => <div className="intro" style={{left: value.x, opacity: value.o, position: 'relative'}}>
+            <hr/>
+            <br/>
+            <br/>
+            <h5 className="font-italic">I love building everything from small business sites to rich interactive web apps.</h5>
+          </div>}
+      </Motion> })
+    },650)
+
+  }
 
   render() {
     let backgroundImageStyle = `translateY(${-this.props.transformY}px)`
@@ -58,15 +64,14 @@ class Home extends Component {
                   <h5 className="font-italic">Hello, I'm</h5>
                   <h1>JIMMY GONZALEZ</h1>
                   <h4>FULLSTACK DEVELOPER</h4>
-                  <hr/>
-                  <br/>
-                  <br/>
-                  <h5 className="font-italic">I love building everything from small business sites to rich interactive web apps.</h5>
 
                 </div>}
             </Motion>
-            {/* {this.handleAboutButton()} */}
 
+
+
+            {this.handleAbout()}
+            {this.state.about}
 
 
           </div>
@@ -82,15 +87,4 @@ class Home extends Component {
   }
 }
 
-// function mapStateToProps(state){
-//   return {
-//     headerData: state.headerData
-//   }
-// }
-//
-// function mapDispatchToProps(dispatch){
-//   return bindActionCreators({ selectHeader: selectHeader }, dispatch)
-// }
-//
-// export default connect(mapStateToProps, mapDispatchToProps)(Home);
 export default Home;

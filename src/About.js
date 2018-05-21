@@ -41,7 +41,7 @@ class About extends Component {
   }
 
   handleTitle(){
-    this.setState({ title: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0, {stiffness: 120, damping: 17}), o: spring(1)}}>
+    this.setState({ title: <Motion defaultStyle={{x: -150, o: 0}} style={{x: spring(0, {stiffness: 120, damping: 17}), o: spring(1)}}>
       {value => <h1 style={{left: value.x, opacity: value.o, position: 'relative'}} className="text-center">ABOUT</h1>}
     </Motion> })
   }
@@ -73,7 +73,7 @@ class About extends Component {
         {value => <div className="col-md-4" style={{left: value.x, opacity: value.o,}}>
           <div><i className="material-icons">important_devices</i></div>
           <h5>RESPONSIVE</h5>
-          <p>Shit is responsive as fuck yo in any browser</p>
+          <p>My layouts will work and respond to any device size big or small</p>
         </div>}
       </Motion> })
     // }, 100)
@@ -85,7 +85,7 @@ class About extends Component {
         {value => <div className="col-md-4" style={{left: value.x, opacity: value.o}}>
           <div><i className="material-icons">lightbulb_outline</i></div>
           <h5>INTUITIVE</h5>
-          <p>You'll shit your brains when you see how intuitive I am with this shit</p>
+          <p>Preference for easy to use UX and intuitive design</p>
         </div>}
       </Motion> })
     // },200)
@@ -97,7 +97,7 @@ class About extends Component {
         {value => <div className="col-md-4" style={{left: value.x, opacity: value.o}}>
           <i className="material-icons">timeline</i>
           <h5>PERFORMANCE</h5>
-          <p>Perforance will be at an all time mother fuckin high</p>
+          <p>Strong performance for an engaging and rich user experience</p>
         </div>}
       </Motion> })
     // },300)

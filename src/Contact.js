@@ -21,14 +21,14 @@ class Contact extends Component {
   }
 
   handleTitle(){
-    this.setState({ title: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0), o: spring(1)}}>
+    this.setState({ title: <Motion defaultStyle={{x: -150, o: 0}} style={{x: spring(0), o: spring(1)}}>
       {value => <h1 className='text-center title' style={{left: value.x, opacity: value.o, position: 'relative'}}>CONTACT</h1>}
     </Motion> })
   }
 
   handleForm(){
-    this.setState({ form: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0), o: spring(1)}}>
-      {value => <Form style={{left: value.x, opacity: value.o, position: 'relative'}} />}
+    this.setState({ form: <Motion defaultStyle={{x: 0, o: 0}} style={{x: spring(1), o: spring(1)}}>
+      {value => <Form style={{transform: `scale(${value.x, value.x})`, opacity: value.o, position: 'relative'}} />}
     </Motion> })
   }
 
@@ -60,8 +60,9 @@ class Contact extends Component {
         <div className='form-reviews'>
           <div className='row center-content'>
             <div className='col-lg-5'>
+              
               <Waypoint onEnter={()=>{this.handleForm()}}
-                bottomOffset='150px'
+                bottomOffset='250px'
               />
               {this.state.form}
             </div>
