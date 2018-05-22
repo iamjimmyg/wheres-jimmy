@@ -16,9 +16,10 @@ class UtilityRadarInfo extends Component {
 
           </div>
 
-          <p>Online search tool for finding specific companies serving the utility industry</p>
+          <p>Demo search tool for finding specific companies serving the utility industry. </p>
           <ul>
-            <li>Translated UX designs to front-end code using React/Redux, SCSS, Handsontable, and Chart.js</li>
+            <li>Translated InVision UX designs to front-end code using React/Redux, SCSS, Handsontable, and Chart.js</li>
+            <li>Integrated a watchlist to add favorite companies with a print ready template.</li>
           </ul>
         </div>
     )

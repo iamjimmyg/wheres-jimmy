@@ -13,7 +13,7 @@ class App extends Component{
   constructor (props){
       super(props);
       this.state = {
-        imageOpacity: .4,
+        imageOpacity: .1,
         textOpacity: 1,
         imageTransformY: 0,
         scale: 1,
@@ -30,7 +30,7 @@ class App extends Component{
           // console.log('scroll posish', window.scrollY)
           // console.log('window height', window.innerHeight)
           let transformY = Math.floor((window.scrollY / window.innerHeight) * 300)
-          let imageOpacity = (window.scrollY / window.innerHeight) + .4
+          let imageOpacity = (window.scrollY / window.innerHeight) + .1
           let imageScale = (((window.scrollY / window.innerHeight) + 1) * .5) + .5
 
           let textOpacity = (window.innerHeight - window.scrollY) / window.innerHeight

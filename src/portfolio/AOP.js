@@ -34,11 +34,11 @@ class AOP extends Component {
             </div>
           </div>
           <a className="carousel-control-prev" href="#carouselAOP" role="button" data-slide="prev">
-            <i className="material-icons arrows">keyboard_arrow_left</i>
+            <i className="material-icons arrow-left">keyboard_arrow_left</i>
             <span className="sr-only">Previous</span>
           </a>
           <a className="carousel-control-next" href="#carouselAOP" role="button" data-slide="next">
-            <i className="material-icons arrows">keyboard_arrow_right</i>
+            <i className="material-icons arrow-right">keyboard_arrow_right</i>
             <span className="sr-only">Next</span>
           </a>
         </div>

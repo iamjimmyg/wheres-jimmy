@@ -1,14 +1,22 @@
 $color-blue: #323840;
 $color-yellow: rgb(178, 148, 17);
 
+
+
 #about {
   padding-top: 55px;
   padding-bottom: 55px;
+  .about-container {
+
+    margin-left: 8vw;
+    margin-right: 8vw;
+  }
 
   h1 {
-    //color: $color-blue;
+
     margin-top: 50px;
-    //font-weight: bold;
+    color: black;
+    font-weight: bold;
   }
   h1 {
     overflow: hidden;
@@ -35,47 +43,17 @@ $color-yellow: rgb(178, 148, 17);
     left: 0.5em;
     margin-right: -50%;
   }
+  h4 {
+    font-weight: bold;
+  }
   .bio, .stats {
-    //margin-bottom: 20px;
-    // h5 {
-    //   overflow: hidden;
-    //   text-align: center;
-    // }
-    //
-    // h5:before,
-    // h5:after {
-    //   background-color: black;
-    //   content: "";
-    //   display: inline-block;
-    //   height: 2px;
-    //   position: relative;
-    //   vertical-align: middle;
-    //   width: 10%;
-    // }
-    //
-    // h5:before {
-    //   right: 0.5em;
-    //   margin-left: -50%;
-    // }
-    //
-    // h5:after {
-    //   left: 0.5em;
-    //   margin-right: -50%;
-    // }
+
   }
-  // }
-  .about-me-content {
-    // margin-top: 40px;
-    // margin-bottom: 40px;
-    //
-    // .bio {
-    //   margin-top: 10px;
-    //
-    // }
-  }
+
   .icon-section{
     .material-icons {
       color: $color-blue;
+      font-size: 120px;
     }
 
     position: relative;
@@ -87,35 +65,9 @@ $color-yellow: rgb(178, 148, 17);
     max-height: 270px;
   }
 
-  //min-height: 100vh;
-  //picture shape
-  // .hexa, .hexa div {
-  //   margin: 0 auto;
-  //   transform-origin: 50% 50%;
-  //   overflow: hidden;
-  //   width: 300px;
-  //   height: 300px;
+  // .material-icons {
+  //   font-size: 120px;
   // }
-  // .hexa {
-  //   width: 325px;
-  //   height: 230px;
-  // }
-  // .hexa div {
-  //   width: 100%;
-  //   height: 100%;
-  // }
-  // .hexa {
-  //   transform: rotate(120deg);
-  // }
-  // .hex1 {
-  //   transform: rotate(-60deg);
-  // }
-  // .hex2 {
-  //   transform: rotate(-60deg);
-  // }
-  .material-icons {
-    font-size: 70px;
-  }
   //icon
   .stats {
     position: relative;

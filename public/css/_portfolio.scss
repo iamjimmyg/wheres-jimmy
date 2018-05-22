@@ -5,6 +5,8 @@
   h1 {
     overflow: hidden;
     text-align: center;
+    color: black;
+    font-weight: bold;
   }
 
   h1:before,
@@ -27,16 +29,43 @@
     left: 0.5em;
     margin-right: -50%;
   }
+  h5, h4 {
+    font-weight: bold;
+  }
   .projects {
     margin-top: 45px;
     margin-bottom: 40px;
     .project {
       position: relative;
       margin-bottom: 35px;
-      .arrows {
-        font-size: 50px;
-        //opacity: 1.0;
-        color: rgb(178, 148, 17);
+      .arrow-left {
+        position: absolute;
+        left: 0;
+        font-size: 30px;
+        background-color: grey;
+        transition: .2s ease-in-out;
+        &:hover {
+          //opacity: 1.0;
+          color: rgb(178, 148, 17);
+          //background: lightgrey;
+          //transform: scale(1.2, 1.2);
+        }
+
+        //opacity: .7;
+        //
+      }
+      .arrow-right {
+        position: absolute;
+        right: 0;
+        font-size: 30px;
+        background-color: grey;
+        transition: .2s ease-in-out;
+        &:hover {
+          //opacity: 1.0;
+          color: rgb(178, 148, 17);
+          //background: lightgrey;
+          //transform: scale(1.2, 1.2);
+        }
       }
       .card {
         -webkit-box-shadow: 11px 10px 22px 2px rgba(0,0,0,0.19);
@@ -47,22 +76,22 @@
         margin-bottom: 40px;
         margin-left: auto;
         margin-right: auto;
-        .carousel-control-prev{
-          opacity: 1;
-          transition: .1s ease-in-out;
-          &:hover {
-            cursor: pointer;
-            transform: scale(1.2, 1.2);
-          }
-        }
-        .carousel-control-next{
-          opacity: 1;
-          transition: .1s ease-in-out;
-          &:hover {
-            cursor: pointer;
-            transform: scale(1.2, 1.2);
-          }
-        }
+        // .carousel-control-prev{
+        //   opacity: 1;
+        //   transition: .1s ease-in-out;
+        //   &:hover {
+        //     cursor: pointer;
+        //     transform: scale(1.2, 1.2);
+        //   }
+        // }
+        // .carousel-control-next{
+        //   opacity: 1;
+        //   transition: .1s ease-in-out;
+        //   &:hover {
+        //     cursor: pointer;
+        //     transform: scale(1.2, 1.2);
+        //   }
+        // }
         .carousel-inner{
           height: 300px;
           // width: 420px;

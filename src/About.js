@@ -15,20 +15,14 @@ class About extends Component {
         <p>As a front-end developer, I write code that conforms to industry standards and semantic best practices. I am able to transform static artwork into pixel prefect, interactive and fully functional interfaces.</p>
 
       </div>,
-      iconSection1: <div className="col-md-4 invisible">
-        <div><i className="material-icons">important_devices</i></div>
-        <h5>RESPONSIVE</h5>
-        <p>Shit is responsive as fuck yo in any browser</p>
+      iconSection1: <div className="invisible">
+        <i className="material-icons">important_devices</i>
       </div>,
-      iconSection2: <div className="col-md-4 invisible">
-        <div><i className="material-icons">lightbulb_outline</i></div>
-        <h5>Intuitive</h5>
-        <p>You'll shit your brains when you see how intuitive I am with this shit</p>
+      iconSection2: <div className="invisible">
+        <i className="material-icons">lightbulb_outline</i>
       </div>,
-      iconSection3: <div className="col-md-4 invisible">
+      iconSection3: <div className="invisible">
         <i className="material-icons">timeline</i>
-        <h5>Performance</h5>
-        <p>Perforance will be at an all time mother fuckin high</p>
       </div>,
 
     }
@@ -44,6 +38,38 @@ class About extends Component {
     this.setState({ title: <Motion defaultStyle={{x: -150, o: 0}} style={{x: spring(0, {stiffness: 120, damping: 17}), o: spring(1)}}>
       {value => <h1 style={{left: value.x, opacity: value.o, position: 'relative'}} className="text-center">ABOUT</h1>}
     </Motion> })
+  }
+
+  handleIconSection1(){
+    // setTimeout(()=>{
+      this.setState({ iconSection1: <Motion defaultStyle={{x: -150, o: 0}} style={{x: spring(0), o: spring(1)}}>
+        {value => <div style={{left: value.x, opacity: value.o, position: 'relative'}}>
+          <i className="material-icons">important_devices</i>
+
+        </div>}
+      </Motion> })
+    // }, 100)
+
+  }
+  handleIconSection2(){
+    // setTimeout(() => {
+      this.setState({ iconSection2: <Motion defaultStyle={{x: -150, o: 0}} style={{x: spring(0), o: spring(1)}}>
+        {value => <div style={{left: value.x, opacity: value.o, position: 'relative'}}>
+            <i className="material-icons">lightbulb_outline</i>
+        </div>}
+      </Motion> })
+    // },200)
+
+  }
+  handleIconSection3(){
+    // setTimeout(()=>{
+      this.setState({ iconSection3: <Motion defaultStyle={{x: -150, o: 0}} style={{x: spring(0), o: spring(1)}}>
+        {value => <div style={{left: value.x, opacity: value.o, position: 'relative'}}>
+          <i className="material-icons">timeline</i>
+
+        </div>}
+      </Motion> })
+    // },300)
   }
 
   handleProfileSection(){
@@ -67,42 +93,6 @@ class About extends Component {
     // }, 100)
   }
 
-  handleIconSection1(){
-    // setTimeout(()=>{
-      this.setState({ iconSection1: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0), o: spring(1)}}>
-        {value => <div className="col-md-4" style={{left: value.x, opacity: value.o,}}>
-          <div><i className="material-icons">important_devices</i></div>
-          <h5>RESPONSIVE</h5>
-          <p>My layouts will work and respond to any device size big or small</p>
-        </div>}
-      </Motion> })
-    // }, 100)
-
-  }
-  handleIconSection2(){
-    // setTimeout(() => {
-      this.setState({ iconSection2: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0), o: spring(1)}}>
-        {value => <div className="col-md-4" style={{left: value.x, opacity: value.o}}>
-          <div><i className="material-icons">lightbulb_outline</i></div>
-          <h5>INTUITIVE</h5>
-          <p>Preference for easy to use UX and intuitive design</p>
-        </div>}
-      </Motion> })
-    // },200)
-
-  }
-  handleIconSection3(){
-    // setTimeout(()=>{
-      this.setState({ iconSection3: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0), o: spring(1)}}>
-        {value => <div className="col-md-4" style={{left: value.x, opacity: value.o}}>
-          <i className="material-icons">timeline</i>
-          <h5>PERFORMANCE</h5>
-          <p>Strong performance for an engaging and rich user experience</p>
-        </div>}
-      </Motion> })
-    // },300)
-  }
-
   render() {
 
     return (
@@ -112,37 +102,74 @@ class About extends Component {
         />
         {this.state.title}
 
-        <div className="row icon-section text-center">
-          <Waypoint onEnter={()=>{this.handleIconSection1()}}
-            bottomOffset='150px'
-          />
-          {this.state.iconSection1}
+        <div className="about-container">
 
-          <Waypoint onEnter={()=>{this.handleIconSection2()}}
-            bottomOffset='175px'
-          />
-          {this.state.iconSection2}
 
-          <Waypoint onEnter={()=>{this.handleIconSection3()}}
-            bottomOffset='200px'
-          />
-          {this.state.iconSection3}
-
-        </div>
-        <div className='row'>
-          <div className="col-lg-5">
-            <Waypoint onEnter={()=>{this.handleProfileSection()}}
+          <div className="row icon-section">
+            <Waypoint onEnter={()=>{this.handleIconSection1()}}
               bottomOffset='150px'
             />
-            {this.state.profileSection}
+            <div className='col-lg-3 text-center'>
+
+              {this.state.iconSection1}
+            </div>
+
+            <div className='col-lg-9'>
+              <h4>RESPONSIVE</h4>
+              <h5>My layouts will work and respond to any device size big or small</h5>
+            </div>
+
           </div>
 
-          <div className="col-lg-7">
-            <Waypoint onEnter={()=>{this.handleStats()}}
-              bottomOffset='200px'
+          <div className="row icon-section">
+            <Waypoint onEnter={()=>{this.handleIconSection2()}}
+              bottomOffset='150px'
             />
-            {this.state.stats}
+            <div className='col-lg-3 text-center'>
+
+              {this.state.iconSection2}
+            </div>
+            <div className='col-lg-9'>
+              <h4>INTUITIVE</h4>
+              <h5>Preference for easy to use UX and intuitive design</h5>
+            </div>
+
           </div>
+
+          <div className="row icon-section">
+            <Waypoint onEnter={()=>{this.handleIconSection3()}}
+              bottomOffset='150px'
+            />
+            <div className='col-lg-3 text-center'>
+
+              {this.state.iconSection3}
+            </div>
+
+            <div className='col-lg-9'>
+              <h4>PERFORMANCE</h4>
+              <h5>Strong performance for an engaging and rich user experience</h5>
+            </div>
+          </div>
+
+
+
+          <div className=''>
+            <div className="">
+              <Waypoint onEnter={()=>{this.handleProfileSection()}}
+                bottomOffset='150px'
+              />
+              {this.state.profileSection}
+            </div>
+
+            <div className="">
+              <Waypoint onEnter={()=>{this.handleStats()}}
+                bottomOffset='200px'
+              />
+              {this.state.stats}
+            </div>
+          </div>
+
+
         </div>
 
 
