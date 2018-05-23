@@ -6,7 +6,7 @@ import Home from './Home'
 import About from './About'
 import Portfolio from './Portfolio'
 import Contact from './Contact'
-
+import Testimonials from './Testimonials'
 
 class App extends Component{
 
@@ -67,6 +67,13 @@ class App extends Component{
 
             <About />
           </Element>
+          <Testimonials
+            textOpacity={this.state.textOpacity}
+            imageOpacity={this.state.imageOpacity}
+            transformY={this.state.imageTransformY}
+            scale={this.state.scale}
+            imageScale={this.state.imageScale}
+           />
 
           <Element name="portfolio" className="element">
             <Portfolio />

@@ -49,7 +49,10 @@
     position: relative;
     width: 60%; }
     #landing .landing-content h5 {
-      margin-bottom: 15px; }
+      margin-bottom: 15px;
+      font-weight: bold; }
+    #landing .landing-content .center-content .intro h4 {
+      font-weight: bold; }
     #landing .landing-content .center-content .intro h1 {
       color: #b29411;
       font-weight: bold; }
@@ -372,6 +375,20 @@ header {
     background: #b29411;
     border: none;
     transition: .3s ease-in-out; }
+
+#testimonials {
+  position: relative; }
+  #testimonials .background-image {
+    z-index: 2;
+    height: 500px;
+    background: url(../smartcity.jpg) no-repeat center center fixed; }
+  #testimonials .background-opacity {
+    z-index: 3;
+    background: rgba(34, 40, 70, 0.4);
+    height: 500px;
+    position: absolute;
+    width: 100%;
+    top: 0; }
 
 body {
   margin: 0;

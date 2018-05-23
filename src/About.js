@@ -35,7 +35,7 @@ class About extends Component {
   }
 
   handleTitle(){
-    this.setState({ title: <Motion defaultStyle={{x: -150, o: 0}} style={{x: spring(0, {stiffness: 120, damping: 17}), o: spring(1)}}>
+    this.setState({ title: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0, {stiffness: 120, damping: 17}), o: spring(1)}}>
       {value => <h1 style={{left: value.x, opacity: value.o, position: 'relative'}} className="text-center">ABOUT</h1>}
     </Motion> })
   }
@@ -75,7 +75,7 @@ class About extends Component {
   handleProfileSection(){
     this.setState({ profileSection: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0), o: spring(1)}}>
       {value => <div style={{left: value.x, opacity: value.o, position: 'relative'}} className="bio">
-        <h5 className="text-center">MY WORK</h5>
+        <h4 className="text-center">MY WORK</h4>
         <div className="">
           <p>Offering creative design solutions to solve business problems is what I do best. I write in JavaScript, CSS, Ruby. I also speak to databases and make servers do stuff. I like working on scalability, performance, reusability, and great user experiences.</p>
           <p>As a front-end developer, I write code that conforms to industry standards and semantic best practices. I am able to transform static artwork into pixel perfect, interactive and fully functional interfaces.</p>
@@ -151,7 +151,9 @@ class About extends Component {
             </div>
           </div>
 
-
+          <hr />
+          <br/>
+          <br/>
 
           <div className=''>
             <div className="">
@@ -160,7 +162,11 @@ class About extends Component {
               />
               {this.state.profileSection}
             </div>
-
+            <br/>
+            <br/>
+            <hr />
+            <br/>
+            <br/>
             <div className="">
               <Waypoint onEnter={()=>{this.handleStats()}}
                 bottomOffset='200px'
