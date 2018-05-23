@@ -49,6 +49,9 @@ body{
       }
     }
   }
+  // #testimonials {
+  //   font-size: .3rem;
+  // }
 }
 @media (max-width: 992px){
   #landing {
@@ -97,9 +100,9 @@ body{
   }
 }
 @media (max-width: 500px) {
-  .profile-pic {
-    transform: scale(.8,.8);
-  }
+  // .profile-pic {
+  //   transform: scale(.8,.8);
+  // }
   #portfolio {
     .projects {
       .project {
@@ -108,6 +111,17 @@ body{
             height: 280px;
           }
         }
+      }
+    }
+  }
+  #testimonials {
+    #reviewCarousel {
+      // .carousel {
+        margin-left: 1vw;
+        margin-right: 1vw;
+      // }
+      h4 {
+        font-size: 1.1rem;
       }
     }
   }
@@ -124,6 +138,7 @@ body{
       }
     }
   }
+
 }
 
 

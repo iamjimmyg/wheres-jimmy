@@ -372,6 +372,45 @@ header {
 
 #testimonials {
   position: relative; }
+  #testimonials .content {
+    z-index: 40;
+    color: white;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    right: 0; }
+    #testimonials .content .carousel {
+      margin-left: 11vw;
+      margin-right: 11vw;
+      height: 410px; }
+      #testimonials .content .carousel .carousel-inner {
+        height: 400px; }
+        #testimonials .content .carousel .carousel-inner .carousel-item {
+          /* Thanks: http://callmenick.com/post/styling-blockquotes-with-css-pseudo-classes */ }
+          #testimonials .content .carousel .carousel-inner .carousel-item blockquote {
+            position: relative;
+            margin: 0.5em;
+            padding: 0.5em 2em 0.5em 3em; }
+          #testimonials .content .carousel .carousel-inner .carousel-item blockquote:before {
+            font-family: Georgia, serif;
+            position: absolute;
+            color: #b29411;
+            font-size: 6em;
+            line-height: 1;
+            top: 0;
+            left: 0;
+            content: "\201C"; }
+          #testimonials .content .carousel .carousel-inner .carousel-item blockquote:after {
+            font-family: Georgia, serif;
+            position: absolute;
+            color: #b29411;
+            /* display: block; don't use this, it raised the quote too high from the bottom - defeated line-height? */
+            float: right;
+            font-size: 6em;
+            line-height: 1;
+            right: 0;
+            bottom: -0.5em;
+            content: "\201D"; }
   #testimonials .background-opacity {
     z-index: 3;
     background: #323840;
@@ -380,6 +419,12 @@ header {
     position: absolute;
     width: 100%;
     top: 0; }
+  #testimonials .iron-image-container .iron-image-preload {
+    z-index: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
   #testimonials .iron-image-container .iron-image-loaded {
     position: absolute;
     z-index: 1;
@@ -435,10 +480,13 @@ body {
     height: 320px; } }
 
 @media (max-width: 500px) {
-  .profile-pic {
-    transform: scale(0.8, 0.8); }
   #portfolio .projects .project .card .carousel-inner {
-    height: 280px; } }
+    height: 280px; }
+  #testimonials #reviewCarousel {
+    margin-left: 1vw;
+    margin-right: 1vw; }
+    #testimonials #reviewCarousel h4 {
+      font-size: 1.1rem; } }
 
 @media (max-width: 375px) {
   #portfolio .projects .project .card .carousel-inner {

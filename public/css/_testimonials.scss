@@ -1,4 +1,5 @@
 $color-blue: #323840;
+$color-yellow: rgb(178, 148, 17);
 
 #testimonials {
   position: relative;
@@ -8,6 +9,63 @@ $color-blue: #323840;
   //   height: 500px;
   //   background: url(../smartcity.jpg) no-repeat center center fixed;
   // }
+  .content {
+    z-index: 40;
+    color: white;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    right: 0;
+    //min-height: 500px;
+    .carousel {
+      //position: flex;
+      //margin-top: 11vh;
+      margin-left: 11vw;
+      margin-right: 11vw;
+      height: 410px;
+
+      .carousel-indicators {
+
+      }
+      .carousel-inner {
+        height: 400px;
+        .carousel-item {
+          blockquote {
+            //font-family: Georgia, serif;
+            position: relative;
+            margin: 0.5em;
+            padding: 0.5em 2em 0.5em 3em;
+          }
+          /* Thanks: http://callmenick.com/post/styling-blockquotes-with-css-pseudo-classes */
+          blockquote:before {
+            font-family: Georgia, serif;
+            position: absolute;
+            color: $color-yellow;
+            font-size: 6em;
+            line-height: 1;
+            top: 0;
+            left: 0;
+            content: "\201C";
+          }
+          blockquote:after {
+            font-family: Georgia, serif;
+            position: absolute;
+            color: $color-yellow;
+           /* display: block; don't use this, it raised the quote too high from the bottom - defeated line-height? */
+            float:right;
+            font-size:6em;
+            line-height: 1;
+            right:0;
+            bottom:-0.5em;
+            content: "\201D";
+          }
+        }
+
+        //padding-top: 1rem;
+      }
+    }
+  }
+
   .background-opacity {
     z-index: 3;
     background: $color-blue;
@@ -28,20 +86,20 @@ $color-blue: #323840;
     // bottom: 0;
     //
     // overflow: hidden;
-    // .iron-image-preload {
-    //   z-index: 0;
-    //   //position: absolute;
-    //   //background: url(../background_image_preload.jpg) no-repeat center center fixed;
-    //   //height: 100vh;
-    //   // width: 100%;
-    //   //z-index: 1;
-    //   top: 0;
-    //   right: 0;
-    //   bottom: 0;
-    //   left: 0;
-    //
-    //   //background-size: cover;
-    // }
+    .iron-image-preload {
+      z-index: 0;
+      //position: absolute;
+      //background: url(../background_image_preload.jpg) no-repeat center center fixed;
+      //height: 100vh;
+      // width: 100%;
+      //z-index: 1;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      //background-size: cover;
+    }
     .iron-image-loaded {
       //background: url(../background-image.jpg) no-repeat center center fixed;
       position: absolute;
