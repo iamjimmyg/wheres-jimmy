@@ -36,8 +36,8 @@ $color-yellow: rgb(178, 148, 17);
     .iron-image-preload {
       z-index: 0;
       position: absolute;
-      background: url(../background_image_preload.jpg) no-repeat center center fixed;
-      height: 100vh;
+      //background: url(../background_image_preload.jpg) no-repeat center center fixed;
+      //height: 100vh;
       // width: 100%;
       //z-index: 1;
       top: 0;
@@ -45,19 +45,19 @@ $color-yellow: rgb(178, 148, 17);
       bottom: 0;
       left: 0;
 
-      background-size: cover;
+      //background-size: cover;
     }
     .iron-image-loaded {
-      background: url(../background-image.jpg) no-repeat center center fixed;
+      //background: url(../background-image.jpg) no-repeat center center fixed;
       position: absolute;
-      height: 100%;
+      //height: 100%;
       z-index: 1;
       top: 0;
       right: 0;
       bottom: 0;
       left: 0;
 
-      background-size: cover;
+      //background-size: cover;
 
       opacity: 0;
 

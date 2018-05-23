@@ -27,6 +27,9 @@ class IronImage extends Component {
           style={{
             top: this.props.transformY,
             transform: this.props.backgroundImageStyle,
+            background: `url(${this.props.srcLoaded}) no-repeat center center fixed`,
+            height: this.props.height,
+            backgroundSize: 'cover',
           }}
           className="iron-image-loaded"
           ref={imageLoadedElem => this.ironImageHd = imageLoadedElem}>
@@ -36,6 +39,10 @@ class IronImage extends Component {
           style={{
             top: this.props.transformY,
             transform: this.props.backgroundImageStyle,
+            background: `url(${this.props.srcPreload}) no-repeat center center fixed`,
+            height: this.props.height,
+            backgroundSize: 'cover',
+            position: this.props.position,
           }}>
         </div>
       </div>

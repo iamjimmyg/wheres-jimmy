@@ -49,7 +49,8 @@ class Home extends Component {
           <img src='background-image.jpg' className='background-image-div' style={{ top: this.props.transformY, transform: backgroundImageStyle }}/>
         </div> */}
         <IronImage
-          //srcPreload='../background_image_preload.jpg'
+          height='100%'
+          srcPreload='../background_image_preload.jpg'
           transformY={this.props.transformY}
           backgroundImageStyle={backgroundImageStyle}
           srcLoaded='../background-image.jpg'

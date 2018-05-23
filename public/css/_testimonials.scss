@@ -1,17 +1,66 @@
+$color-blue: #323840;
+
 #testimonials {
   position: relative;
-  .background-image {
-    //opacity: .5;
-    z-index: 2;
-    height: 500px;
-    background: url(../smartcity.jpg) no-repeat center center fixed;
-  }
+  // .background-image {
+  //   //opacity: .5;
+  //   z-index: 2;
+  //   height: 500px;
+  //   background: url(../smartcity.jpg) no-repeat center center fixed;
+  // }
   .background-opacity {
     z-index: 3;
-    background: rgba(34,40,70, .4);
+    background: $color-blue;
+    opacity: .5;
     height: 500px;
     position: absolute;
     width: 100%;
     top: 0;
+  }
+
+  .iron-image-container {
+    // position: absolute;
+    //
+    // width: 100%;
+    // height: 100vh;
+    // top: 0;
+    // right: 0;
+    // bottom: 0;
+    //
+    // overflow: hidden;
+    // .iron-image-preload {
+    //   z-index: 0;
+    //   //position: absolute;
+    //   //background: url(../background_image_preload.jpg) no-repeat center center fixed;
+    //   //height: 100vh;
+    //   // width: 100%;
+    //   //z-index: 1;
+    //   top: 0;
+    //   right: 0;
+    //   bottom: 0;
+    //   left: 0;
+    //
+    //   //background-size: cover;
+    // }
+    .iron-image-loaded {
+      //background: url(../background-image.jpg) no-repeat center center fixed;
+      position: absolute;
+      //height: 100%;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      //background-size: cover;
+
+      opacity: 0;
+
+      transition: opacity 1s ease;
+    }
+
+    .iron-image-fade-in {
+      opacity: 1;
+    }
   }
 }
