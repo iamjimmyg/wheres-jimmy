@@ -380,37 +380,46 @@ header {
     left: 0;
     right: 0; }
     #testimonials .content .carousel {
-      margin-left: 11vw;
-      margin-right: 11vw;
+      margin-left: 20vw;
+      margin-right: 20vw;
       height: 410px; }
-      #testimonials .content .carousel .carousel-inner {
-        height: 400px; }
-        #testimonials .content .carousel .carousel-inner .carousel-item {
-          /* Thanks: http://callmenick.com/post/styling-blockquotes-with-css-pseudo-classes */ }
-          #testimonials .content .carousel .carousel-inner .carousel-item blockquote {
-            position: relative;
-            margin: 0.5em;
-            padding: 0.5em 2em 0.5em 3em; }
-          #testimonials .content .carousel .carousel-inner .carousel-item blockquote:before {
-            font-family: Georgia, serif;
-            position: absolute;
-            color: #b29411;
-            font-size: 6em;
-            line-height: 1;
-            top: 0;
-            left: 0;
-            content: "\201C"; }
-          #testimonials .content .carousel .carousel-inner .carousel-item blockquote:after {
-            font-family: Georgia, serif;
-            position: absolute;
-            color: #b29411;
-            /* display: block; don't use this, it raised the quote too high from the bottom - defeated line-height? */
-            float: right;
-            font-size: 6em;
-            line-height: 1;
-            right: 0;
-            bottom: -0.5em;
-            content: "\201D"; }
+      #testimonials .content .carousel .carousel-indicators li {
+        max-width: 8px;
+        border-radius: 100%;
+        height: 8px;
+        margin-right: 7px;
+        margin-left: 7px; }
+      #testimonials .content .carousel .carousel-inner .carousel-item {
+        height: 375px;
+        /* Thanks: http://callmenick.com/post/styling-blockquotes-with-css-pseudo-classes */ }
+        #testimonials .content .carousel .carousel-inner .carousel-item .column {
+          display: flex;
+          flex-direction: column;
+          justify-content: center; }
+        #testimonials .content .carousel .carousel-inner .carousel-item blockquote {
+          position: relative;
+          margin: 0.5em;
+          padding: 0.5em 2em 0.5em 3em; }
+        #testimonials .content .carousel .carousel-inner .carousel-item blockquote:before {
+          font-family: Georgia, serif;
+          position: absolute;
+          color: #b29411;
+          font-size: 6em;
+          line-height: 1;
+          top: 0;
+          left: 0;
+          content: "\201C"; }
+        #testimonials .content .carousel .carousel-inner .carousel-item blockquote:after {
+          font-family: Georgia, serif;
+          position: absolute;
+          color: #b29411;
+          /* display: block; don't use this, it raised the quote too high from the bottom - defeated line-height? */
+          float: right;
+          font-size: 6em;
+          line-height: 1;
+          right: 0;
+          bottom: -0.5em;
+          content: "\201D"; }
   #testimonials .background-opacity {
     z-index: 3;
     background: #323840;
@@ -471,13 +480,21 @@ body {
     height: 480px; }
   #contact .form-reviews {
     margin-top: 0px;
-    margin-bottom: 0px; } }
+    margin-bottom: 0px; }
+  #testimonials #reviewCarousel {
+    margin-left: 10vw;
+    margin-right: 10vw; } }
 
 @media (max-width: 767px) {
   header .header-logo {
     left: 10px; }
   #portfolio .projects .project .card .carousel-inner {
-    height: 320px; } }
+    height: 320px; }
+  #testimonials #reviewCarousel {
+    margin-left: 5vw;
+    margin-right: 5vw; }
+    #testimonials #reviewCarousel h4 {
+      font-size: 1.2rem; } }
 
 @media (max-width: 500px) {
   #portfolio .projects .project .card .carousel-inner {
@@ -486,8 +503,13 @@ body {
     margin-left: 1vw;
     margin-right: 1vw; }
     #testimonials #reviewCarousel h4 {
-      font-size: 1.1rem; } }
+      font-size: 1.2rem; } }
 
 @media (max-width: 375px) {
   #portfolio .projects .project .card .carousel-inner {
-    height: 230px; } }
+    height: 230px; }
+  #testimonials #reviewCarousel {
+    margin-left: 1vw;
+    margin-right: 1vw; }
+    #testimonials #reviewCarousel h4 {
+      font-size: 1.1rem; } }

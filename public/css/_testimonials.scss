@@ -20,16 +20,28 @@ $color-yellow: rgb(178, 148, 17);
     .carousel {
       //position: flex;
       //margin-top: 11vh;
-      margin-left: 11vw;
-      margin-right: 11vw;
+      margin-left: 20vw;
+      margin-right: 20vw;
       height: 410px;
 
       .carousel-indicators {
-
+        li {
+          max-width: 8px;
+          border-radius: 100%;
+          height: 8px;
+          margin-right: 7px;
+          margin-left: 7px;
+        }
       }
       .carousel-inner {
-        height: 400px;
+
         .carousel-item {
+          .column {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+          height: 375px;
           blockquote {
             //font-family: Georgia, serif;
             position: relative;
