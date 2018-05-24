@@ -16,28 +16,12 @@ import 'slick-carousel/slick/slick.css';
 class Portfolio extends Component {
   constructor(props){
     super(props)
-    // this.aop = <AOP />
-    // this.aopInfo = <AOPInfo />
-    // this.bellawatt = <Bellawatt />
-    // this.bellawattInfo = <BellawattInfo />
-    // this.utilityRadar = <UtilityRadar />
-    // this.utilityRadarInfo = <UtilityRadarInfo />
 
     this.state = {
       title: <h1 className='invisible'>PORTFOLIO</h1>,
-      // aop: <div className='invisible'>{this.aop}</div>,
-      // aopInfo: <div className='invisible'>{this.aopInfo}</div>,
-      // bellawatt: <div className='invisible'>{this.bellawatt}</div>,
-      // bellawattInfo: <div className='invisible'>{this.bellawattInfo}</div>,
-      // utilityRadar: <div className='invisible'>{this.utilityRadar}</div>,
-      // utilityRadarInfo: <div className='invisible'>{this.utilityRadarInfo}</div>,
+      projectIndex: 0,
     }
-    // this.handleAOP = this.handleAOP.bind(this)
-    // this.handleAOPInfo = this.handleAOPInfo.bind(this)
-    // this.handleBellawatt = this.handleBellawatt.bind(this)
-    // this.handleBellawattInfo = this.handleBellawattInfo.bind(this)
-    // this.handleUtilityRadar = this.handleUtilityRadar.bind(this)
-    // this.handleUtilityRadarInfo = this.handleUtilityRadarInfo.bind(this)
+
   }
 
   handleTitle(){
@@ -96,6 +80,7 @@ class Portfolio extends Component {
 
           );
       },
+      beforeChange: (old, newIndex) => {this.setState({projectIndex: newIndex})},
       dotsClass: "slick-dots slick-thumb",
       dots: true,
       //infinite: true,
@@ -110,7 +95,7 @@ class Portfolio extends Component {
           bottomOffset='150px'
         />
         {this.state.title}
-        <div className="projects container">
+        <div className="projects">
           <Slider  {...settings}>
             <div>
               <div className="row">
@@ -152,6 +137,7 @@ class Portfolio extends Component {
 
 
            </Slider>
+           {this.state.projectIndex}
         </div>
 
 

@@ -36,7 +36,8 @@
   }
   .projects {
     .project-info {
-
+      margin-left: 20px;
+      margin-right: 60px;
       .nnsa-icon {
         height: 60px;
         padding-right: 10px;
@@ -55,21 +56,23 @@
         padding-left: 15px;
       }
     }
-    // .slick-prev {
-    //   top: auto;
-    //   bottom: 0;
-    //   background: $color-yellow;
-    // }
-    // .slick-next {
-    //   top: auto;
-    //   bottom: 0;
-    //   background: $color-yellow;
-    // }
+    .slick-prev {
+      top: auto;
+      bottom: 0;
+      background: $color-yellow;
+    }
+    .slick-next {
+      right: 20px;
+
+      top: auto;
+      bottom: 20px;
+      background: $color-yellow;
+    }
     .slick-slider {
       .carousel {
         border: 1px solid black;
 
-        height: 400px;
+        height: calc(50vw * .7);;
         overflow: hidden;
         .carousel-inner{
           overflow: hidden;

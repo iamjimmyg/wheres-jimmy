@@ -154,23 +154,35 @@
     margin-right: -50%; }
   #portfolio h5, #portfolio h4 {
     font-weight: bold; }
-  #portfolio .projects .project-info .nnsa-icon {
-    height: 60px;
-    padding-right: 10px;
-    padding-left: 15px; }
-  #portfolio .projects .project-info .bellawatt-icon {
-    height: 55px;
-    padding-right: 10px;
-    padding-left: 15px; }
-  #portfolio .projects .project-info .utility-icon {
-    position: relative;
-    top: -4px;
-    height: 70px;
-    padding-right: 10px;
-    padding-left: 15px; }
+  #portfolio .projects .project-info {
+    margin-left: 20px;
+    margin-right: 60px; }
+    #portfolio .projects .project-info .nnsa-icon {
+      height: 60px;
+      padding-right: 10px;
+      padding-left: 15px; }
+    #portfolio .projects .project-info .bellawatt-icon {
+      height: 55px;
+      padding-right: 10px;
+      padding-left: 15px; }
+    #portfolio .projects .project-info .utility-icon {
+      position: relative;
+      top: -4px;
+      height: 70px;
+      padding-right: 10px;
+      padding-left: 15px; }
+  #portfolio .projects .slick-prev {
+    top: auto;
+    bottom: 0;
+    background: #b29411; }
+  #portfolio .projects .slick-next {
+    right: 20px;
+    top: auto;
+    bottom: 20px;
+    background: #b29411; }
   #portfolio .projects .slick-slider .carousel {
     border: 1px solid black;
-    height: 400px;
+    height: calc(50vw * .7);
     overflow: hidden; }
     #portfolio .projects .slick-slider .carousel .carousel-inner {
       overflow: hidden;
@@ -468,17 +480,15 @@ body {
 @media (max-width: 1200px) {
   body {
     font-size: 1rem; }
-  #portfolio .container {
-    width: 100%; }
   #portfolio .projects .slick-slider .carousel {
-    height: 350px; } }
+    height: calc(50vw * .7); } }
 
 @media (max-width: 992px) {
   #landing .landing-content {
     width: 80%; }
   #portfolio .projects .slick-slider .carousel {
     margin-bottom: 25px;
-    height: 520px; }
+    height: calc(90vw * .65); }
   #contact .form-reviews {
     margin-top: 0px;
     margin-bottom: 0px; }
@@ -489,8 +499,6 @@ body {
 @media (max-width: 767px) {
   header .header-logo {
     left: 10px; }
-  #portfolio .projects .slick-slider .carousel {
-    height: 420px; }
   #testimonials #reviewCarousel {
     margin-left: 5vw;
     margin-right: 5vw; }

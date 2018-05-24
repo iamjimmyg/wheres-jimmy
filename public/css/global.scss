@@ -42,14 +42,14 @@ body{
     font-size: 1rem;
   }
   #portfolio {
-    .container {
-      width: 100%;
-    }
+    // .container {
+    //   width: 100%;
+    // }
     .projects {
       .slick-slider {
         .carousel {
 
-          height: 350px;
+          height: calc(50vw * .7);
 
 
         }
@@ -70,10 +70,10 @@ body{
     .projects {
       .slick-slider {
         .carousel {
-          // margin-left: 5vw;
-          // margin-right: 5vw;
+          // margin-left: 7vw;
+          // margin-right: 7vw;
           margin-bottom: 25px;
-            height: 520px;
+          height: calc(90vw * .65);
         }
       }
     }
@@ -86,13 +86,8 @@ body{
   }
   #testimonials {
     #reviewCarousel {
-      // .carousel {
       margin-left: 10vw;
       margin-right: 10vw;
-      // }
-      // h4 {
-      //   font-size: 1.2rem;
-      // }
     }
   }
 }
@@ -108,7 +103,7 @@ body{
     .projects {
       .slick-slider {
         .carousel {
-          height: 420px;
+          //height: 400px;
         }
       }
     }
@@ -126,20 +121,16 @@ body{
   }
 }
 @media (max-width: 500px) {
-  // .profile-pic {
-  //   transform: scale(.8,.8);
-  // }
-  // #portfolio {
-  //   .projects {
-  //     .project {
-  //       .card {
-  //         .carousel-inner {
-  //           height: 280px;
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
+  #portfolio {
+    .projects {
+      .slick-slider {
+        .carousel {
+          //height: 280px;
+        }
+      }
+    }
+  }
+
   #testimonials {
     #reviewCarousel {
       // .carousel {
