@@ -16,9 +16,8 @@ class Bellawatt extends Component {
 
   render (){
     return (
-        <div data-toggle="modal" data-target=".bellawatt-modal">
-          <div id="carouselBellawatt" className="carousel slide card" data-ride="carousel">
-            <div className='banner'><i className="material-icons browser-dots">more_horiz</i></div>
+        <div data-toggle="modal" data-target=".bellawatt-modal" data-interval="false">
+          <div id="carouselBellawatt" className="carousel slide" data-ride="carousel">
             <div className="carousel-inner">
               <div className="carousel-item active">
                 <img className='image' src={this.state.bellawatt1} alt="First slide"/>

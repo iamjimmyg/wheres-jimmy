@@ -137,7 +137,8 @@
     overflow: hidden;
     text-align: center;
     color: black;
-    font-weight: bold; }
+    font-weight: bold;
+    padding-bottom: 40px; }
   #portfolio h1:before,
   #portfolio h1:after {
     background-color: black;
@@ -155,65 +156,60 @@
     margin-right: -50%; }
   #portfolio h5, #portfolio h4 {
     font-weight: bold; }
-  #portfolio .projects {
-    margin-top: 45px;
-    margin-bottom: 40px; }
-    #portfolio .projects .project {
-      position: relative;
-      margin-bottom: 35px; }
-      #portfolio .projects .project .arrow-left {
+  #portfolio .projects .project-info .nnsa-icon {
+    height: 60px;
+    padding-right: 10px; }
+  #portfolio .projects .project-info .bellawatt-icon {
+    height: 55px;
+    padding-right: 10px; }
+  #portfolio .projects .project-info .utility-icon {
+    position: relative;
+    top: -4px;
+    height: 70px;
+    padding-right: 10px; }
+  #portfolio .projects .slick-prev {
+    top: auto;
+    bottom: 0;
+    background: #b29411; }
+  #portfolio .projects .slick-next {
+    top: auto;
+    bottom: 0;
+    background: #b29411; }
+  #portfolio .projects .slick-slider {
+    height: 550px; }
+    #portfolio .projects .slick-slider .carousel {
+      border: 1px solid black; }
+      #portfolio .projects .slick-slider .carousel .carousel-inner {
+        height: 400px; }
+        #portfolio .projects .slick-slider .carousel .carousel-inner .image {
+          width: 100%;
+          height: 100%; }
+      #portfolio .projects .slick-slider .carousel .arrow-left {
         position: absolute;
         left: 0;
         font-size: 30px;
         background-color: grey;
         transition: .2s ease-in-out; }
-        #portfolio .projects .project .arrow-left:hover {
+        #portfolio .projects .slick-slider .carousel .arrow-left:hover {
           color: #b29411; }
-      #portfolio .projects .project .arrow-right {
+      #portfolio .projects .slick-slider .carousel .arrow-right {
         position: absolute;
         right: 0;
         font-size: 30px;
         background-color: grey;
         transition: .2s ease-in-out; }
-        #portfolio .projects .project .arrow-right:hover {
+        #portfolio .projects .slick-slider .carousel .arrow-right:hover {
           color: #b29411; }
-      #portfolio .projects .project .card {
-        -webkit-box-shadow: 11px 10px 22px 2px rgba(0, 0, 0, 0.19);
-        -moz-box-shadow: 11px 10px 22px 2px rgba(0, 0, 0, 0.19);
-        box-shadow: 11px 10px 22px 2px rgba(0, 0, 0, 0.19);
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        margin-bottom: 40px;
-        margin-left: auto;
-        margin-right: auto; }
-        #portfolio .projects .project .card .carousel-inner {
-          height: 300px; }
-          #portfolio .projects .project .card .carousel-inner .image {
-            width: 100%;
-            height: 100%; }
-      #portfolio .projects .project .banner {
-        background: lightgrey;
-        border-top-left-radius: 8px;
-        border-top-right-radius: 8px; }
-        #portfolio .projects .project .banner .browser-dots {
-          float: left;
-          color: grey;
-          font-size: 30px; }
-      #portfolio .projects .project .project-info .nnsa-icon {
-        height: 75px;
-        top: -10px;
-        position: relative;
-        margin-right: 10px;
-        margin-left: 10px; }
-      #portfolio .projects .project .project-info .bellawatt-icon {
-        height: 60px;
-        position: relative;
-        margin-right: 10px;
-        margin-left: 10px; }
-      #portfolio .projects .project .project-info .utility-icon {
-        height: 80px;
-        position: relative;
-        top: -9px; }
+    #portfolio .projects .slick-slider .slick-thumb {
+      bottom: 50px; }
+      #portfolio .projects .slick-slider .slick-thumb li {
+        width: 90px; }
+        #portfolio .projects .slick-slider .slick-thumb li .nnsa-icon {
+          height: 85px; }
+        #portfolio .projects .slick-slider .slick-thumb li .bellawatt-icon {
+          height: 75px; }
+        #portfolio .projects .slick-slider .slick-thumb li .utility-icon {
+          height: 100px; }
 
 #contact {
   height: 100%;
@@ -470,13 +466,13 @@ body {
 @media (max-width: 1200px) {
   body {
     font-size: 1rem; }
-  #portfolio .projects .project .card .carousel-inner {
-    height: 280px; } }
+  #portfolio .container {
+    width: 100%; } }
 
 @media (max-width: 992px) {
   #landing .landing-content {
     width: 80%; }
-  #portfolio .projects .project .card .carousel-inner {
+  #portfolio .projects .slick-slider .carousel .carousel-inner {
     height: 480px; }
   #contact .form-reviews {
     margin-top: 0px;

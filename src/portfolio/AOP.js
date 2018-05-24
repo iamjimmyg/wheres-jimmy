@@ -1,27 +1,12 @@
 import React, { Component } from 'react'
 
 class AOP extends Component {
-  // constructor(props){
-  //   super(props)
-  //   this.state = {
-  //     aop1: 'aop1.png'
-  //   }
-  // }
-
-  // componentWillMount(){
-  //   setTimeout(()=>{
-  //     this.setState({ aop1: 'aop1.png' })
-  //   },0)
-  // }
 
   render (){
     return (
-      <div data-toggle="modal" data-target=".aop-modal">
+      <div data-toggle="modal" data-target=".aop-modal" data-interval="false">
 
-        <div id="carouselAOP" className="carousel slide card" data-ride="carousel">
-          <div className='banner'>
-            <i className="material-icons browser-dots">more_horiz</i>
-          </div>
+        <div id="carouselAOP" className="carousel slide" data-ride="carousel">
           <div className="carousel-inner">
             <div className="carousel-item active">
               <img className='image' src='aop1.png' alt="First slide"/>

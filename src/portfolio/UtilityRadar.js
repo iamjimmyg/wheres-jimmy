@@ -16,12 +16,11 @@ class UtilityRadar extends Component {
 
   render (){
     return (
-        <div data-toggle="modal" data-target=".utility-modal">
-          <div id="carouselUtilityRadar" className="carousel slide card" data-ride="carousel">
-            <div className='banner'><i className="material-icons browser-dots">more_horiz</i></div>
+        <div data-toggle="modal" data-target=".utility-modal" data-interval="false">
+          <div id="carouselUtilityRadar" className="carousel slide" data-ride="carousel">
             <div className="carousel-inner">
               <div className="carousel-item active">
-                <img className='image' src={this.state.utilityRadar1} alt="First slide"/>
+                <img className='image' src="utilityradar1.jpg" alt="First slide"/>
               </div>
               <div className="carousel-item">
                 <img className='image' src="utilityradar2.jpg" alt="Second slide"/>

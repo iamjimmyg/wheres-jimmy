@@ -5,6 +5,9 @@
 @import "header";
 @import "testimonials";
 
+// @import "~slick-carousel/slick/slick.css";
+// @import "~slick-carousel/slick/slick-theme.css";
+
 body{
 
   margin:0;
@@ -39,14 +42,8 @@ body{
     font-size: 1rem;
   }
   #portfolio {
-    .projects {
-      .project {
-        .card {
-          .carousel-inner {
-            height: 280px;
-          }
-        }
-      }
+    .container {
+      width: 100%;
     }
   }
   // #testimonials {
@@ -61,8 +58,8 @@ body{
   }
   #portfolio {
     .projects {
-      .project {
-        .card {
+      .slick-slider {
+        .carousel {
           .carousel-inner {
             height: 480px;
           }
