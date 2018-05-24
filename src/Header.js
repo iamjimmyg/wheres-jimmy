@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { selectHeader } from './actions/index';
 import { bindActionCreators } from 'redux';
 
-import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Link } from 'react-scroll'
 
 class Header extends Component {
   constructor(props) {
@@ -18,20 +18,20 @@ class Header extends Component {
     this.hamburgerClick = this.hamburgerClick.bind(this)
     this.updateDimensions = this.updateDimensions.bind(this)
   }
-  componentDidMount() {
-
-    Events.scrollEvent.register('begin', function(to, element) {
-      //console.log("begin", arguments);
-      //selected = arguments[0]
-      //console.log(to)
-    });
-    // this.setState({ hr: selected})
-    Events.scrollEvent.register('end', function(to, element) {
-      //console.log("end", arguments);
-    });
-
-    scrollSpy.update();
-  }
+  // componentDidMount() {
+  //
+  //   Events.scrollEvent.register('begin', function(to, element) {
+  //     //console.log("begin", arguments);
+  //     //selected = arguments[0]
+  //     //console.log(to)
+  //   });
+  //   // this.setState({ hr: selected})
+  //   Events.scrollEvent.register('end', function(to, element) {
+  //     //console.log("end", arguments);
+  //   });
+  //
+  //   scrollSpy.update();
+  // }
 
   componentWillMount(){
     this.handleSetActive()

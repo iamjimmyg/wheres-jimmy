@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 
 class UtilityRadar extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
-      utilityRadar1: 'utilityradar1.jpg'
-    }
-  }
+  // constructor(props){
+  //   super(props)
+  //   this.state = {
+  //     utilityRadar1: 'utilityradar1.jpg'
+  //   }
+  // }
 
   // componentWillMount(){
   //   setTimeout(()=>{
@@ -16,8 +16,8 @@ class UtilityRadar extends Component {
 
   render (){
     return (
-        <div data-toggle="modal" data-target=".utility-modal" data-interval="false">
-          <div id="carouselUtilityRadar" className="carousel slide" data-ride="carousel">
+        <div data-toggle="modal" data-target=".utility-modal">
+          <div id="carouselUtilityRadar" className="carousel slide" data-ride="carousel" data-interval="false">
             <div className="carousel-inner">
               <div className="carousel-item active">
                 <img className='image' src="utilityradar1.jpg" alt="First slide"/>

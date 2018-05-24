@@ -4,9 +4,9 @@ class AOP extends Component {
 
   render (){
     return (
-      <div data-toggle="modal" data-target=".aop-modal" data-interval="false">
+      <div data-toggle="modal" data-target=".aop-modal">
 
-        <div id="carouselAOP" className="carousel slide" data-ride="carousel">
+        <div id="carouselAOP" className="carousel slide" data-ride="carousel" data-interval="false">
           <div className="carousel-inner">
             <div className="carousel-item active">
               <img className='image' src='aop1.png' alt="First slide"/>

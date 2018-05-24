@@ -130,9 +130,7 @@
         padding: 1px; }
 
 #portfolio {
-  padding-top: 55px;
-  height: 100%;
-  background: #f5f5f5; }
+  padding-top: 55px; }
   #portfolio h1 {
     overflow: hidden;
     text-align: center;
@@ -158,60 +156,64 @@
     font-weight: bold; }
   #portfolio .projects .project-info .nnsa-icon {
     height: 60px;
-    padding-right: 10px; }
+    padding-right: 10px;
+    padding-left: 15px; }
   #portfolio .projects .project-info .bellawatt-icon {
     height: 55px;
-    padding-right: 10px; }
+    padding-right: 10px;
+    padding-left: 15px; }
   #portfolio .projects .project-info .utility-icon {
     position: relative;
     top: -4px;
     height: 70px;
-    padding-right: 10px; }
-  #portfolio .projects .slick-prev {
-    top: auto;
-    bottom: 0;
-    background: #b29411; }
-  #portfolio .projects .slick-next {
-    top: auto;
-    bottom: 0;
-    background: #b29411; }
-  #portfolio .projects .slick-slider {
-    height: 550px; }
-    #portfolio .projects .slick-slider .carousel {
-      border: 1px solid black; }
-      #portfolio .projects .slick-slider .carousel .carousel-inner {
-        height: 400px; }
-        #portfolio .projects .slick-slider .carousel .carousel-inner .image {
-          width: 100%;
-          height: 100%; }
-      #portfolio .projects .slick-slider .carousel .arrow-left {
-        position: absolute;
-        left: 0;
-        font-size: 30px;
-        background-color: grey;
-        transition: .2s ease-in-out; }
-        #portfolio .projects .slick-slider .carousel .arrow-left:hover {
-          color: #b29411; }
-      #portfolio .projects .slick-slider .carousel .arrow-right {
-        position: absolute;
-        right: 0;
-        font-size: 30px;
-        background-color: grey;
-        transition: .2s ease-in-out; }
-        #portfolio .projects .slick-slider .carousel .arrow-right:hover {
-          color: #b29411; }
-    #portfolio .projects .slick-slider .slick-thumb {
-      bottom: 50px; }
-      #portfolio .projects .slick-slider .slick-thumb li {
-        width: 90px; }
-        #portfolio .projects .slick-slider .slick-thumb li .nnsa-icon {
-          height: 85px; }
-        #portfolio .projects .slick-slider .slick-thumb li .bellawatt-icon {
-          height: 75px; }
-        #portfolio .projects .slick-slider .slick-thumb li .utility-icon {
-          height: 100px; }
+    padding-right: 10px;
+    padding-left: 15px; }
+  #portfolio .projects .slick-slider .carousel {
+    border: 1px solid black;
+    height: 400px;
+    overflow: hidden; }
+    #portfolio .projects .slick-slider .carousel .carousel-inner {
+      overflow: hidden;
+      position: absolute; }
+      #portfolio .projects .slick-slider .carousel .carousel-inner .carousel-item .image {
+        width: 100%;
+        height: 100%; }
+    #portfolio .projects .slick-slider .carousel .arrow-left {
+      position: absolute;
+      left: 0;
+      font-size: 30px;
+      background-color: grey;
+      transition: .2s ease-in-out; }
+      #portfolio .projects .slick-slider .carousel .arrow-left:hover {
+        color: #b29411; }
+    #portfolio .projects .slick-slider .carousel .arrow-right {
+      position: absolute;
+      right: 0;
+      font-size: 30px;
+      background-color: grey;
+      transition: .2s ease-in-out; }
+      #portfolio .projects .slick-slider .carousel .arrow-right:hover {
+        color: #b29411; }
+  #portfolio .projects .slick-slider .slick-thumb {
+    margin-top: 15px; }
+    #portfolio .projects .slick-slider .slick-thumb li {
+      height: 90px;
+      width: 90px; }
+      #portfolio .projects .slick-slider .slick-thumb li:last-child {
+        height: 0px;
+        width: 0px; }
+      #portfolio .projects .slick-slider .slick-thumb li .nnsa-icon {
+        height: 85px; }
+      #portfolio .projects .slick-slider .slick-thumb li .bellawatt-icon {
+        height: 75px; }
+      #portfolio .projects .slick-slider .slick-thumb li .utility-icon {
+        height: 100px; }
+  #portfolio .projects .slick-slider .slick-dots {
+    position: relative;
+    bottom: 22px; }
 
 #contact {
+  background: #f5f5f5;
   height: 100%;
   position: relative; }
   #contact .background-image {
@@ -467,13 +469,16 @@ body {
   body {
     font-size: 1rem; }
   #portfolio .container {
-    width: 100%; } }
+    width: 100%; }
+  #portfolio .projects .slick-slider .carousel {
+    height: 350px; } }
 
 @media (max-width: 992px) {
   #landing .landing-content {
     width: 80%; }
-  #portfolio .projects .slick-slider .carousel .carousel-inner {
-    height: 480px; }
+  #portfolio .projects .slick-slider .carousel {
+    margin-bottom: 25px;
+    height: 520px; }
   #contact .form-reviews {
     margin-top: 0px;
     margin-bottom: 0px; }
@@ -484,8 +489,8 @@ body {
 @media (max-width: 767px) {
   header .header-logo {
     left: 10px; }
-  #portfolio .projects .project .card .carousel-inner {
-    height: 320px; }
+  #portfolio .projects .slick-slider .carousel {
+    height: 420px; }
   #testimonials #reviewCarousel {
     margin-left: 5vw;
     margin-right: 5vw; }
@@ -493,8 +498,6 @@ body {
       font-size: 1.2rem; } }
 
 @media (max-width: 500px) {
-  #portfolio .projects .project .card .carousel-inner {
-    height: 280px; }
   #testimonials #reviewCarousel {
     margin-left: 1vw;
     margin-right: 1vw; }
@@ -502,8 +505,6 @@ body {
       font-size: 1.2rem; } }
 
 @media (max-width: 375px) {
-  #portfolio .projects .project .card .carousel-inner {
-    height: 230px; }
   #testimonials #reviewCarousel {
     margin-left: 1vw;
     margin-right: 1vw; }

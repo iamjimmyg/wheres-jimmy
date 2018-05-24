@@ -86,21 +86,22 @@ class Portfolio extends Component {
   // }
 
   render() {
-    const icons = ['nnsa-icon','bellawatt-icon','utility-icon']
+    const icons = ['nnsa-icon','bellawatt-icon','utility-icon',]
     var settings = {
       customPaging: function(i) {
-        return (
-          <a>
-            <img className={icons[i]} src={`${icons[i]}.png`}/>
-          </a>
-        );
+          return (
+            <a className={i === 3 ? 'd-none' : ''}>
+              <img className={icons[i]} src={`${icons[i]}.png`}/>
+            </a>
+
+          );
       },
       dotsClass: "slick-dots slick-thumb",
       dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1
+      //infinite: true,
+      //speed: 500,
+      //slidesToShow: 1,
+      //slidesToScroll: 1
     };
 
     return (
@@ -111,7 +112,7 @@ class Portfolio extends Component {
         {this.state.title}
         <div className="projects container">
           <Slider  {...settings}>
-            <div className=''>
+            <div>
               <div className="row">
                 <div className="col-lg-6">
                   <AOP />
@@ -122,7 +123,8 @@ class Portfolio extends Component {
                 </div>
               </div>
             </div>
-            <div className='container'>
+
+            <div>
               <div className="row">
                 <div className="col-lg-6">
                   <Bellawatt />
@@ -133,7 +135,7 @@ class Portfolio extends Component {
                 </div>
               </div>
             </div>
-            <div className='container'>
+            <div>
               <div className="row">
                 <div className="col-lg-6">
                   <UtilityRadar />
@@ -144,57 +146,15 @@ class Portfolio extends Component {
                 </div>
               </div>
             </div>
+            <div className='hidden-icon'></div>
+
+
+
 
            </Slider>
         </div>
 
-        {/* <div className="container projects">
-          <div className='row project'>
-            <div className='col-lg-5'>
-              <Waypoint onEnter={()=>{this.handleAOP()}}
-                bottomOffset='150px'
-              />
-              {this.state.aop}
-            </div>
-            <div className='col-lg-7 '>
-              <Waypoint onEnter={()=>{this.handleAOPInfo()}}
-                bottomOffset='200px'
-              />
-              {this.state.aopInfo}
-            </div>
 
-          </div>
-          <div className='row project'>
-            <div className='col-lg-5'>
-              <Waypoint onEnter={()=>{this.handleBellawatt()}}
-                bottomOffset='150px'
-              />
-              {this.state.bellawatt}
-            </div>
-            <div className='col-lg-7'>
-              <Waypoint onEnter={()=>{this.handleBellawattInfo()}}
-                bottomOffset='200px'
-              />
-              {this.state.bellawattInfo}
-            </div>
-
-          </div>
-
-          <div className='row project'>
-            <div className='col-lg-5'>
-              <Waypoint onEnter={()=>{this.handleUtilityRadar()}}
-                bottomOffset='150px'
-              />
-              {this.state.utilityRadar}
-            </div>
-            <div className='col-lg-7'>
-              <Waypoint onEnter={()=>{this.handleUtilityRadarInfo()}}
-                bottomOffset='200px'
-              />
-              {this.state.utilityRadarInfo}
-            </div>
-          </div>
-        </div> */}
 
       </section>
     );

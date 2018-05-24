@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link, DirectLink, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Element} from 'react-scroll'
 
 import Header from './Header'
 import Home from './Home'

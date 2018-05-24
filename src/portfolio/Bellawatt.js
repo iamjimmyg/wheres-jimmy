@@ -1,26 +1,15 @@
 import React, { Component } from 'react'
 
 class Bellawatt extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
-      bellawatt1: 'bellawatt1.jpg'
-    }
-  }
 
-  // componentWillMount(){
-  //   setTimeout(()=>{
-  //     this.setState({ bellawatt1: 'bellawatt1.png' })
-  //   },50)
-  // }
 
   render (){
     return (
-        <div data-toggle="modal" data-target=".bellawatt-modal" data-interval="false">
-          <div id="carouselBellawatt" className="carousel slide" data-ride="carousel">
+        <div data-toggle="modal" data-target=".bellawatt-modal">
+          <div id="carouselBellawatt" className="carousel slide" data-ride="carousel" data-interval="false">
             <div className="carousel-inner">
               <div className="carousel-item active">
-                <img className='image' src={this.state.bellawatt1} alt="First slide"/>
+                <img className='image' src='bellawatt1.jpg' alt="First slide"/>
               </div>
               <div className="carousel-item">
                 <img className='image' src="bellawatt2.jpg" alt="Second slide"/>
