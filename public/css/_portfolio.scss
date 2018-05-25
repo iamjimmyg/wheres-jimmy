@@ -1,6 +1,7 @@
 
 #portfolio {
   padding-top: 55px;
+  position: relative;
   //height: 100%;
   //min-height: 800px;
   h1 {
@@ -35,6 +36,18 @@
     font-weight: bold;
   }
   .projects {
+    .left-arrow {
+      position: absolute;
+      font-size: 84px;
+      bottom: 32px;
+      left: 19px;
+    }
+    .right-arrow {
+      position: absolute;
+      font-size: 84px;
+      bottom: 32px;
+      right: 19px;
+    }
     .project-info {
       margin-left: 20px;
       margin-right: 60px;
@@ -57,16 +70,18 @@
       }
     }
     .slick-prev {
-      top: auto;
-      bottom: 0;
-      background: $color-yellow;
+      left: 4px;
+      //position: absolute;
+      // top: auto;
+      // bottom: 0;
+      // background: $color-yellow;
     }
     .slick-next {
       right: 20px;
-
-      top: auto;
-      bottom: 20px;
-      background: $color-yellow;
+      //
+      //top: auto;
+      //bottom: 20px;
+      // background: $color-yellow;
     }
     .slick-slider {
       .carousel {
@@ -110,16 +125,8 @@
 
 
       .slick-thumb {
-        //bottom: 50px;
-        //position: absolute;
-        // //bottom: -25px;
-        // display: block;
-        // width: 100%;
-        // padding: 0;
-        // margin: 0;
-        // list-style: none;
-        // text-align: center;
-        margin-top: 15px;
+
+        margin-top: 45px;
         li {
           &:last-child {
             height: 0px;

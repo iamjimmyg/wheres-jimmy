@@ -12,6 +12,27 @@ import Slider from "react-slick";
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 
+// function SampleNextArrow(props) {
+//   const { className, style, onClick } = props;
+//   return (
+//     <div
+//       className={className}
+//       style={{ ...style, display: "block", background: "red" }}
+//       onClick={onClick}
+//     />
+//   );
+// }
+//
+// function SamplePrevArrow(props) {
+//   const { className, style, onClick } = props;
+//   return (
+//     <div
+//       className={className}
+//       style={{ ...style, display: "block", background: "green", }}
+//       onClick={onClick}
+//     />
+//   );
+// }
 
 class Portfolio extends Component {
   constructor(props){
@@ -83,6 +104,9 @@ class Portfolio extends Component {
       beforeChange: (old, newIndex) => {this.setState({projectIndex: newIndex})},
       dotsClass: "slick-dots slick-thumb",
       dots: true,
+      // nextArrow: <SampleNextArrow />,
+      // prevArrow: <SamplePrevArrow />
+      //slickNext: console.log('hello')
       //infinite: true,
       //speed: 500,
       //slidesToShow: 1,
@@ -96,7 +120,7 @@ class Portfolio extends Component {
         />
         {this.state.title}
         <div className="projects">
-          <Slider  {...settings}>
+          <Slider ref={slider=>(this.slider = slider)} {...settings}>
             <div>
               <div className="row">
                 <div className="col-lg-6">
@@ -134,10 +158,14 @@ class Portfolio extends Component {
             <div className='hidden-icon'></div>
 
 
-
-
            </Slider>
-           {this.state.projectIndex}
+           <div onClick={()=>this.slider.slickGoTo(this.state.projectIndex - 1)}>
+             <i className="material-icons left-arrow">chevron_left</i>
+           </div>
+           <div onClick={()=>this.slider.slickGoTo(this.state.projectIndex + 1)}>
+             <i className="material-icons right-arrow">chevron_right</i>
+           </div>
+           {/* {this.state.projectIndex} */}
         </div>
 
 

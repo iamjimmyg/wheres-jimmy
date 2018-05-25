@@ -130,7 +130,8 @@
         padding: 1px; }
 
 #portfolio {
-  padding-top: 55px; }
+  padding-top: 55px;
+  position: relative; }
   #portfolio h1 {
     overflow: hidden;
     text-align: center;
@@ -154,6 +155,16 @@
     margin-right: -50%; }
   #portfolio h5, #portfolio h4 {
     font-weight: bold; }
+  #portfolio .projects .left-arrow {
+    position: absolute;
+    font-size: 84px;
+    bottom: 32px;
+    left: 19px; }
+  #portfolio .projects .right-arrow {
+    position: absolute;
+    font-size: 84px;
+    bottom: 32px;
+    right: 19px; }
   #portfolio .projects .project-info {
     margin-left: 20px;
     margin-right: 60px; }
@@ -172,14 +183,9 @@
       padding-right: 10px;
       padding-left: 15px; }
   #portfolio .projects .slick-prev {
-    top: auto;
-    bottom: 0;
-    background: #b29411; }
+    left: 4px; }
   #portfolio .projects .slick-next {
-    right: 20px;
-    top: auto;
-    bottom: 20px;
-    background: #b29411; }
+    right: 20px; }
   #portfolio .projects .slick-slider .carousel {
     border: 1px solid black;
     height: calc(50vw * .7);
@@ -207,7 +213,7 @@
       #portfolio .projects .slick-slider .carousel .arrow-right:hover {
         color: #b29411; }
   #portfolio .projects .slick-slider .slick-thumb {
-    margin-top: 15px; }
+    margin-top: 45px; }
     #portfolio .projects .slick-slider .slick-thumb li {
       height: 90px;
       width: 90px; }
