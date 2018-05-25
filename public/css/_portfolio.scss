@@ -41,12 +41,22 @@
       font-size: 84px;
       bottom: 32px;
       left: 19px;
+      transition: .2s ease-in-out;
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.1, 1.1);
+      }
     }
     .right-arrow {
       position: absolute;
       font-size: 84px;
       bottom: 32px;
       right: 19px;
+      transition: .2s ease-in-out;
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.1, 1.1);
+      }
     }
     .project-info {
       margin-left: 20px;
@@ -69,21 +79,27 @@
         padding-left: 15px;
       }
     }
-    .slick-prev {
-      left: 4px;
-      //position: absolute;
-      // top: auto;
-      // bottom: 0;
-      // background: $color-yellow;
-    }
-    .slick-next {
-      right: 20px;
-      //
-      //top: auto;
-      //bottom: 20px;
-      // background: $color-yellow;
-    }
+    // .slick-prev {
+    //   left: 4px;
+    //   //position: absolute;
+    //   // top: auto;
+    //   // bottom: 0;
+    //   // background: $color-yellow;
+    // }
+    // .slick-next {
+    //   right: 20px;
+    //   //
+    //   //top: auto;
+    //   //bottom: 20px;
+    //   // background: $color-yellow;
+    // }
+
     .slick-slider {
+
+      .slick-dots {
+        transition: .3s ease-in-out;
+
+      }
       .carousel {
         border: 1px solid black;
 

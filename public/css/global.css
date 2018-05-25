@@ -159,12 +159,20 @@
     position: absolute;
     font-size: 84px;
     bottom: 32px;
-    left: 19px; }
+    left: 19px;
+    transition: .2s ease-in-out; }
+    #portfolio .projects .left-arrow:hover {
+      cursor: pointer;
+      transform: scale(1.1, 1.1); }
   #portfolio .projects .right-arrow {
     position: absolute;
     font-size: 84px;
     bottom: 32px;
-    right: 19px; }
+    right: 19px;
+    transition: .2s ease-in-out; }
+    #portfolio .projects .right-arrow:hover {
+      cursor: pointer;
+      transform: scale(1.1, 1.1); }
   #portfolio .projects .project-info {
     margin-left: 20px;
     margin-right: 60px; }
@@ -182,10 +190,8 @@
       height: 70px;
       padding-right: 10px;
       padding-left: 15px; }
-  #portfolio .projects .slick-prev {
-    left: 4px; }
-  #portfolio .projects .slick-next {
-    right: 20px; }
+  #portfolio .projects .slick-slider .slick-dots {
+    transition: .3s ease-in-out; }
   #portfolio .projects .slick-slider .carousel {
     border: 1px solid black;
     height: calc(50vw * .7);

@@ -91,16 +91,32 @@ class Portfolio extends Component {
   // }
 
   render() {
+    var that = this
+    const iconPosition = ['83px', '-15px', '-116px']
     const icons = ['nnsa-icon','bellawatt-icon','utility-icon',]
     var settings = {
       customPaging: function(i) {
+          let selectedIndex = i === that.state.projectIndex ? 'scale(1.2, 1.2)': ''
+          console.log(selectedIndex)
           return (
-            <a className={i === 3 ? 'd-none' : ''}>
-              <img className={icons[i]} src={`${icons[i]}.png`}/>
+            <a className={i === 3 ? 'd-none' : ''} >
+              <img style={{ transform: selectedIndex, transition: '.3s ease-in-out' }} className={icons[i]} src={`${icons[i]}.png`}/>
             </a>
 
           );
       },
+      appendDots: dots => (
+        <div
+          style={{
+            left: iconPosition[this.state.projectIndex],
+            // backgroundColor: "#ddd",
+            // borderRadius: "10px",
+            // padding: "10px"
+          }}
+        >
+          <ul style={{ margin: "0px" }}> {dots} </ul>
+        </div>
+      ),
       beforeChange: (old, newIndex) => {this.setState({projectIndex: newIndex})},
       dotsClass: "slick-dots slick-thumb",
       dots: true,
