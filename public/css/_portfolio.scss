@@ -39,28 +39,28 @@
     .left-arrow {
       position: absolute;
       font-size: 84px;
-      bottom: 32px;
+      bottom: 82px;
       left: 19px;
       transition: .2s ease-in-out;
       &:hover {
         cursor: pointer;
-        transform: scale(1.1, 1.1);
+        transform: scale(1.15, 1.15);
       }
     }
     .right-arrow {
       position: absolute;
       font-size: 84px;
-      bottom: 32px;
+      bottom: 84px;
       right: 19px;
       transition: .2s ease-in-out;
       &:hover {
         cursor: pointer;
-        transform: scale(1.1, 1.1);
+        transform: scale(1.15, 1.15);
       }
     }
     .project-info {
       margin-left: 20px;
-      margin-right: 60px;
+      //margin-right: 60px;
       .nnsa-icon {
         height: 60px;
         padding-right: 10px;
@@ -98,12 +98,11 @@
 
       .slick-dots {
         transition: .3s ease-in-out;
-
       }
       .carousel {
-        border: 1px solid black;
+        border: 1px solid grey;
 
-        height: calc(50vw * .7);;
+        height: calc(50vw * .6);;
         overflow: hidden;
         .carousel-inner{
           overflow: hidden;
@@ -141,24 +140,50 @@
 
 
       .slick-thumb {
-
-        margin-top: 45px;
+        //display: none;
+        margin-top: 65px;
         li {
           &:last-child {
             height: 0px;
             width: 0px;
           }
-          height: 90px;
-          width: 90px;
-          .nnsa-icon {
-            height: 85px;
+          height: 190px;
+          width: 150px;
+          margin-right: 20px;
+          .icon-box {
+            box-shadow: 3px 3px 15px lightgrey;
+            background: #efefef;
+            height: 140px;
+            //border: 2px solid lightgrey;
+            border-radius: 3px;
+            .hr {
+              top: 110px;
+              position: relative;
+            }
+            .icon-name {
+              top: 94px;
+              position: relative;
+            }
+            .nnsa-icon {
+              position: absolute;
+              height: 85px;
+              left: 30px;
+              top: 10px;
+            }
+            .bellawatt-icon {
+              border-radius: 100%;
+              position: absolute;
+              height: 85px;
+              left: 30px;
+              top: 10px;
+            }
+            .utility-icon {
+              position: absolute;
+              height: 105px;
+              left: 22px;
+            }
           }
-          .bellawatt-icon {
-            height: 75px;
-          }
-          .utility-icon {
-            height: 100px;
-          }
+
         }
       }
       .slick-dots {

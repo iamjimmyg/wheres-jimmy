@@ -12,27 +12,27 @@ import Slider from "react-slick";
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 
-// function SampleNextArrow(props) {
-//   const { className, style, onClick } = props;
-//   return (
-//     <div
-//       className={className}
-//       style={{ ...style, display: "block", background: "red" }}
-//       onClick={onClick}
-//     />
-//   );
-// }
-//
-// function SamplePrevArrow(props) {
-//   const { className, style, onClick } = props;
-//   return (
-//     <div
-//       className={className}
-//       style={{ ...style, display: "block", background: "green", }}
-//       onClick={onClick}
-//     />
-//   );
-// }
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "none", background: "red" }}
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "none", background: "green", }}
+      onClick={onClick}
+    />
+  );
+}
 
 class Portfolio extends Component {
   constructor(props){
@@ -92,15 +92,29 @@ class Portfolio extends Component {
 
   render() {
     var that = this
-    const iconPosition = ['83px', '-15px', '-116px']
+    const iconPosition = ['166px', '-15px', '-174px']
     const icons = ['nnsa-icon','bellawatt-icon','utility-icon',]
+    const iconName = ['AOP', 'BELLAWATT', 'UTILITY RADAR']
     var settings = {
       customPaging: function(i) {
-          let selectedIndex = i === that.state.projectIndex ? 'scale(1.2, 1.2)': ''
-          console.log(selectedIndex)
+          let selectedIndex = i === that.state.projectIndex ? 'scale(1.1, 1.1)': ''
+          let zIndex = i === that.state.projectIndex ? '10' : ''
+          let border = i === that.state.projectIndex ? '1px solid yellow' : ''
           return (
             <a className={i === 3 ? 'd-none' : ''} >
-              <img style={{ transform: selectedIndex, transition: '.3s ease-in-out' }} className={icons[i]} src={`${icons[i]}.png`}/>
+              <div className='icon-box'
+                style={{
+                  transform: selectedIndex,
+                  //background: 'red',
+                  transition: '.3s ease-in-out',
+                  position: 'relative',
+                  zIndex: zIndex,
+                  //border: border
+                }}>
+                <img className={icons[i]} src={`${icons[i]}.png`}/>
+                <hr className='hr'/>
+                <p className='icon-name'>{iconName[i]}</p>
+              </div>
             </a>
 
           );
@@ -120,8 +134,8 @@ class Portfolio extends Component {
       beforeChange: (old, newIndex) => {this.setState({projectIndex: newIndex})},
       dotsClass: "slick-dots slick-thumb",
       dots: true,
-      // nextArrow: <SampleNextArrow />,
-      // prevArrow: <SamplePrevArrow />
+      nextArrow: <SampleNextArrow />,
+      prevArrow: <SamplePrevArrow/>
       //slickNext: console.log('hello')
       //infinite: true,
       //speed: 500,
