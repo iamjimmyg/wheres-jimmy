@@ -69,6 +69,9 @@ body{
   #portfolio {
     .projects {
       .slick-slider {
+        .slick-thumb {
+          display: none;
+        }
         .carousel {
           // margin-left: 7vw;
           // margin-right: 7vw;
@@ -102,9 +105,7 @@ body{
   #portfolio {
     .projects {
       .slick-slider {
-        .carousel {
-          //height: 400px;
-        }
+
       }
     }
   }
@@ -124,9 +125,7 @@ body{
   #portfolio {
     .projects {
       .slick-slider {
-        .slick-thumb {
-          display: none;
-        }
+
       }
     }
   }

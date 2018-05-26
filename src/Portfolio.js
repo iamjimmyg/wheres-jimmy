@@ -95,11 +95,13 @@ class Portfolio extends Component {
     const iconPosition = ['166px', '-15px', '-174px']
     const icons = ['nnsa-icon','bellawatt-icon','utility-icon',]
     const iconName = ['AOP', 'BELLAWATT', 'UTILITY RADAR']
+    let rightArrowPointer = this.state.projectIndex === 0 ? 'none' : ''
+    let leftArrowPointer = this.state.projectIndex === 2 ? 'none' : ''
     var settings = {
       customPaging: function(i) {
           let selectedIndex = i === that.state.projectIndex ? 'scale(1.1, 1.1)': ''
           let zIndex = i === that.state.projectIndex ? '10' : ''
-          let border = i === that.state.projectIndex ? '1px solid yellow' : ''
+          let border = i === that.state.projectIndex ? '1px solid yellow' : 'none'
           return (
             <a className={i === 3 ? 'd-none' : ''} >
               <div className='icon-box'
@@ -149,6 +151,15 @@ class Portfolio extends Component {
           bottomOffset='150px'
         />
         {this.state.title}
+        <div className='small-arrows'>
+          <div className='small-icon-left d-lg-none' style={{ pointerEvents: rightArrowPointer, opacity: rightArrowPointer === 'none' ? '.4': '1' }}>
+            <i  onClick={()=>this.slider.slickGoTo(this.state.projectIndex - 1)} className="material-icons left-arrow">chevron_left</i>
+          </div>
+          <div className='small-icon-right d-lg-none' style={{ pointerEvents: leftArrowPointer, opacity: leftArrowPointer === 'none' ? '.4': '1' }}>
+            <i onClick={()=>this.slider.slickGoTo(this.state.projectIndex + 1)} className="material-icons right-arrow">chevron_right</i>
+          </div>
+        </div>
+
         <div className="projects">
           <Slider ref={slider=>(this.slider = slider)} {...settings}>
             <div>
@@ -189,11 +200,14 @@ class Portfolio extends Component {
 
 
            </Slider>
-           <div onClick={()=>this.slider.slickGoTo(this.state.projectIndex - 1)}>
-             <i className="material-icons left-arrow">chevron_left</i>
+           {/* <div>
+
+           </div> */}
+           <div className='icon-circle-left d-none d-lg-block' style={{ pointerEvents: rightArrowPointer, opacity: rightArrowPointer === 'none' ? '.4': '1' }}>
+             <i  onClick={()=>this.slider.slickGoTo(this.state.projectIndex - 1)} className="material-icons left-arrow">chevron_left</i>
            </div>
-           <div onClick={()=>this.slider.slickGoTo(this.state.projectIndex + 1)}>
-             <i className="material-icons right-arrow">chevron_right</i>
+           <div className='icon-circle-right d-none d-lg-block' style={{ pointerEvents: leftArrowPointer, opacity: leftArrowPointer === 'none' ? '.4': '1' }}>
+             <i onClick={()=>this.slider.slickGoTo(this.state.projectIndex + 1)} className="material-icons right-arrow">chevron_right</i>
            </div>
            {/* {this.state.projectIndex} */}
         </div>
