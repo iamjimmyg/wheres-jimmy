@@ -42,8 +42,8 @@ class Contact extends Component {
   handlePin(){
     this.setState({
       pin: <Motion defaultStyle={{x: -200, }} style={{x: spring(0)}} >
-        {value => <Marker style={{position: 'relative', top: value.x}}
-          coordinates={[106.767, 10.7831]}
+        {value => <Marker style={{position: 'absolute', top: value.x}}
+          coordinates={[106.700, 10.7831]}
           anchor="bottom">
           <img src={pin} style={{height: '40px'}}/>
         </Marker>}
