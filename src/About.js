@@ -9,11 +9,13 @@ class About extends Component {
     this.state = {
       title: <h1 className="text-center invisible">ABOUT</h1>,
       stats: <Stats klass='invisible'/>,
-      profileSection: <div className="bio invisible">
-        <p>Offering creative design solutions to solve business problems is what I do best.</p>
-        <p>I write in JavaScript, CSS, Java, and PHP. I also speak to databases and make servers do stuff. I like working on scalability, performance, reusability, and great user experiences.</p>
-        <p>As a front-end developer, I write code that conforms to industry standards and semantic best practices. I am able to transform static artwork into pixel prefect, interactive and fully functional interfaces.</p>
+      profileSection: <div className="bio">
+        <h4 className="text-center">MY WORK</h4>
+        <div className="">
+          <p>Offering creative design solutions to solve business problems is what I do best. I write in JavaScript, CSS, Ruby. I also speak to databases and make servers do stuff. I like working on scalability, performance, reusability, and great user experiences.</p>
+          <p>As a front-end developer, I write code that conforms to industry standards and semantic best practices. I am able to transform static artwork into pixel perfect, interactive and fully functional interfaces.</p>
 
+        </div>
       </div>,
       iconSection1: <div className="invisible">
         <i className="material-icons">important_devices</i>
@@ -27,7 +29,7 @@ class About extends Component {
 
     }
     this.handleStats = this.handleStats.bind(this)
-    this.handleProfileSection = this.handleProfileSection.bind(this)
+    //this.handleProfileSection = this.handleProfileSection.bind(this)
     this.handleIconSection1 = this.handleIconSection1.bind(this)
     this.handleIconSection2 = this.handleIconSection2.bind(this)
     this.handleIconSection3 = this.handleIconSection3.bind(this)
@@ -72,23 +74,23 @@ class About extends Component {
     // },300)
   }
 
-  handleProfileSection(){
-    this.setState({ profileSection: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0), o: spring(1)}}>
-      {value => <div style={{left: value.x, opacity: value.o, position: 'relative'}} className="bio">
-        <h4 className="text-center">MY WORK</h4>
-        <div className="">
-          <p>Offering creative design solutions to solve business problems is what I do best. I write in JavaScript, CSS, Ruby. I also speak to databases and make servers do stuff. I like working on scalability, performance, reusability, and great user experiences.</p>
-          <p>As a front-end developer, I write code that conforms to industry standards and semantic best practices. I am able to transform static artwork into pixel perfect, interactive and fully functional interfaces.</p>
-
-        </div>
-      </div>}
-    </Motion> })
-  }
+  // handleProfileSection(){
+  //   this.setState({ profileSection: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0), o: spring(1)}}>
+  //     {value => <div style={{left: value.x, opacity: value.o, position: 'relative'}} className="bio">
+  //       <h4 className="text-center">MY WORK</h4>
+  //       <div className="">
+  //         <p>Offering creative design solutions to solve business problems is what I do best. I write in JavaScript, CSS, Ruby. I also speak to databases and make servers do stuff. I like working on scalability, performance, reusability, and great user experiences.</p>
+  //         <p>As a front-end developer, I write code that conforms to industry standards and semantic best practices. I am able to transform static artwork into pixel perfect, interactive and fully functional interfaces.</p>
+  //
+  //       </div>
+  //     </div>}
+  //   </Motion> })
+  // }
 
   handleStats(){
     // setTimeout(()=>{
-    this.setState({ stats: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0), o: spring(1)}}>
-      {value => <Stats style={{left: value.x, opacity: value.o,}}/>}
+    this.setState({ stats: <Motion defaultStyle={{x: -150, o: 0}} style={{x: spring(0), o: spring(1)}}>
+      {value => <Stats style={{bottom: value.x, opacity: value.o,}}/>}
     </Motion> })
     // }, 100)
   }
@@ -157,9 +159,9 @@ class About extends Component {
 
           <div className=''>
             <div className="">
-              <Waypoint onEnter={()=>{this.handleProfileSection()}}
+              {/* <Waypoint onEnter={()=>{this.handleProfileSection()}}
                 bottomOffset='150px'
-              />
+              /> */}
               {this.state.profileSection}
             </div>
             <br/>

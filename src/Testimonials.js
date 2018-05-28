@@ -55,7 +55,7 @@ class Testimonials extends Component {
     super(props)
     this.carousel = <ReviewCarousel />
     this.state = {
-      reviewCarousel: <div className="content invisible">
+      reviewCarousel: <div className="content ">
         <h2>Testimonials</h2>
         {this.carousel}
       </div>
@@ -64,15 +64,44 @@ class Testimonials extends Component {
   }
 
   handleReview(){
-    this.setState({ reviewCarousel: <Motion defaultStyle={{x: -30, o: 0}} style={{x: spring(0), o: spring(1)}}>
+    this.setState({ reviewCarousel: <Motion defaultStyle={{x: 0, o: 0}} style={{x: spring(0), o: spring(1)}}>
       {value => <div className="content" style={{left: value.x, opacity: value.o, position: 'absolute', width: '100%'}}>
         <h2>Testimonials</h2>
         {this.carousel}
       </div>}
     </Motion>})
+    console.log('ooohh shit you just entered the testimonial zone')
+  }
+
+  componentDidMount () {
+
+      // window.onscroll =()=>{
+      //
+      //   if(window.scrollY < window.innerHeight){
+      //
+      //     // console.log('scroll posish', window.scrollY)
+      //     // console.log('window height', window.innerHeight)
+      //     let transformY = Math.floor((window.scrollY / window.innerHeight) * 300)
+      //     let imageOpacity = (window.scrollY / window.innerHeight) + .1
+      //     let imageScale = (((window.scrollY / window.innerHeight) + 1) * .5) + .5
+      //
+      //     let textOpacity = (window.innerHeight - window.scrollY) / window.innerHeight
+      //     //console.log(textOpacity)
+      //     let scale = .7 + (((window.innerHeight - window.scrollY) / window.innderHeight) * .3)
+      //     this.setState({
+      //       imageOpacity: imageOpacity,
+      //       imageTransformY: transformY,
+      //       scale: scale,
+      //       textOpacity: textOpacity,
+      //       imageScale: imageScale,
+      //     })
+      //   }
+      // }
+
   }
 
   render() {
+    //console.log(this.props.scroll)
     return (
       <section className="text-center" id='testimonials'>
         <div className='background-opacity'></div>
@@ -86,9 +115,9 @@ class Testimonials extends Component {
           <h2>Testimonials</h2>
           <ReviewCarousel />
         </div> */}
-        <Waypoint onEnter={()=>{this.handleReview()}}
-          bottomOffset='20px'
-        />
+        {/* <Waypoint onEnter={() => console.log('enter')}
+          onLeave={()=>console.log('leave')}
+        /> */}
         {this.state.reviewCarousel}
 
       </section>

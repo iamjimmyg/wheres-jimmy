@@ -8,6 +8,8 @@ import Portfolio from './Portfolio'
 import Contact from './Contact'
 import Testimonials from './Testimonials'
 
+import Waypoint from 'react-waypoint'
+
 class App extends Component{
 
   constructor (props){
@@ -18,6 +20,7 @@ class App extends Component{
         imageTransformY: 0,
         scale: 1,
         imageScale: 1,
+        scroll: 0,
       }
       //this.scrollToTop = this.scrollToTop.bind(this);
   }
@@ -25,8 +28,9 @@ class App extends Component{
   componentDidMount () {
 
       window.onscroll =()=>{
+        this.setState({scroll: window.scrollY})
         if(window.scrollY < window.innerHeight){
-          //console.log(window.scrollY)
+
           // console.log('scroll posish', window.scrollY)
           // console.log('window height', window.innerHeight)
           let transformY = Math.floor((window.scrollY / window.innerHeight) * 300)
@@ -67,12 +71,15 @@ class App extends Component{
 
             <About />
           </Element>
+
+          <Waypoint onEnter={() => console.log('top passed')}
+
+          />
           <Testimonials
-            textOpacity={this.state.textOpacity}
-            imageOpacity={this.state.imageOpacity}
-            transformY={this.state.imageTransformY}
-            scale={this.state.scale}
-            imageScale={this.state.imageScale}
+            scroll={this.state.scroll}
+           />
+           <Waypoint onLeave={() => console.log('bottom passed')}
+
            />
 
           <Element name="portfolio" className="element">

@@ -3,11 +3,12 @@ import Waypoint from 'react-waypoint'
 import {Motion, spring} from 'react-motion'
 import Form from './Form'
 import ReactMapboxGl from "react-mapbox-gl";
-import { Layer, Feature, Marker } from "react-mapbox-gl"
+import { Layer, Feature, Marker, ZoomControl } from "react-mapbox-gl"
 import pin from './assets/marker-icon.svg'
 
 const Map = ReactMapboxGl({
-  accessToken: 'pk.eyJ1IjoiaWFtamltbXlnIiwiYSI6ImNqaGxxaml3ajFoMHczNm51Mm0xc2RnMGQifQ.mz4xK1eUrkLkqFg-tRFwPg'
+  accessToken: 'pk.eyJ1IjoiaWFtamltbXlnIiwiYSI6ImNqaGxxaml3ajFoMHczNm51Mm0xc2RnMGQifQ.mz4xK1eUrkLkqFg-tRFwPg',
+  scrollZoom:false,
 });
 
 class Contact extends Component {
@@ -16,14 +17,11 @@ class Contact extends Component {
 
     this.state = {
       title: <h1 className='invisible'>CONTACT</h1>,
-      form: <Form klass='invisible'/>,
+      form: <Form klass=''/>,
 
     }
     this.handleForm = this.handleForm.bind(this)
     this.handlePin = this.handlePin.bind(this)
-    // this.handleFeedback1 = this.handleFeedback1.bind(this)
-    // this.handleFeedback2 = this.handleFeedback2.bind(this)
-    // this.handleFeedback3 = this.handleFeedback3.bind(this)
     this.handleTitle = this.handleTitle.bind(this)
   }
 
@@ -52,32 +50,11 @@ class Contact extends Component {
 
   }
 
-  // handleFeedback1(){
-  //   this.setState({ feedback1: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0), o: spring(1)}}>
-  //     {value => <h5 className='font-italic' style={{left: value.x, opacity: value.o, position: 'relative', padding: '10px'}}>&nbsp;&nbsp;&nbsp;“Jimmy was the primary developer on several client facing functional demos. With minimal guidance, he delivered and deployed 3 HTML/CSS/JS/React projects. We have been thrilled with the results!”</h5>}
-  //   </Motion> })
-  // }
-  // handleFeedback2(){
-  //   this.setState({ feedback2: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0), o: spring(1)}}>
-  //     {value => <h5 className='font-italic' style={{left: value.x, opacity: value.o, position: 'relative', padding: '10px'}}>&nbsp;&nbsp;&nbsp;"Jimmy contributed to an existing large, complex project. It was built primarily using Ruby on Rails, with a Dockerized setup for development. Despite the fact that these were completely new technologies for him, Jimmy was able to jump in and get productive really quickly. Our customer for this product has been extremely happy with what we’ve delivered."</h5>}
-  //   </Motion> })
-  // }
-  // handleFeedback3(){
-  //   this.setState({ feedback3: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0), o: spring(1)}}>
-  //     {value => <h5 className='font-italic' style={{left: value.x, opacity: value.o, position: 'relative', padding: '10px'}}>&nbsp;&nbsp;&nbsp;“He developed a track record of consistently shipping results that mattered to us and to our customers.”</h5>}
-  //   </Motion> })
-  // }
-
   render() {
-
-
-    //console.log(Map)
 
     return (
       <section className='flex' id='contact'>
-        {/* <div className='background-image'>
 
-        </div> */}
         <Waypoint onEnter={()=>{this.handleTitle()}}
           bottomOffset='150px'
         />
@@ -88,25 +65,25 @@ class Contact extends Component {
             <div className='row center-content'>
               <div className='col-lg-6'>
 
-                <Waypoint onEnter={()=>{this.handleForm()}}
+                {/* <Waypoint onEnter={()=>{this.handleForm()}}
                   bottomOffset='250px'
-                />
+                /> */}
                 {this.state.form}
               </div>
               <div className='col-lg-6 map flex'>
                 <h5 className='text-center'>My current location</h5>
-                <Map style="mapbox://styles/mapbox/streets-v10" center={[106.6997, 10.7731 ]}>
+
+                <Map style="mapbox://styles/mapbox/streets-v10"
+                  center={[106.6997, 10.7731 ]}
+
+                >
                   <Waypoint onEnter={()=>{this.handlePin()}}
-                    bottomOffset='350px'
+                    bottomOffset='400px'
                   />
                   {this.state.pin}
-
+                  <ZoomControl/>
                 </Map>
-                {/* <Map latitude={37.78} longitude={-122.41} > */}
 
-                {/* </Map> */}
-
-                {/* <div id='map' style={{width: '400px', height: '300px'}}></div> */}
               </div>
             </div>
             <div className="social-media-icons text-center">
@@ -117,10 +94,6 @@ class Contact extends Component {
           </div>
         </div>
 
-
-
-
-        {/* <p><a className="nav-link" href="#Home" onClick={()=>{this.props.selectHeader('home')}}>Back to top</a></p> */}
       </section>
     );
   }

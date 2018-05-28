@@ -41,6 +41,9 @@ class Portfolio extends Component {
     this.state = {
       title: <h1 className='invisible'>PORTFOLIO</h1>,
       projectIndex: 0,
+      aop: <div className='invisible'>
+        <AOP />
+      </div>
     }
 
   }
@@ -51,44 +54,11 @@ class Portfolio extends Component {
     </Motion>})
   }
 
-  // handleAOP(){
-  //   this.setState({ aop: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0), o: spring(1)}}>
-  //     {value => <div style={{left: value.x, opacity: value.o, position: 'relative'}}>{this.aop}</div>}
-  //   </Motion>})
-  // }
-  // handleAOPInfo(){
-  //   // setTimeout(() => {
-  //     this.setState({ aopInfo: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0), o: spring(1)}}>
-  //       {value => <div style={{left: value.x, opacity: value.o, position: 'relative'}}>{this.aopInfo}</div>}
-  //     </Motion>})
-  //   // },100)
-  // }
-  //
-  // handleBellawatt(){
-  //   this.setState({ bellawatt: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0), o: spring(1)}}>
-  //     {value => <div style={{left: value.x, opacity: value.o, position: 'relative'}}>{this.bellawatt}</div>}
-  //   </Motion>})
-  // }
-  // handleBellawattInfo(){
-  //   // setTimeout(() => {
-  //     this.setState({ bellawattInfo: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0), o: spring(1)}}>
-  //       {value => <div style={{left: value.x, opacity: value.o, position: 'relative'}}>{this.bellawattInfo}</div>}
-  //     </Motion>})
-  //   // },100)
-  // }
-  //
-  // handleUtilityRadar(){
-  //   this.setState({ utilityRadar: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0), o: spring(1)}}>
-  //     {value => <div style={{left: value.x, opacity: value.o, position: 'relative'}}>{this.utilityRadar}</div>}
-  //   </Motion>})
-  // }
-  // handleUtilityRadarInfo(){
-  //   // setTimeout(() => {
-  //     this.setState({ utilityRadarInfo: <Motion defaultStyle={{x: -25, o: 0}} style={{x: spring(0), o: spring(1)}}>
-  //       {value => <div style={{left: value.x, opacity: value.o, position: 'relative'}}>{this.utilityRadarInfo}</div>}
-  //     </Motion>})
-  //   // },100)
-  // }
+  handleAOP() {
+    this.setState({ aop: <Motion defaultStyle={{x: 0, o: 0}} style={{x: spring(1), o: spring(1)}}>
+      {value => <div style={{transform: `scale(${value.x, value.x})`, opacity: value.o}}><AOP /></div>}
+    </Motion>})
+  }
 
   render() {
     var that = this
@@ -107,11 +77,9 @@ class Portfolio extends Component {
               <div className='icon-box'
                 style={{
                   transform: selectedIndex,
-                  //background: 'red',
                   transition: '.3s ease-in-out',
                   position: 'relative',
                   zIndex: zIndex,
-                  //border: border
                 }}>
                 <img className={icons[i]} src={`${icons[i]}.png`}/>
                 <hr className='hr'/>
@@ -125,9 +93,6 @@ class Portfolio extends Component {
         <div
           style={{
             left: iconPosition[this.state.projectIndex],
-            // backgroundColor: "#ddd",
-            // borderRadius: "10px",
-            // padding: "10px"
           }}
         >
           <ul style={{ margin: "0px" }}> {dots} </ul>
@@ -138,11 +103,6 @@ class Portfolio extends Component {
       dots: true,
       nextArrow: <SampleNextArrow />,
       prevArrow: <SamplePrevArrow/>
-      //slickNext: console.log('hello')
-      //infinite: true,
-      //speed: 500,
-      //slidesToShow: 1,
-      //slidesToScroll: 1
     };
 
     return (
@@ -162,13 +122,17 @@ class Portfolio extends Component {
 
         <div className="projects">
           <Slider ref={slider=>(this.slider = slider)} {...settings}>
-            <div>
+            <div className=''>
               <div className="row">
                 <div className="col-lg-6">
-                  <AOP />
+                  <Waypoint onEnter={()=>{this.handleAOP()}}
+                    bottomOffset='150px'
+                  />
+                  {this.state.aop}
+                  {/* <AOP /> */}
 
                 </div>
-                <div className="col-lg-6">
+                <div className="col-lg-6 flex">
                   <AOPInfo/>
                 </div>
               </div>
@@ -180,7 +144,7 @@ class Portfolio extends Component {
                   <Bellawatt />
 
                 </div>
-                <div className="col-lg-6">
+                <div className="col-lg-6 flex">
                   <BellawattInfo/>
                 </div>
               </div>
@@ -191,7 +155,7 @@ class Portfolio extends Component {
                   <UtilityRadar />
 
                 </div>
-                <div className="col-lg-6">
+                <div className="col-lg-6 flex">
                   <UtilityRadarInfo/>
                 </div>
               </div>
