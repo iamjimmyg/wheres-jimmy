@@ -65,7 +65,7 @@ class Testimonials extends Component {
 
   handleReview(){
     this.setState({ reviewCarousel: <Motion defaultStyle={{x: -30, o: 0}} style={{x: spring(0), o: spring(1)}}>
-      {value => <div className="content" style={{left: value.x, opacity: value.o, position: 'absolute'}}>
+      {value => <div className="content" style={{left: value.x, opacity: value.o, position: 'absolute', width: '100%'}}>
         <h2>Testimonials</h2>
         {this.carousel}
       </div>}
