@@ -2,23 +2,25 @@ import React, { Component } from 'react';
 import Waypoint from 'react-waypoint'
 import {Motion, spring} from 'react-motion'
 import Form from './Form'
+import ReactMapboxGl from "react-mapbox-gl";
+import { Layer, Feature, Marker } from "react-mapbox-gl"
+import pin from './assets/marker-icon.svg'
+
+const Map = ReactMapboxGl({
+  accessToken: 'pk.eyJ1IjoiaWFtamltbXlnIiwiYSI6ImNqaGxxaml3ajFoMHczNm51Mm0xc2RnMGQifQ.mz4xK1eUrkLkqFg-tRFwPg'
+});
 
 class Contact extends Component {
   constructor(props){
     super(props)
-//     this.map = mapboxgl.accessToken = 'pk.eyJ1IjoiaWFtamltbXlnIiwiYSI6ImNqaGxxaml3ajFoMHczNm51Mm0xc2RnMGQifQ.mz4xK1eUrkLkqFg-tRFwPg';
-// var map = new mapboxgl.Map({
-// container: 'map',
-// style: 'mapbox://styles/mapbox/streets-v10'
-// });
+
     this.state = {
       title: <h1 className='invisible'>CONTACT</h1>,
       form: <Form klass='invisible'/>,
-      // feedback1: <p className='invisible'>“Jimmy was the primary developer on several client facing functional demos. With minimal guidance, he delivered and deployed 3 HTML/CSS/JS/React projects. We have been thrilled with the results!”</p>,
-      // feedback2: <p className='invisible'>"Jimmy contributed to an existing large, complex project. It was built primarily using Ruby on Rails, with a Dockerized setup for development. Despite the fact that these were completely new technologies for him, Jimmy was able to jump in and get productive really quickly. Our customer for this product has been extremely happy with what we’ve delivered."</p>,
-      // feedback3: <p className='invisible'>“Jimmy developed a track record of consistently shipping results that mattered to us and to our customers.”</p>,
+
     }
     this.handleForm = this.handleForm.bind(this)
+    this.handlePin = this.handlePin.bind(this)
     // this.handleFeedback1 = this.handleFeedback1.bind(this)
     // this.handleFeedback2 = this.handleFeedback2.bind(this)
     // this.handleFeedback3 = this.handleFeedback3.bind(this)
@@ -35,6 +37,19 @@ class Contact extends Component {
     this.setState({ form: <Motion defaultStyle={{x: 0, o: 0}} style={{x: spring(1), o: spring(1)}}>
       {value => <Form style={{transform: `scale(${value.x, value.x})`, opacity: value.o, position: 'relative'}} />}
     </Motion> })
+  }
+
+  handlePin(){
+    this.setState({
+      pin: <Motion defaultStyle={{x: -200, }} style={{x: spring(0)}} >
+        {value => <Marker style={{position: 'relative', top: value.x}}
+          coordinates={[106.767, 10.7831]}
+          anchor="bottom">
+          <img src={pin} style={{height: '40px'}}/>
+        </Marker>}
+      </Motion>
+    })
+
   }
 
   // handleFeedback1(){
@@ -56,12 +71,13 @@ class Contact extends Component {
   render() {
 
 
+    //console.log(Map)
 
     return (
       <section className='flex' id='contact'>
-        <div className='background-image'>
+        {/* <div className='background-image'>
 
-        </div>
+        </div> */}
         <Waypoint onEnter={()=>{this.handleTitle()}}
           bottomOffset='150px'
         />
@@ -70,14 +86,26 @@ class Contact extends Component {
         <div className="container">
           <div className='form-reviews'>
             <div className='row center-content'>
-              <div className='col-lg-5'>
+              <div className='col-lg-6'>
 
                 <Waypoint onEnter={()=>{this.handleForm()}}
                   bottomOffset='250px'
                 />
                 {this.state.form}
               </div>
-              <div className='col-lg-7 google-map'>
+              <div className='col-lg-6 map flex'>
+                <h5 className='text-center'>My current location</h5>
+                <Map style="mapbox://styles/mapbox/streets-v10" center={[106.6997, 10.7731 ]}>
+                  <Waypoint onEnter={()=>{this.handlePin()}}
+                    bottomOffset='350px'
+                  />
+                  {this.state.pin}
+
+                </Map>
+                {/* <Map latitude={37.78} longitude={-122.41} > */}
+
+                {/* </Map> */}
+
                 {/* <div id='map' style={{width: '400px', height: '300px'}}></div> */}
               </div>
             </div>

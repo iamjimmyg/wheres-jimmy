@@ -19,12 +19,12 @@ $color-yellow: rgb(178, 148, 17);
   // }
 
   // width: 100%;
-  height: 100%;
+  height: 95vh;
   position: relative;
   //min-height: 95vh;
   h1 {
     // position: fixed;
-    padding-top: 55px;
+    padding-top: 35px;
     overflow: hidden;
     text-align: center;
     margin-bottom: 40px;
@@ -56,9 +56,22 @@ $color-yellow: rgb(178, 148, 17);
     font-weight: bold;
   }
   //height: 100vh;
+  .map {
+
+
+    min-height: 400px;
+    .mapboxgl-map {
+      //text-align: center;
+      //position: relative;
+      //width: 80%;
+      // margin-left: 40px;
+      // margin-right: 40px;
+      min-height: 70%;
+    }
+  }
   .form-reviews {
-    margin-top: 11vh;
-    margin-bottom: 11vh;
+    // margin-top: 11vh;
+    // margin-bottom: 11vh;
     .feedback {
       padding: 15px;
     }
@@ -72,6 +85,7 @@ $color-yellow: rgb(178, 148, 17);
   .social-media-icons {
     //height: 100px;
     //width:100%;
+    margin-top: 40px;
     position: relative;
     // left: 0;
     // bottom: 0;
