@@ -7,6 +7,8 @@ import Bellawatt from './portfolio/Bellawatt'
 import BellawattInfo from './portfolio/BellawattInfo'
 import UtilityRadar from './portfolio/UtilityRadar'
 import UtilityRadarInfo from './portfolio/UtilityRadarInfo'
+import ILJP from './portfolio/ILJP'
+import ILJPInfo from './portfolio/ILJPInfo'
 
 import Slider from "react-slick";
 import 'slick-carousel/slick/slick-theme.css';
@@ -62,18 +64,18 @@ class Portfolio extends Component {
 
   render() {
     var that = this
-    const iconPosition = ['166px', '-15px', '-174px']
-    const icons = ['nnsa-icon','bellawatt-icon','utility-icon',]
-    const iconName = ['AOP', 'BELLAWATT', 'UTILITY RADAR']
+    const iconPosition = ['265px','85px', '-90px', '-265px']
+    const icons = ['nnsa-icon','bellawatt-icon','utility-icon', 'iljp-icon']
+    const iconName = ['AOP', 'BELLAWATT', 'UTILITY RADAR', 'ILJP' ]
     let rightArrowPointer = this.state.projectIndex === 0 ? 'none' : ''
-    let leftArrowPointer = this.state.projectIndex === 2 ? 'none' : ''
+    let leftArrowPointer = this.state.projectIndex === 3 ? 'none' : ''
     var settings = {
       customPaging: function(i) {
           let selectedIndex = i === that.state.projectIndex ? 'scale(1.1, 1.1)': ''
           let zIndex = i === that.state.projectIndex ? '10' : ''
           let border = i === that.state.projectIndex ? '1px solid yellow' : 'none'
           return (
-            <a className={i === 3 ? 'd-none' : ''} >
+            <a className={i === 4 ? 'd-none' : ''} >
               <div className='icon-box'
                 style={{
                   transform: selectedIndex,
@@ -160,20 +162,28 @@ class Portfolio extends Component {
                 </div>
               </div>
             </div>
+            <div>
+              <div className="row">
+                <div className="col-lg-6">
+                  <ILJP />
+                </div>
+                <div className="col-lg-6 flex">
+                  <ILJPInfo />
+                </div>
+              </div>
+            </div>
             <div className='hidden-icon'></div>
 
 
            </Slider>
-           {/* <div>
 
-           </div> */}
            <div className='icon-circle-left d-none d-lg-block' style={{ pointerEvents: rightArrowPointer, opacity: rightArrowPointer === 'none' ? '.4': '1' }}>
              <i  onClick={()=>this.slider.slickGoTo(this.state.projectIndex - 1)} className="material-icons left-arrow">chevron_left</i>
            </div>
            <div className='icon-circle-right d-none d-lg-block' style={{ pointerEvents: leftArrowPointer, opacity: leftArrowPointer === 'none' ? '.4': '1' }}>
              <i onClick={()=>this.slider.slickGoTo(this.state.projectIndex + 1)} className="material-icons right-arrow">chevron_right</i>
            </div>
-           {/* {this.state.projectIndex} */}
+
         </div>
 
 

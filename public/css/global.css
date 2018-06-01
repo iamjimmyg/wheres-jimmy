@@ -233,8 +233,14 @@
       position: relative;
       top: -4px;
       height: 70px;
+      padding-right: 8px;
+      padding-left: 10px; }
+    #portfolio .projects .project-info .iljp-icon {
+      position: relative;
+      height: 46px;
       padding-right: 10px;
-      padding-left: 15px; }
+      padding-left: 15px;
+      top: 5px; }
   #portfolio .projects .slick-slider .slick-dots {
     transition: .3s ease-in-out; }
   #portfolio .projects .slick-slider .carousel {
@@ -298,6 +304,11 @@
           position: absolute;
           height: 105px;
           left: 22px; }
+        #portfolio .projects .slick-slider .slick-thumb li .icon-box .iljp-icon {
+          position: absolute;
+          height: 80px;
+          left: 11px;
+          top: 15px; }
   #portfolio .projects .slick-slider .slick-dots {
     position: relative;
     bottom: 22px; }
