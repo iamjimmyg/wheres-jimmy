@@ -16,10 +16,10 @@ class ILJPInfo extends Component {
 
           </div>
 
-          <p>Demo search tool for finding specific companies serving the utility industry. </p>
+          <p>Non-profit website dedicated to advancing policies and practices that reduce violence, decrease prison recidivism and make the justice system more equitable</p>
           <ul>
-            <li>Translated InVision UX designs to front-end code using React/Redux, SCSS, Handsontable, and Chart.js</li>
-            <li>Integrated a watchlist to add favorite companies with a print ready template.</li>
+            <li>Translated wireframe idea into a simple multi-page squarespace site.</li>
+            <li>Integrated subscribe form and deployed to godaddy.com</li>
           </ul>
         </div>
     )
