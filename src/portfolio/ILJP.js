@@ -4,14 +4,17 @@ class ILJP extends Component {
 
   render (){
     return (
-        <div data-toggle="modal" data-target=".utility-modal">
+        <div data-toggle="modal" data-target=".iljp-modal">
           <div id="carouselILJP" className="carousel slide" data-ride="carousel" data-interval="false">
             <div className="carousel-inner">
               <div className="carousel-item active">
-                <img className='image' src="utilityradar1.jpg" alt="First slide"/>
+                <img className='image' src="iljp1.jpg" alt="First slide"/>
               </div>
               <div className="carousel-item">
-                <img className='image' src="utilityradar2.jpg" alt="Second slide"/>
+                <img className='image' src="iljp2.jpg" alt="Second slide"/>
+              </div>
+              <div className="carousel-item">
+                <img className='image' src="iljp3.jpg" alt="Second slide"/>
               </div>
             </div>
             <a className="carousel-control-prev" href="#carouselILJP" role="button" data-slide="prev">
