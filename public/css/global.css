@@ -341,10 +341,10 @@
     margin-right: -50%; }
   #contact h5 {
     font-weight: bold; }
-  #contact .map {
-    min-height: 400px; }
-    #contact .map .mapboxgl-map {
-      min-height: 70%; }
+  #contact .form-reviews .center-content {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto; }
   #contact .form-reviews .feedback {
     padding: 15px; }
   #contact .form-reviews p {

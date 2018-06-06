@@ -62,16 +62,16 @@ class Contact extends Component {
 
         <div className="container">
           <div className='form-reviews'>
-            <div className='row center-content'>
-              <div className='col-lg-6'>
+            <div className='center-content'>
+              {/* <div className=''> */}
 
                 {/* <Waypoint onEnter={()=>{this.handleForm()}}
                   bottomOffset='250px'
                 /> */}
                 {this.state.form}
-              </div>
-              <div className='col-lg-6 map flex'>
-                <h5 className='text-center'>My current location</h5>
+              {/* </div> */}
+              {/* <div className='col-lg-6 map flex'> */}
+                {/* <h5 className='text-center'>My current location</h5>
 
                 <Map style="mapbox://styles/mapbox/streets-v10"
                   center={[106.6997, 10.7731 ]}
@@ -82,9 +82,9 @@ class Contact extends Component {
                   />
                   {this.state.pin}
                   <ZoomControl/>
-                </Map>
+                </Map> */}
 
-              </div>
+              {/* </div> */}
             </div>
             <div className="social-media-icons text-center">
                 <a href='http://www.facebook.com/jimmy.gonzalez.3517' target="_blank" className="facebook icon" title="Facebook"><svg viewBox="0 0 512 512"><path d="M211.9 197.4h-36.7v59.9h36.7V433.1h70.5V256.5h49.2l5.2-59.1h-54.4c0 0 0-22.1 0-33.7 0-13.9 2.8-19.5 16.3-19.5 10.9 0 38.2 0 38.2 0V82.9c0 0-40.2 0-48.8 0 -52.5 0-76.1 23.1-76.1 67.3C211.9 188.8 211.9 197.4 211.9 197.4z"/></svg></a>
