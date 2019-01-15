@@ -10,16 +10,16 @@ class ILJPInfo extends Component {
               <img src='iljp-icon.png' className="iljp-icon"/>
             </div>
             <div className='text-left'>
-              <h4><a href='http://www.iljp.org' target="_blank">Illinois Justice Project</a></h4>
-              <h5>Front-end Developer</h5>
+              <h4><a href='https://www.chamberofcommerce.org/' target="_blank">ChamberOfCommerce.org</a></h4>
+              <h5>WordPress Developer</h5>
             </div>
 
           </div>
 
-          <p>Non-profit website dedicated to advancing policies and practices that reduce violence, decrease prison recidivism and make the justice system more equitable</p>
+          <p>WordPress site dedicated to information regarding the creation of a small business can help people plan wisely and avoid common pitfalls.</p>
           <ul>
-            <li>Translated wireframe idea into a simple multi-page squarespace site.</li>
-            <li>Integrated subscribe form and deployed to godaddy.com</li>
+            <li>Designed and developed WordPress site using JavaScript, CSS, and Elementor.</li>
+            <li>Customized themes and created easy to add articles to meet customer's requirements.</li>
           </ul>
         </div>
     )

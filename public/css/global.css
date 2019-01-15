@@ -221,6 +221,10 @@
         transform: scale(1.1, 1.1); }
   #portfolio .projects .project-info {
     margin-left: 20px; }
+    #portfolio .projects .project-info .myproperties-icon {
+      height: 60px;
+      padding-right: 10px;
+      padding-left: 15px; }
     #portfolio .projects .project-info .nnsa-icon {
       height: 60px;
       padding-right: 10px;
@@ -289,6 +293,11 @@
         #portfolio .projects .slick-slider .slick-thumb li .icon-box .icon-name {
           top: 94px;
           position: relative; }
+        #portfolio .projects .slick-slider .slick-thumb li .icon-box .myproperties-icon {
+          position: absolute;
+          height: 85px;
+          left: 30px;
+          top: 10px; }
         #portfolio .projects .slick-slider .slick-thumb li .icon-box .nnsa-icon {
           position: absolute;
           height: 85px;

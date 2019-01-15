@@ -141,6 +141,11 @@
     .project-info {
       margin-left: 20px;
       //margin-right: 60px;
+      .myproperties-icon {
+        height: 60px;
+        padding-right: 10px;
+        padding-left: 15px;
+      }
       .nnsa-icon {
         height: 60px;
         padding-right: 10px;
@@ -250,6 +255,12 @@
             .icon-name {
               top: 94px;
               position: relative;
+            }
+            .myproperties-icon {
+              position: absolute;
+              height: 85px;
+              left: 30px;
+              top: 10px;
             }
             .nnsa-icon {
               position: absolute;

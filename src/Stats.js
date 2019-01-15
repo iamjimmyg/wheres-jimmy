@@ -25,13 +25,13 @@ class Stats extends Component {
     return (
       <div className={'stats ' + this.props.klass} style={this.props.style}>
         <h4 className='text-center'>SKILLSET</h4>
-        {skill('JAVASCRIPT', '85%')}
-        {skill('REACT', '90%')}
+        {skill('JAVASCRIPT', '95%')}
+        {skill('REACT', '95%')}
         {skill('HTML', '95%')}
-        {skill('SCSS', '86%')}
-        {skill('NODE', '70%')}
+        {skill('SCSS', '90%')}
+        {skill('NODE', '83%')}
         {skill('RUBY ON RAILS', '65%')}
-        {skill('GUITAR', '80%')}
+        {skill('GRAPHQL', '85%')}
 
       </div>
     )

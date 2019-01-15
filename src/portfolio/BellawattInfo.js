@@ -9,7 +9,7 @@ class Bellawatt extends Component {
               <img src='bellawatt.jpg' className="bellawatt-icon"/>
             </div>
             <div className='text-left'>
-              <h4><a href='http://www.bellawatt.com' target="_blank">bellaWatt</a></h4>
+              <h4>bellaWatt [Redacted]</h4>
               <h5>Front-end Developer</h5>
             </div>
 

@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Waypoint from 'react-waypoint'
 import {Motion, spring} from 'react-motion'
+import Myproperties from './portfolio/Myproperties'
+import MypropertiesInfo from './portfolio/MypropertiesInfo'
 import AOP from './portfolio/AOP'
 import AOPInfo from './portfolio/AOPInfo'
 import Bellawatt from './portfolio/Bellawatt'
@@ -43,8 +45,8 @@ class Portfolio extends Component {
     this.state = {
       title: <h1 className='invisible'>PORTFOLIO</h1>,
       projectIndex: 0,
-      aop: <div className='invisible'>
-        <AOP />
+      firstProject: <div className='invisible'>
+        <Myproperties />
       </div>
     }
 
@@ -57,16 +59,16 @@ class Portfolio extends Component {
   }
 
   handleAOP() {
-    this.setState({ aop: <Motion defaultStyle={{x: 0, o: 0}} style={{x: spring(1), o: spring(1)}}>
-      {value => <div style={{transform: `scale(${value.x, value.x})`, opacity: value.o}}><AOP /></div>}
+    this.setState({ firstProject: <Motion defaultStyle={{x: 0, o: 0}} style={{x: spring(1), o: spring(1)}}>
+      {value => <div style={{transform: `scale(${value.x, value.x})`, opacity: value.o}}><Myproperties /></div>}
     </Motion>})
   }
 
   render() {
     var that = this
     const iconPosition = ['265px','85px', '-90px', '-265px']
-    const icons = ['nnsa-icon','bellawatt-icon','utility-icon', 'iljp-icon']
-    const iconName = ['AOP', 'BELLAWATT', 'UTILITY RADAR', 'ILJP' ]
+    const icons = ['myproperties-icon', 'nnsa-icon','bellawatt-icon','utility-icon',]
+    const iconName = ['MyProperties', 'AOP', 'BELLAWATT', 'UTILITY RADAR' ]
     let rightArrowPointer = this.state.projectIndex === 0 ? 'none' : ''
     let leftArrowPointer = this.state.projectIndex === 3 ? 'none' : ''
     var settings = {
@@ -130,8 +132,20 @@ class Portfolio extends Component {
                   <Waypoint onEnter={()=>{this.handleAOP()}}
                     bottomOffset='150px'
                   />
-                  {this.state.aop}
+                  {this.state.firstProject}
                   {/* <AOP /> */}
+
+                </div>
+                <div className="col-lg-6 flex">
+                  <MypropertiesInfo/>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div className="row">
+                <div className="col-lg-6">
+                  <AOP />
 
                 </div>
                 <div className="col-lg-6 flex">
@@ -139,7 +153,6 @@ class Portfolio extends Component {
                 </div>
               </div>
             </div>
-
             <div>
               <div className="row">
                 <div className="col-lg-6">
@@ -162,7 +175,7 @@ class Portfolio extends Component {
                 </div>
               </div>
             </div>
-            <div>
+            {/* <div>
               <div className="row">
                 <div className="col-lg-6">
                   <ILJP />
@@ -171,7 +184,7 @@ class Portfolio extends Component {
                   <ILJPInfo />
                 </div>
               </div>
-            </div>
+            </div> */}
             <div className='hidden-icon'></div>
 
 

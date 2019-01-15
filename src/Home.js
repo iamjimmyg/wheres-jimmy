@@ -56,7 +56,6 @@ class Home extends Component {
           srcLoaded='../background-image.jpg'
         />
 
-
         <div className="landing-content container" style={{ transform: scaleText, opacity: this.props.textOpacity, top: this.props.transformY }}>
 
           <div className="center-content" >
@@ -64,24 +63,16 @@ class Home extends Component {
               {value => <div className="intro" style={{left: value.x, opacity: value.o}}>
                   <h5 className="font-italic">Hello, I'm</h5>
                   <h1>JIMMY GONZALEZ</h1>
-                  <h4>FULLSTACK DEVELOPER</h4>
+                  <h4>FRONT-END DEVELOPER</h4>
 
                 </div>}
             </Motion>
 
-
-
             {this.handleAbout()}
             {this.state.about}
 
-
           </div>
         </div>
-        {/* <div className='text-center'>
-          {this.state.downArrow}
-        </div> */}
-
-
       </section>
 
     );

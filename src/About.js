@@ -12,8 +12,14 @@ class About extends Component {
       profileSection: <div className="bio">
         <h4 className="text-center">MY WORK</h4>
         <div className="">
-          <p>Offering creative design solutions to solve business problems is what I do best. I write in JavaScript, CSS, Ruby. I also speak to databases and make servers do stuff. I like working on scalability, performance, reusability, and great user experiences.</p>
-          <p>As a front-end developer, I write code that conforms to industry standards and semantic best practices. I am able to transform static artwork into pixel perfect, interactive and fully functional interfaces.</p>
+          <p>Innovative, experienced, and a proven team player with
+            2 years experience of building, developing, and
+            managing websites, applications and programs for
+            various organizations using JavaScript, React/Redux,
+            and Node to name a few. Interested in securing a
+            position as a Front-end Developer, hoping to share great
+            skills, expertise, and experience with the company’s
+            team.</p>
 
         </div>
       </div>,
