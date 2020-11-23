@@ -6,6 +6,7 @@
     "git": "^0.1.5",
     "mapbox-gl": "^0.45.0",
     "material-ui": "^0.20.0",
+    "node-sass": "^5.0.0",
     "node-sass-chokidar": "^1.1.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
@@ -26,6 +27,7 @@
     "watch-css": "npm run build-css && node-sass-chokidar public/css/ -o public/css/ --watch --recursive",
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "deploy": "npm run build && cp build/index.html build/200.html",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }

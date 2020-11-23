@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 import Waypoint from 'react-waypoint'
 import {Motion, spring} from 'react-motion'
+
+import Varuna from './portfolio/Varuna'
+import VarunaInfo from './portfolio/VarunaInfo'
+
 import Myproperties from './portfolio/Myproperties'
 import MypropertiesInfo from './portfolio/MypropertiesInfo'
 import AOP from './portfolio/AOP'
@@ -46,7 +50,7 @@ class Portfolio extends Component {
       title: <h1 className='invisible'>PORTFOLIO</h1>,
       projectIndex: 0,
       firstProject: <div className='invisible'>
-        <Myproperties />
+        <Varuna />
       </div>
     }
 
@@ -58,26 +62,26 @@ class Portfolio extends Component {
     </Motion>})
   }
 
-  handleAOP() {
+  handleFirstProject() {
     this.setState({ firstProject: <Motion defaultStyle={{x: 0, o: 0}} style={{x: spring(1), o: spring(1)}}>
-      {value => <div style={{transform: `scale(${value.x, value.x})`, opacity: value.o}}><Myproperties /></div>}
+      {value => <div style={{transform: `scale(${value.x, value.x})`, opacity: value.o}}><Varuna /></div>}
     </Motion>})
   }
 
   render() {
     var that = this
-    const iconPosition = ['265px','85px', '-90px', '-265px']
-    const icons = ['myproperties-icon', 'nnsa-icon','bellawatt-icon','utility-icon',]
-    const iconName = ['MyProperties', 'AOP', 'BELLAWATT', 'UTILITY RADAR' ]
+    const iconPosition = ['390px','210px', '30px', '-150px', '-330px']
+    const icons = ['varuna-icon', 'myproperties-icon', 'nnsa-icon','bellawatt-icon','utility-icon']
+    const iconName = ['Varuna', 'MyProperties', 'AOP', 'BELLAWATT', 'UTILITY RADAR' ]
     let rightArrowPointer = this.state.projectIndex === 0 ? 'none' : ''
-    let leftArrowPointer = this.state.projectIndex === 3 ? 'none' : ''
-    var settings = {
+    let leftArrowPointer = this.state.projectIndex === 4 ? 'none' : ''
+    const settings = {
       customPaging: function(i) {
           let selectedIndex = i === that.state.projectIndex ? 'scale(1.1, 1.1)': ''
           let zIndex = i === that.state.projectIndex ? '10' : ''
           let border = i === that.state.projectIndex ? '1px solid yellow' : 'none'
           return (
-            <a className={i === 4 ? 'd-none' : ''} >
+            <a className={i === 5 ? 'd-none' : ''} >
               <div className='icon-box'
                 style={{
                   transform: selectedIndex,
@@ -129,11 +133,23 @@ class Portfolio extends Component {
             <div className=''>
               <div className="row">
                 <div className="col-lg-6">
-                  <Waypoint onEnter={()=>{this.handleAOP()}}
+                  <Waypoint onEnter={()=>{this.handleFirstProject()}}
                     bottomOffset='150px'
                   />
                   {this.state.firstProject}
                   {/* <AOP /> */}
+
+                </div>
+                <div className="col-lg-6 flex">
+                  <VarunaInfo/>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div className="row">
+                <div className="col-lg-6">
+                  <Myproperties />
 
                 </div>
                 <div className="col-lg-6 flex">
@@ -153,6 +169,7 @@ class Portfolio extends Component {
                 </div>
               </div>
             </div>
+
             <div>
               <div className="row">
                 <div className="col-lg-6">
