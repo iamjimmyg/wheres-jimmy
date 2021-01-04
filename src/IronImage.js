@@ -9,9 +9,10 @@ class IronImage extends Component {
   componentDidMount() {
 
     const hdLoaderImg = new Image();
+
     hdLoaderImg.src = this.props.srcLoaded;
     hdLoaderImg.onload = () => {
-      //this.ironImageHd.setAttribute()
+      // this.ironImageHd.setAttribute()
       //   'style',
       //   `background: url('${this.props.srcLoaded}') no-repeat center center fixed`
       // );
@@ -23,16 +24,19 @@ class IronImage extends Component {
 
     return (
       <div className='iron-image-container'>
-        <div
+        <div className="iron-image-loaded"
           style={{
             top: this.props.transformY,
             transform: this.props.backgroundImageStyle,
+            // background: `url(${this.props.srcLoaded}) no-repeat center center fixed`,
             background: `url(${this.props.srcLoaded}) no-repeat center center fixed`,
+
             minHeight: this.props.height,
+            // minHeight: '100%',
             backgroundSize: 'cover',
           }}
-          className="iron-image-loaded"
-          ref={imageLoadedElem => this.ironImageHd = imageLoadedElem}>
+          ref={imageLoadedElem => this.ironImageHd = imageLoadedElem}
+          >
         </div>
 
         <div className="iron-image-preload"

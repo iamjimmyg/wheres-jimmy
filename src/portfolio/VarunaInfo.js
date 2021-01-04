@@ -14,10 +14,10 @@ class VarunaInfo extends Component {
           </div>
         </div>
 
-        <p>water shit application that allows for multiple currencies, and allows for an assistant signup with limited capabilities compared to admin.</p>
+        <p>Water distribution system monitoring application that allows for real-time monitoring of chlorine residual levels using Varuna's sensors and software track system behavior that predict operational issues, enabling operations to optimize workflows.</p>
         <ul>
-          <li>Designed and developed front-end using React.js, Apollo, Webpack, React-Motion, Chart.js and SCSS.</li>
-          <li>Designed and developed back-end using Node.js, Express.js, GraphQL, MongoDB, and deployed using Heroku and GoDaddy.</li>
+          <li>Designed and developed initial MVP using React.js, Express.js, GraphQL, MongoDB, and deployed using Heroku and GoDaddy.</li>
+          <li>Developed and translated UX designers wireframes using React.js and SCSS. Assisted backend developer in migrating data from MongoAtlas to AWS. </li>
         </ul>
       </div>
     )

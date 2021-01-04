@@ -17,6 +17,7 @@ class Home extends Component {
           <br/>
           <br/>
           <h5 className="font-italic">I love building everything from small business sites to rich interactive web apps.</h5>
+          <h5 className="font-italic">This website and all projects listed below were built with React.js. </h5>
         </div>
     }
     this.handleAbout = this.handleAbout.bind(this)
@@ -29,7 +30,8 @@ class Home extends Component {
             <hr/>
             <br/>
             <br/>
-            <h5 className="font-italic">I love building everything from small business sites to rich interactive web apps.</h5>
+            <h5 className="font-italic">I love building everything from small business sites to rich interactive web apps. </h5>
+            <h5 className="font-italic">This website and all projects listed below were built with React.js. </h5>
           </div>}
       </Motion> })
     },650)
@@ -37,9 +39,11 @@ class Home extends Component {
   }
 
   render() {
+    console.log('props', this.props)
     let backgroundImageStyle = `translateY(${-this.props.transformY}px)`
     //let textHeight = `translateY(${this.props.transformY})`
     let scaleText = `scale(${this.props.scale}, ${this.props.scale})`
+
 
     return (
       <section className="container flex" id='landing'>
@@ -50,10 +54,10 @@ class Home extends Component {
         </div> */}
         <IronImage
           height='100%'
-          srcPreload='../background_image_preload.jpg'
+          srcPreload='../Optimized-laptop.jpg'
           transformY={this.props.transformY}
           backgroundImageStyle={backgroundImageStyle}
-          srcLoaded='../background-image.jpg'
+          srcLoaded='../laptop.jpg'
         />
 
         <div className="landing-content container" style={{ transform: scaleText, opacity: this.props.textOpacity, top: this.props.transformY }}>

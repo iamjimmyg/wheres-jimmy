@@ -28,18 +28,17 @@ class App extends Component{
   componentDidMount () {
 
       window.onscroll =()=>{
+
         this.setState({scroll: window.scrollY})
+
         if(window.scrollY < window.innerHeight){
 
-          // console.log('scroll posish', window.scrollY)
-          // console.log('window height', window.innerHeight)
           let transformY = Math.floor((window.scrollY / window.innerHeight) * 300)
           let imageOpacity = (window.scrollY / window.innerHeight) + .1
           let imageScale = (((window.scrollY / window.innerHeight) + 1) * .5) + .5
 
           let textOpacity = (window.innerHeight - window.scrollY) / window.innerHeight
-          //console.log(textOpacity)
-          let scale = .7 + (((window.innerHeight - window.scrollY) / window.innderHeight) * .3)
+          let scale = .7 + (((window.innerHeight - window.scrollY) / window.innerHeight) * .3)
           this.setState({
             imageOpacity: imageOpacity,
             imageTransformY: transformY,

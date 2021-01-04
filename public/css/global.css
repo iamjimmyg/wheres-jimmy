@@ -617,6 +617,10 @@ body {
       font-size: 1.2rem; } }
 
 @media (max-width: 375px) {
+  #landing .iron-image-container .iron-image-preload {
+    background-attachment: scroll; }
+  #landing .iron-image-container .iron-image-loaded {
+    background-attachment: scroll; }
   #testimonials #reviewCarousel {
     margin-left: 1vw;
     margin-right: 1vw; }

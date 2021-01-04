@@ -122,6 +122,7 @@ body{
   }
 }
 @media (max-width: 500px) {
+
   #portfolio {
     .projects {
       .slick-slider {
@@ -144,6 +145,17 @@ body{
 
 }
 @media (max-width: 375px) {
+  #landing {
+    .iron-image-container {
+
+      .iron-image-preload {
+        background-attachment: scroll;
+      }
+      .iron-image-loaded {
+        background-attachment: scroll;
+      }
+    }
+  }
   // #portfolio {
   //   .projects {
   //     .project {
