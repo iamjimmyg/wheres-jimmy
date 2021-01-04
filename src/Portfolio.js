@@ -71,17 +71,17 @@ class Portfolio extends Component {
   render() {
     var that = this
     const iconPosition = ['390px','210px', '30px', '-150px', '-330px']
-    const icons = ['varuna-icon', 'myproperties-icon', 'nnsa-icon','bellawatt-icon','utility-icon']
+    const icons = ['varuna-icon', 'myproperties-icon', 'nnsa-icon','bellawatt-icon']
     const iconName = ['Varuna', 'MyProperties', 'AOP', 'BELLAWATT', 'UTILITY RADAR' ]
     let rightArrowPointer = this.state.projectIndex === 0 ? 'none' : ''
-    let leftArrowPointer = this.state.projectIndex === 4 ? 'none' : ''
+    let leftArrowPointer = this.state.projectIndex === 3 ? 'none' : ''
     const settings = {
       customPaging: function(i) {
           let selectedIndex = i === that.state.projectIndex ? 'scale(1.1, 1.1)': ''
           let zIndex = i === that.state.projectIndex ? '10' : ''
           let border = i === that.state.projectIndex ? '1px solid yellow' : 'none'
           return (
-            <a className={i === 5 ? 'd-none' : ''} >
+            <a className={i === 4 ? 'd-none' : ''} >
               <div className='icon-box'
                 style={{
                   transform: selectedIndex,
@@ -181,7 +181,7 @@ class Portfolio extends Component {
                 </div>
               </div>
             </div>
-            <div>
+            {/* <div>
               <div className="row">
                 <div className="col-lg-6">
                   <UtilityRadar />
@@ -191,7 +191,7 @@ class Portfolio extends Component {
                   <UtilityRadarInfo/>
                 </div>
               </div>
-            </div>
+            </div> */}
             {/* <div>
               <div className="row">
                 <div className="col-lg-6">

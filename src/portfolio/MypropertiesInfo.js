@@ -9,7 +9,7 @@ class MypropertiesInfo extends Component {
             <img className='myproperties-icon' src='myproperties-icon.png'/>
           </div>
           <div className='text-left'>
-            <h4><a href='http://www.myproperties.me' target="_blank">MyProperties</a></h4>
+            <h4>MyProperties [Redacted]</h4>
             <h5>Full Stack Developer</h5>
           </div>
         </div>
