@@ -22,7 +22,6 @@ class App extends Component{
         imageScale: 1,
         scroll: 0,
       }
-      //this.scrollToTop = this.scrollToTop.bind(this);
   }
 
   componentDidMount () {

@@ -11,10 +11,6 @@ import AOP from './portfolio/AOP'
 import AOPInfo from './portfolio/AOPInfo'
 import Bellawatt from './portfolio/Bellawatt'
 import BellawattInfo from './portfolio/BellawattInfo'
-import UtilityRadar from './portfolio/UtilityRadar'
-import UtilityRadarInfo from './portfolio/UtilityRadarInfo'
-import ILJP from './portfolio/ILJP'
-import ILJPInfo from './portfolio/ILJPInfo'
 
 import Slider from "react-slick";
 import 'slick-carousel/slick/slick-theme.css';
@@ -79,7 +75,7 @@ class Portfolio extends Component {
       customPaging: function(i) {
           let selectedIndex = i === that.state.projectIndex ? 'scale(1.1, 1.1)': ''
           let zIndex = i === that.state.projectIndex ? '10' : ''
-          let border = i === that.state.projectIndex ? '1px solid yellow' : 'none'
+          // let border = i === that.state.projectIndex ? '1px solid yellow' : 'none'
           return (
             <a className={i === 4 ? 'd-none' : ''} >
               <div className='icon-box'
@@ -89,7 +85,7 @@ class Portfolio extends Component {
                   position: 'relative',
                   zIndex: zIndex,
                 }}>
-                <img className={icons[i]} src={`${icons[i]}.png`}/>
+                <img alt='' className={icons[i]} src={`${icons[i]}.png`}/>
                 <hr className='hr'/>
                 <p className='icon-name'>{iconName[i]}</p>
               </div>

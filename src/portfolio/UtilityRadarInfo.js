@@ -7,7 +7,7 @@ class UtilityRadarInfo extends Component {
         <div className="text-left project-info">
           <div className='row'>
             <div>
-              <img src='utility-icon.png' className="utility-icon"/>
+              <img alt='' src='utility-icon.png' className="utility-icon"/>
             </div>
             <div className='text-left'>
               <h4><a href='http://www.utilityradar.com' target="_blank">Utility Radar</a></h4>

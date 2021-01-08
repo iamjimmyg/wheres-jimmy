@@ -6,7 +6,7 @@ class VarunaInfo extends Component {
       <div className="text-left project-info">
         <div className='row '>
           <div>
-            <img className='varuna-icon' src='varuna-icon.png'/>
+            <img alt='' className='varuna-icon' src='varuna-icon.png'/>
           </div>
           <div className='text-left'>
             <h4><a href='http://www.varunaiot.com' target="_blank">Varuna</a></h4>

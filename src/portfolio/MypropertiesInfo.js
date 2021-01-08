@@ -6,7 +6,7 @@ class MypropertiesInfo extends Component {
       <div className="text-left project-info">
         <div className='row '>
           <div>
-            <img className='myproperties-icon' src='myproperties-icon.png'/>
+            <img alt='' className='myproperties-icon' src='myproperties-icon.png'/>
           </div>
           <div className='text-left'>
             <h4>MyProperties [Redacted]</h4>

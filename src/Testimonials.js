@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Waypoint from 'react-waypoint'
 import {Motion, spring} from 'react-motion'
 import IronImage from './IronImage'
 
@@ -37,14 +36,6 @@ class ReviewCarousel extends Component {
             </div>
           </div>
         </div>
-        {/* <a className="carousel-control-prev" href="#reviewCarousel" role="button" data-slide="prev">
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#reviewCarousel" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a> */}
       </div>
     )
   }
@@ -70,38 +61,11 @@ class Testimonials extends Component {
         {this.carousel}
       </div>}
     </Motion>})
-    console.log('ooohh shit you just entered the testimonial zone')
   }
 
-  componentDidMount () {
-
-      // window.onscroll =()=>{
-      //
-      //   if(window.scrollY < window.innerHeight){
-      //
-      //     // console.log('scroll posish', window.scrollY)
-      //     // console.log('window height', window.innerHeight)
-      //     let transformY = Math.floor((window.scrollY / window.innerHeight) * 300)
-      //     let imageOpacity = (window.scrollY / window.innerHeight) + .1
-      //     let imageScale = (((window.scrollY / window.innerHeight) + 1) * .5) + .5
-      //
-      //     let textOpacity = (window.innerHeight - window.scrollY) / window.innerHeight
-      //     //console.log(textOpacity)
-      //     let scale = .7 + (((window.innerHeight - window.scrollY) / window.innderHeight) * .3)
-      //     this.setState({
-      //       imageOpacity: imageOpacity,
-      //       imageTransformY: transformY,
-      //       scale: scale,
-      //       textOpacity: textOpacity,
-      //       imageScale: imageScale,
-      //     })
-      //   }
-      // }
-
-  }
 
   render() {
-    //console.log(this.props.scroll)
+
     return (
       <section className="text-center" id='testimonials'>
         <div className='background-opacity'></div>
@@ -111,13 +75,6 @@ class Testimonials extends Component {
           srcLoaded='../smartcity.jpg'
         />
 
-        {/* <div className="content">
-          <h2>Testimonials</h2>
-          <ReviewCarousel />
-        </div> */}
-        {/* <Waypoint onEnter={() => console.log('enter')}
-          onLeave={()=>console.log('leave')}
-        /> */}
         {this.state.reviewCarousel}
 
       </section>

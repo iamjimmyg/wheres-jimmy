@@ -1,9 +1,7 @@
 import React, {Component} from 'react'
 
 class Form extends Component {
-  constructor(props){
-    super(props)
-  }
+
   render(){
     return (
       <div className={`${this.props.klass}`} style={this.props.style}>

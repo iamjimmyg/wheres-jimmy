@@ -6,10 +6,10 @@ class Bellawatt extends Component {
         <div className="text-left project-info">
           <div className='row'>
             <div>
-              <img src='bellawatt.jpg' className="bellawatt-icon"/>
+              <img alt='' src='bellawatt.jpg' className="bellawatt-icon"/>
             </div>
             <div className='text-left'>
-              <h4>bellaWatt [Redacted]</h4>
+              <h4><a href='http://www.varunaiot.com' target="_blank">bellaWatt</a></h4>
               <h5>Front-end Developer</h5>
             </div>
 

@@ -6,7 +6,7 @@ class AOPInfo extends Component {
       <div className="text-left project-info">
         <div className='row '>
           <div>
-            <img className='nnsa-icon' src='nnsa-icon.png'/>
+            <img alt='' className='nnsa-icon' src='nnsa-icon.png'/>
           </div>
           <div className='text-left'>
             <h4>AOP [Redacted]</h4>
